@@ -1,8 +1,8 @@
 name: Create Board Firmware
 
 on:
-#  push:
-#  pull_request:
+  push:
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -12,5 +12,5 @@ jobs:
     permissions:
       contents: write
     with:
-      shortBoardName: XXX
-      iniFileName: rusefi_XXX.ini
+      shortBoardName: paralela
+      iniFileName: rusefi_paralela.ini

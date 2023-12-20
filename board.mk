@@ -1,3 +1,5 @@
+BOARDINC += $(BOARD_DIR)/generated/controllers/generated
+
 BOARDCPPSRC =  $(BOARD_DIR)/board_configuration.cpp
 
 DDEFS += -DFIRMWARE_ID=\"Paralela\"
