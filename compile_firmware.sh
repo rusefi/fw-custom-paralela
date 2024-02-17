@@ -2,4 +2,4 @@
 
 cd ext/rusefi/firmware/
 
-bash config/boards/common_script.sh ../../../../.. ARCH_STM32F4
+bash config/boards/common_script.sh ../../../meta-info.env
