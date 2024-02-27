@@ -63,14 +63,14 @@ jobs:
 
       - name: Push Config
         run: |
-          mkdir -p generated
-          cp ext/rusefi/firmware/controllers/generated/rusefi_generated.h   generated
-          cp ext/rusefi/firmware/controllers/generated/signature_paralela.h generated
-          cp ext/rusefi/firmware/tunerstudio/generated/rusefi_paralela.ini  generated
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub git update Action"
           git add generated/*
-          git commit -am "GHA Automation Snapshot just for reference"
+          OUT=$(git commit -am "GHA Automation" 2>&1) || echo "commit failed, finding out why"
+          if echo "$OUT" | grep 'nothing to commit'; then
+            echo "Configs: looks like nothing to commit"
+            exit 0
+          fi
           git status
 
       - name: Connectors Status
