@@ -1,27 +1,28 @@
-name: Firmware at GHA
+name: Explicit Firmware at GHA
 
 on:
-#  push:
+  push:
 #  pull_request:
   workflow_dispatch:
 
 jobs:
   build-firmware:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      # Build machines don't have arm-none-eabi gcc, so let's download it and put it on the path
-      - name: Download & Install GCC
+      - name: Install Arm GNU Toolchain (arm-none-eabi-gcc)
         if: ${{ env.skip != 'true' }}
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-        run: |
-          ext/rusefi/firmware/provide_gcc.sh
-          echo "::add-path::`pwd`/gcc-arm-none-eabi/bin"
+        uses: carlosperate/arm-none-eabi-gcc-action@v1
+        with:
+          release: '12.3.Rel1'
 
       - uses: actions/setup-java@v4
         with:
@@ -31,10 +32,20 @@ jobs:
       - name: Test Compiler
         run: javac -version
 
-      - name: Install Tools
+      - name: Discover cores
+        if: ${{ matrix.os != 'macos-latest' }}
+        run: lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
+
+      - name: Install required software (ubuntu)
+        if: ${{ matrix.os != 'macos-latest' }}
         run: |
           sudo bash ext/rusefi/misc/actions/add-ubuntu-latest-apt-mirrors.sh
           sudo apt-get install sshpass sshpass mtools
+
+      - name: Install required software (macos)
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: |
+          brew install mtools zip dosfstools flock
 
       - name: Removing other .ini files since we will be uploading
         working-directory: ext/rusefi/
