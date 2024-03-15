@@ -11,7 +11,7 @@
     engineConfiguration->ignitionMode = IM_WASTED_SPARK;
     // default 0.0
     engineConfiguration->fixedTiming = 10;
-    // default 2.0
+    // default 1.8
     engineConfiguration->displacement = 1.838997;
     // default "60/2"
     engineConfiguration->trigger.type = TT_TOOTHED_WHEEL_36_1;
