@@ -39,26 +39,60 @@
     engineConfiguration->cylinderBankSelect[10] = 1;
     // default 0.0
     engineConfiguration->cylinderBankSelect[11] = 1;
+    // default "GPPWM Output 3"
+    engineConfiguration->ignBlends[0].blendParameter = GPPWM_Zero;
+    // default "VVT 1 I"
+    engineConfiguration->ignBlends[0].yAxisOverride = GPPWM_Zero;
+    // default "Aux Linear 1"
+    engineConfiguration->veBlends[2].blendParameter = GPPWM_Zero;
+    // default "IAT"
+    engineConfiguration->boostOpenLoopBlends[0].blendParameter = GPPWM_Zero;
+    // default "Aux Temp 2"
+    engineConfiguration->boostClosedLoopBlends[1].blendParameter = GPPWM_Zero;
+    // default "CLT"
+    engineConfiguration->boostClosedLoopBlends[1].yAxisOverride = GPPWM_Zero;
     // default 0.0
     engineConfiguration->mapLowValueVoltage = 2.91;
     // default "false"
     engineConfiguration->enableAemXSeries = true;
+    // default 92.0
+    engineConfiguration->fanOnTemperature = 95;
+    // default 88.0
+    engineConfiguration->fanOffTemperature = 91;
     // default "false"
     engineConfiguration->enableSoftwareKnock = true;
     // default 500.0
     engineConfiguration->vvtControlMinRpm = 550;
     // default "false"
     engineConfiguration->enableVerboseCanTx = true;
+    // default 200.0
+    engineConfiguration->rpmSoftLimitWindowSize = 0;
+    // default 4.0
+    engineConfiguration->rpmSoftLimitTimingRetard = 0;
+    // default 1.0
+    engineConfiguration->tpsAccelFractionDivisor = 0;
     // default 60.0
     engineConfiguration->gppwm[0].onAboveDuty = 80;
     // default 50.0
     engineConfiguration->gppwm[0].offBelowDuty = 10;
 
 
+	cannedtpsTpsAccelTable();
 	cannedboostTableOpenLoop();
+	cannedvvtTable1();
+	cannedvvtTable2();
+	cannedscriptTable3();
 	cannedscriptTable4();
+	cannedALSTimingRetardTable();
+	cannedALSFuelAdjustment();
+	cannedALSIgnSkipTable();
 	cannedignitionTable();
+	cannedignitionIatCorrTable();
 	cannedveTable();
+	cannedmapEstimateTable();
+	cannedinjectionPhase();
+	cannedthrottle2TrimTable();
+	cannedmaxKnockRetardTable();
 	cannedlambdaTable();
-	cannedtcuSolenoidTable();
+	cannedinjectorStagingTable();
 ```

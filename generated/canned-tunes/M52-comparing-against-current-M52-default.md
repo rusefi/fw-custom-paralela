@@ -59,6 +59,14 @@
     engineConfiguration->cylinderBankSelect[11] = 1;
     // default 4.0
     engineConfiguration->benchTestOnTime = 5;
+    // default "GPPWM Output 3"
+    engineConfiguration->ignBlends[0].blendParameter = GPPWM_Zero;
+    // default "Aux Linear 1"
+    engineConfiguration->veBlends[2].blendParameter = GPPWM_Zero;
+    // default "IAT"
+    engineConfiguration->boostOpenLoopBlends[0].blendParameter = GPPWM_Zero;
+    // default "Aux Temp 2"
+    engineConfiguration->boostClosedLoopBlends[1].blendParameter = GPPWM_Zero;
     // default 0.0
     engineConfiguration->tpsMin = 120;
     // default 1000.0
@@ -101,6 +109,10 @@
     engineConfiguration->idleTimingPid.minValue = -5;
     // default 10.0
     engineConfiguration->idleTimingPid.maxValue = 5;
+    // default 92.0
+    engineConfiguration->fanOnTemperature = 95;
+    // default 88.0
+    engineConfiguration->fanOffTemperature = 91;
     // default "false"
     engineConfiguration->disableFan1WhenStopped = true;
     // default 0.5
@@ -123,9 +135,7 @@
     engineConfiguration->rpmHardLimit = 10000;
     // default 300.0
     engineConfiguration->boostCutPressure = 0;
-    // default 0.0
-    engineConfiguration->rpmSoftLimitWindowSize = 200;
-    // default 0.0
+    // default 4.0
     engineConfiguration->rpmSoftLimitTimingRetard = 10;
     // default 250.0
     engineConfiguration->etbRevLimitRange = 0;
@@ -147,7 +157,7 @@
     engineConfiguration->tpsDecelEnleanmentThreshold = 7;
     // default 0.0
     engineConfiguration->tpsAccelFractionPeriod = 3;
-    // default 0.0
+    // default 1.0
     engineConfiguration->tpsAccelFractionDivisor = 0.3;
     // default 2000.0
     engineConfiguration->boostControlMinRpm = 0;
@@ -193,11 +203,19 @@
 
 	cannedtpsTpsAccelTable();
 	cannedboostTableOpenLoop();
+	cannedvvtTable1();
+	cannedvvtTable2();
+	cannedscriptTable3();
 	cannedscriptTable4();
+	cannedALSTimingRetardTable();
+	cannedALSFuelAdjustment();
+	cannedALSIgnSkipTable();
 	cannedignitionTable();
+	cannedignitionIatCorrTable();
 	cannedveTable();
-	cannedmapEstimateTable();
+	cannedinjectionPhase();
+	cannedthrottle2TrimTable();
+	cannedmaxKnockRetardTable();
 	cannedlambdaTable();
-	cannedtcuSolenoidTable();
 	cannedpostCrankingFactor();
 ```

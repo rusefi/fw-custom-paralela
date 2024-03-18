@@ -53,6 +53,18 @@
     engineConfiguration->cylinderBankSelect[11] = 1;
     // default 4.0
     engineConfiguration->benchTestOnTime = 5;
+    // default "GPPWM Output 3"
+    engineConfiguration->ignBlends[0].blendParameter = GPPWM_Zero;
+    // default "VVT 1 I"
+    engineConfiguration->ignBlends[0].yAxisOverride = GPPWM_Zero;
+    // default "Aux Linear 1"
+    engineConfiguration->veBlends[2].blendParameter = GPPWM_Zero;
+    // default "IAT"
+    engineConfiguration->boostOpenLoopBlends[0].blendParameter = GPPWM_Zero;
+    // default "Aux Temp 2"
+    engineConfiguration->boostClosedLoopBlends[1].blendParameter = GPPWM_Zero;
+    // default "CLT"
+    engineConfiguration->boostClosedLoopBlends[1].yAxisOverride = GPPWM_Zero;
     // default 0.0
     engineConfiguration->tpsMin = 896;
     // default 1000.0
@@ -155,6 +167,10 @@
     engineConfiguration->useIdleTimingPidControl = true;
     // default -10.0
     engineConfiguration->idleTimingPid.minValue = -15;
+    // default 92.0
+    engineConfiguration->fanOnTemperature = 95;
+    // default 88.0
+    engineConfiguration->fanOffTemperature = 91;
     // default 0.5
     engineConfiguration->acDelay = 0;
     // default 4.0
@@ -217,6 +233,10 @@
     engineConfiguration->rpmHardLimit = 6200;
     // default 300.0
     engineConfiguration->boostCutPressure = 0;
+    // default 200.0
+    engineConfiguration->rpmSoftLimitWindowSize = 0;
+    // default 4.0
+    engineConfiguration->rpmSoftLimitTimingRetard = 0;
     // default 0.0
     engineConfiguration->etbRevLimitStart = 6100;
     // default 250.0
@@ -241,7 +261,7 @@
     engineConfiguration->tpsDecelEnleanmentThreshold = 12;
     // default 0.0
     engineConfiguration->tpsAccelFractionPeriod = 3;
-    // default 0.0
+    // default 1.0
     engineConfiguration->tpsAccelFractionDivisor = 0.3;
     // default 0.3
     engineConfiguration->wwaeTau = 0.25;
@@ -273,8 +293,6 @@
     engineConfiguration->etbMaximumPosition = 97;
     // default "false"
     engineConfiguration->launchControlEnabled = true;
-    // default "Launch Button"
-    engineConfiguration->launchActivationMode = ALWAYS_ACTIVE_LAUNCH;
     // default 30.0
     engineConfiguration->launchSpeedThreshold = 15;
     // default 3000.0
@@ -332,17 +350,23 @@
 	cannedtpsTpsAccelTable();
 	cannedboostTableOpenLoop();
 	cannedboostTableClosedLoop();
+	cannedvvtTable1();
+	cannedvvtTable2();
 	cannedscriptTable1();
+	cannedscriptTable3();
 	cannedscriptTable4();
+	cannedALSTimingRetardTable();
+	cannedALSFuelAdjustment();
+	cannedALSIgnSkipTable();
 	cannedignitionTable();
 	cannedignitionIatCorrTable();
 	cannedveTable();
-	cannedmapEstimateTable();
 	cannedinjectionPhase();
 	cannedpedalToTpsTable();
+	cannedthrottle2TrimTable();
 	cannedmaxKnockRetardTable();
 	cannedlambdaTable();
 	cannediacPidMultTable();
-	cannedtcuSolenoidTable();
+	cannedinjectorStagingTable();
 	cannedpostCrankingFactor();
 ```

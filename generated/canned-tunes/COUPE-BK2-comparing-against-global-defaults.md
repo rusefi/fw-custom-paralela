@@ -45,6 +45,14 @@
     engineConfiguration->cylinderBankSelect[10] = 1;
     // default 0.0
     engineConfiguration->cylinderBankSelect[11] = 1;
+    // default "GPPWM Output 3"
+    engineConfiguration->ignBlends[0].blendParameter = GPPWM_Zero;
+    // default "Aux Linear 1"
+    engineConfiguration->veBlends[2].blendParameter = GPPWM_Zero;
+    // default "IAT"
+    engineConfiguration->boostOpenLoopBlends[0].blendParameter = GPPWM_Zero;
+    // default "Aux Temp 2"
+    engineConfiguration->boostClosedLoopBlends[1].blendParameter = GPPWM_Zero;
     // default 0.0
     engineConfiguration->tpsMin = 98;
     // default 1000.0
@@ -75,9 +83,9 @@
     engineConfiguration->useIdleTimingPidControl = true;
     // default 0.0
     engineConfiguration->idleTimingPid.dFactor = 5.0E-5;
-    // default 95.0
+    // default 92.0
     engineConfiguration->fanOnTemperature = 80;
-    // default 91.0
+    // default 88.0
     engineConfiguration->fanOffTemperature = 75;
     // default "false"
     engineConfiguration->disableFan1WhenStopped = true;
@@ -113,6 +121,10 @@
     engineConfiguration->auxPid[1].dFactor = 0.2;
     // default "MAP"
     engineConfiguration->debugMode = DBG_22;
+    // default 200.0
+    engineConfiguration->rpmSoftLimitWindowSize = 0;
+    // default 4.0
+    engineConfiguration->rpmSoftLimitTimingRetard = 0;
     // default 250.0
     engineConfiguration->etbRevLimitRange = 0;
     // default 50.0
@@ -129,7 +141,7 @@
     engineConfiguration->tpsDecelEnleanmentThreshold = 7;
     // default 0.0
     engineConfiguration->tpsAccelFractionPeriod = 3;
-    // default 0.0
+    // default 1.0
     engineConfiguration->tpsAccelFractionDivisor = 3;
     // default 2000.0
     engineConfiguration->boostControlMinRpm = 0;
@@ -149,11 +161,21 @@
 
 	coupleBK2cannedtpsTpsAccelTable();
 	coupleBK2cannedboostTableOpenLoop();
+	coupleBK2cannedvvtTable1();
+	coupleBK2cannedvvtTable2();
+	coupleBK2cannedscriptTable3();
 	coupleBK2cannedscriptTable4();
+	coupleBK2cannedALSTimingRetardTable();
+	coupleBK2cannedALSFuelAdjustment();
+	coupleBK2cannedALSIgnSkipTable();
 	coupleBK2cannedignitionTable();
+	coupleBK2cannedignitionIatCorrTable();
 	coupleBK2cannedveTable();
+	coupleBK2cannedmapEstimateTable();
+	coupleBK2cannedinjectionPhase();
 	coupleBK2cannedpedalToTpsTable();
+	coupleBK2cannedthrottle2TrimTable();
+	coupleBK2cannedmaxKnockRetardTable();
 	coupleBK2cannedlambdaTable();
-	coupleBK2cannedtcuSolenoidTable();
 	coupleBK2cannedpostCrankingFactor();
 ```

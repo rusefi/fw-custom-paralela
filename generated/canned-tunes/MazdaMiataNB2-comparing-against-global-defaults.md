@@ -161,9 +161,9 @@
     engineConfiguration->idleTimingPid.pFactor = 0.01;
     // default 10.0
     engineConfiguration->idleTimingPid.maxValue = 12;
-    // default 95.0
+    // default 92.0
     engineConfiguration->fanOnTemperature = 97;
-    // default 91.0
+    // default 88.0
     engineConfiguration->fanOffTemperature = 94;
     // default "false"
     engineConfiguration->enableFan1WithAc = true;
@@ -275,6 +275,8 @@
     engineConfiguration->tpsAccelLookback = 0.2;
     // default 40.0
     engineConfiguration->tpsAccelEnrichmentThreshold = 4;
+    // default 1.0
+    engineConfiguration->tpsAccelFractionDivisor = 0;
     // default 0.3
     engineConfiguration->wwaeTau = 0.15;
     // default 0.0
@@ -291,10 +293,6 @@
     engineConfiguration->launchSpeedThreshold = 1;
     // default 3000.0
     engineConfiguration->launchRpm = 3500;
-    // default 500.0
-    engineConfiguration->launchTimingRpmRange = 100;
-    // default 500.0
-    engineConfiguration->hardCutRpmRange = 100;
     // default "false"
     engineConfiguration->enableLaunchRetard = true;
     // default 0.0
@@ -341,14 +339,13 @@
 	nb2cannedboostTableOpenLoop();
 	nb2cannedboostTableClosedLoop();
 	nb2cannedvvtTable1();
+	nb2cannedvvtTable2();
+	nb2cannedscriptTable3();
 	nb2cannedscriptTable4();
 	nb2cannedignitionTable();
-	nb2cannedignitionIatCorrTable();
 	nb2cannedveTable();
 	nb2cannedidleVeTable();
-	nb2cannedmapEstimateTable();
 	nb2cannedinjectionPhase();
 	nb2cannedlambdaTable();
-	nb2cannedtcuSolenoidTable();
 	nb2cannedpostCrankingFactor();
 ```
