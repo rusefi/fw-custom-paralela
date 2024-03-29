@@ -43,6 +43,12 @@
     engineConfiguration->boostClosedLoopBlends[1].blendParameter = GPPWM_Zero;
     // default "CLT"
     engineConfiguration->boostClosedLoopBlends[1].yAxisOverride = GPPWM_Zero;
+    // default "Normal"
+    engineConfiguration->clutchDownPinInverted = false;
+    // default "Normal"
+    engineConfiguration->clutchUpPinInverted = false;
+    // default "Normal"
+    engineConfiguration->flexSensorInverted = false;
     // default 0.0
     engineConfiguration->mapLowValueVoltage = 2.91;
     // default "false"

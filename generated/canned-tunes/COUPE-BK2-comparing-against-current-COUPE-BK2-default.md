@@ -27,6 +27,10 @@
     engineConfiguration->boostOpenLoopBlends[0].blendParameter = GPPWM_Zero;
     // default "Aux Temp 2"
     engineConfiguration->boostClosedLoopBlends[1].blendParameter = GPPWM_Zero;
+    // default "Normal"
+    engineConfiguration->clutchDownPinInverted = false;
+    // default "Normal"
+    engineConfiguration->clutchUpPinInverted = false;
     // default 300.0
     engineConfiguration->idle.solenoidFrequency = 200;
     // default "false"
