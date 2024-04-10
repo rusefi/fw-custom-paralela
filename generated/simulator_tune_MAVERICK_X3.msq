@@ -4632,7 +4632,7 @@ end</constant>
          1.72
 </constant>
     </page>
-    <versionInfo firmwareInfo="20240402" nPages="1" signature="rusEFI default.2024.04.10.paralela.3653172668" version="5.0"/>
+    <versionInfo firmwareInfo="20240402" nPages="1" signature="rusEFI default.2024.04.10.paralela.3273636998" version="5.0"/>
     <bibliography author="rusEFI 20240402" writeDate="date"/>
     <settings/>
     <userComments/>
