@@ -1188,7 +1188,7 @@
 #define show_microRusEFI_presets false
 #define show_Proteus_presets false
 #define show_test_presets false
-#define SIGNATURE_HASH 3273636998
+#define SIGNATURE_HASH 2421416277
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1542,7 +1542,7 @@
 #define ts_show_rotary true
 #define ts_show_sd_card true
 #define ts_show_sd_pins true
-#define ts_show_software_knock false
+#define ts_show_software_knock true
 #define ts_show_speedo_settings true
 #define ts_show_spi true
 #define ts_show_spi2_enable true
@@ -1563,7 +1563,7 @@
 #define ts_show_vr_threshold_all false
 #define ts_show_vr_threshold_pins true
 #define ts_show_vvt_output true
-#define TS_SIGNATURE "rusEFI default.2024.04.10.paralela.3273636998"
+#define TS_SIGNATURE "rusEFI default.2024.04.11.paralela.2421416277"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_SINGLE_WRITE_COMMAND 'W'
