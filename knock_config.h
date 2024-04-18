@@ -1,7 +1,7 @@
 /**
  * @file knock_config.h
  */
-/*
+
 #pragma once
 
 // Knock is on ADC3
@@ -14,4 +14,4 @@
 // Sample rate & time - depends on the exact MCU
 #define KNOCK_SAMPLE_TIME ADC_SAMPLE_84
 #define KNOCK_SAMPLE_RATE (STM32_PCLK2 / (4 * (84 + 12)))
-*/
+
