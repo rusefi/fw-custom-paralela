@@ -1,8 +1,4 @@
 pins:
-  - id: B14
-    class: outputs
-    ts_name: B14 Output
-
   - id: EFI_ADC_0
     class: analog_inputs
 # getAdcChannelBrainPin in 'stm32_adc.cpp' says EFI_ADC_0 is PA0
@@ -20,9 +16,9 @@ pins:
     class: analog_inputs
     ts_name: Knock (A3)
     
-  - id: EFI_ADC_6
-    class: [switch_inputs, event_inputs]
-    ts_name: CMP (A6)
+#  - id: EFI_ADC_6
+#    class: [switch_inputs, event_inputs]
+#    ts_name: CMP (A6)
 
   - id: EFI_ADC_7
     class: analog_inputs
@@ -32,9 +28,9 @@ pins:
     class: analog_inputs
     ts_name: O2-B (B0)
 
-  - id: EFI_ADC_9
-    class: [switch_inputs, event_inputs]
-    ts_name: CKP (B1)
+#  - id: EFI_ADC_9
+#    class: [switch_inputs, event_inputs]
+ #   ts_name: CKP (B1)
 
   - id: EFI_ADC_10
     class: analog_inputs
