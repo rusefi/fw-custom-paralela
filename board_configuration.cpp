@@ -11,6 +11,11 @@ Gpio getRunningLedPin() {
 Gpio getWarningLedPin() {
 	return Gpio::Unassigned;
 }
+
+void setBoardDefaultConfiguration() {
+	engineConfiguration->vbattDividerCoeff = 10.2f;
+	engineConfiguration->vbattAdcChannel = EFI_ADC_12;
+}
 /*
 static void setInjectorPins() {
 	engineConfiguration->injectionPins[0] = Gpio::E0;
