@@ -73,7 +73,5 @@ pins:
     ts_name: VR/Hall 3 (E4)
 
   - id: [A8, A8]
-    meta: PA8
-    function: Ignition 1
     class: outputs
     ts_name: Ignition 1
