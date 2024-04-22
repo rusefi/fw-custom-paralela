@@ -130,6 +130,6 @@ pins:
   #  ts_name: I/O PE12
 
 
-  - id: [E2, E2]
+  - id: [B1, B1]
     class: [switch_inputs, event_inputs]
-    ts_name: VR/Hall 1 (E2)
+    ts_name: CKP
