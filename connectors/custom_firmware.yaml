@@ -130,7 +130,7 @@ pins:
   #  ts_name: I/O PE12
 
 
-  - id: [B1, B1]
+  - id: [A6, A6]
     class: [switch_inputs, event_inputs]
     ts_name: CKP (PB1)
     
