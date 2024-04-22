@@ -80,21 +80,21 @@ pins:
     class: outputs
     ts_name: Boost (PB9)
 
-  - id: B14
-    class: outputs
-    ts_name: StepDir
+  #- id: B14
+  #  class: outputs
+  #  ts_name: StepDir
 
-  - id: B15
-    class: outputs
-    ts_name: StepStep
+  #- id: B15
+  #  class: outputs
+  #  ts_name: StepStep
 
-  - id: C5
-    class: outputs
-    ts_name: Idle
+  #- id: C5
+  #  class: outputs
+  #  ts_name: Idle
 
-  - id: C13
-    class: outputs
-    ts_name: Fan (PC13)
+  #- id: C13
+  #  class: outputs
+  #  ts_name: Fan (PC13)
     
   #- id: D0
   #  class: can
