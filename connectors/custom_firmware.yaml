@@ -1,5 +1,5 @@
 pins:
-    - id: B1
+    - id: E2
     class:  event_inputs
     ts_name: CKP (PB1)
     
