@@ -104,9 +104,13 @@ pins:
   #  class: can
   #  ts_name: CAN Tx
 
-  - id: [PD11, PD11]
-    class: [output, switch_inputs]
+ - id: D11
+    class: outputs
     ts_name: I/O PD11
+
+ # - id: [PD11, PD11]
+ #   class: [output, switch_inputs]
+ #   ts_name: I/O PD11
 
   #- id: [D12, D12]
   #  class: [output, switch_inputs]
