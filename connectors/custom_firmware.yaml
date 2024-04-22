@@ -132,4 +132,8 @@ pins:
 
   - id: [B1, B1]
     class: [switch_inputs, event_inputs]
-    ts_name: CKP
+    ts_name: CKP (PB1)
+    
+ - id: [A6, A6]
+    class: [switch_inputs, event_inputs]
+    ts_name: CMP (A6)
