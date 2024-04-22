@@ -24,6 +24,10 @@ pins:
  #   class: [switch_inputs, event_inputs]
  #   ts_name: CMP (A6)
 
+    - id: [E2, E2]
+    class: [switch_inputs, event_inputs]
+    ts_name: VR/Hall 1 (E2)
+
   - id: EFI_ADC_8
     class: analog_inputs
     ts_name: O2-2 (B0)
