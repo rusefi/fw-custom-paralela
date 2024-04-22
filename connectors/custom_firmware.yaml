@@ -1,7 +1,5 @@
 pins:
-    - id: [E2, E2]
-    class: [switch_inputs, event_inputs]
-    ts_name: VR/Hall 1 (E2)
+    
     
   - id: EFI_ADC_0
     class: analog_inputs
@@ -131,5 +129,7 @@ pins:
   #- id: [E12, E12]
   #  class: [output, switch_inputs]
   #  ts_name: I/O PE12
-
+- id: [E2, E2]
+    class: [switch_inputs, event_inputs]
+    ts_name: VR/Hall 1 (E2)
 
