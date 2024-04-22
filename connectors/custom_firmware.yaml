@@ -68,6 +68,6 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: VR/Hall 3 (E4)
 
-  - id: [A8, A8]
+  - id: A8
     class: outputs
     ts_name: Ignition 1
