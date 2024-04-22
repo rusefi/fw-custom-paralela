@@ -12,9 +12,9 @@ pins:
     class: analog_inputs
     ts_name: CLT (A2)
 
-  - id: EFI_ADC_3
-    class: analog_inputs
-    ts_name: Knock (A3)
+  #- id: EFI_ADC_3
+ #   class: analog_inputs
+   # ts_name: Knock (A3)
 
      - id: [B1, B1]
     class: [switch_inputs, event_inputs]
