@@ -17,9 +17,9 @@ pins:
  #   class: analog_inputs
    # ts_name: Knock (A3)
 
-    # - id: B1
-    #class: event_inputs
-    #ts_name: CKP (B1)
+    - id: Gpio::B1
+    class: event_inputs
+    ts_name: CKP (B1)
     
  # - id: [A6, A6]
  #   class: [switch_inputs, event_inputs]
@@ -97,9 +97,9 @@ pins:
     class: outputs
     ts_name: Fan (PC13)
     
-  - id: Gpio::D0
-    class: can
-    ts_name: CAN Rx
+#  - id: Gpio::D0
+#    class: can
+#    ts_name: CAN Rx
 
   #- id: Gpio::D1
   #  class: can
