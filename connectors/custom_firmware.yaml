@@ -96,13 +96,13 @@ pins:
     class: outputs
     ts_name: Fan (PC13)
     
-  - id: D0
-    class: can
-    ts_name: CAN Rx
+ # - id: D0
+ #   class: can
+ #   ts_name: CAN Rx
 
-  - id: D1
-    class: can
-    ts_name: CAN Tx
+ # - id: D1
+ #   class: can
+ #   ts_name: CAN Tx
 
   #- id: [D11, D12]
   #  class: [output, switch_inputs]
