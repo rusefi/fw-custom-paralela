@@ -104,7 +104,7 @@ pins:
   #  class: can
   #  ts_name: CAN Tx
 
-  - id: [Gpio::D11, Gpio::D11]
+  - id: [PD11, PD11]
     class: [output, switch_inputs]
     ts_name: I/O PD11
 
