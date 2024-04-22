@@ -96,34 +96,34 @@ pins:
     class: outputs
     ts_name: Fan (PC13)
     
-  - id: D0
-    class: can
-    ts_name: CAN Rx
+  #- id: D0
+  #  class: can
+  #  ts_name: CAN Rx
 
-  - id: D1
-    class: can
-    ts_name: CAN Tx
+  #- id: D1
+  #  class: can
+  #  ts_name: CAN Tx
 
-  - id: [D11, D12]
-    class: [output, switch_inputs]
-    ts_name: I/O PD11
+  #- id: [D11, D12]
+  #  class: [output, switch_inputs]
+  #  ts_name: I/O PD11
 
-  - id: [D12, D12]
-    class: [output, switch_inputs]
-    ts_name: I/O PD12
+  #- id: [D12, D12]
+  #  class: [output, switch_inputs]
+  #  ts_name: I/O PD12
 
-  - id: [D13, D13]
-    class: [output, switch_inputs]
-    ts_name: I/O PD13
+  #- id: [D13, D13]
+  #  class: [output, switch_inputs]
+  #  ts_name: I/O PD13
 
-  - id: [D14, D14]
-    class: [output, switch_inputs]
-    ts_name: I/O PD14
+  #- id: [D14, D14]
+  #  class: [output, switch_inputs]
+  #  ts_name: I/O PD14
 
-  - id: [E11, E11]
-    class: [output, switch_inputs]
-    ts_name: I/O PE11
+  #- id: [E11, E11]
+  #  class: [output, switch_inputs]
+  #  ts_name: I/O PE11
 
-  - id: [E12, E12]
-    class: [output, switch_inputs]
-    ts_name: I/O PE12
+  #- id: [E12, E12]
+  #  class: [output, switch_inputs]
+  #  ts_name: I/O PE12
