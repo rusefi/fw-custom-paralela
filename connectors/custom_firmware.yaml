@@ -1,5 +1,3 @@
-meta: config/boards/hellen_meta.h
-
 pins:
     
   - id: EFI_ADC_0
@@ -26,14 +24,6 @@ pins:
  # - id: [A6, A6]
  #   class: [switch_inputs, event_inputs]
  #   ts_name: CMP (A6)
-
-- pin: C7
-    id: [H144_IN_CAM, H144_IN_CAM]
-    class: [event_inputs, switch_inputs]
-    function: Camshaft Intake Hall Sensor or Generic Digital Input
-    type: hall
-    ts_name: CAM Hall/Digital
-   
 
   - id: EFI_ADC_8
     class: analog_inputs
@@ -131,9 +121,9 @@ pins:
   #  class: [output, switch_inputs]
   #  ts_name: I/O PD14
 
-  - id: [E11, E11]
-    class: [output, switch_inputs]
-    ts_name: I/O PE11
+#  - id: [E11, E11]
+#    class: [output, switch_inputs]
+#    ts_name: I/O PE11
 
   #- id: [E12, E12]
   #  class: [output, switch_inputs]
