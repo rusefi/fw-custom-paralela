@@ -1,6 +1,6 @@
 pins:
-    - id: [B1, B1]
-    class: [switch_inputs, event_inputs]
+    - id: B1
+    class:  event_inputs
     ts_name: CKP (PB1)
     
   - id: EFI_ADC_0
