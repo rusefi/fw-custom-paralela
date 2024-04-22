@@ -96,17 +96,17 @@ pins:
     class: outputs
     ts_name: Fan (PC13)
     
-  - id: Gpio::D0
-    class: can
-    ts_name: CAN Rx
+ # - id: Gpio::D0
+ #   class: can
+ #   ts_name: CAN Rx
 
-  - id: Gpio::D1
-    class: can
-    ts_name: CAN Tx
+  #- id: Gpio::D1
+  #  class: can
+  #  ts_name: CAN Tx
 
-  #- id: [D11, D12]
-  #  class: [output, switch_inputs]
-  #  ts_name: I/O PD11
+  - id: [D11, D11]
+    class: [output, switch_inputs]
+    ts_name: I/O PD11
 
   #- id: [D12, D12]
   #  class: [output, switch_inputs]
