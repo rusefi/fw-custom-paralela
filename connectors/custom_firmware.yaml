@@ -97,9 +97,9 @@ pins:
     class: outputs
     ts_name: Fan (PC13)
     
- # - id: Gpio::D0
- #   class: can
- #   ts_name: CAN Rx
+  - id: Gpio::D0
+    class: can
+    ts_name: CAN Rx
 
   #- id: Gpio::D1
   #  class: can
