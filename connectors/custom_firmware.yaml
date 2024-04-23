@@ -25,7 +25,7 @@ pins:
  #   class: [switch_inputs, event_inputs]
  #   ts_name: CMP (A6)
 
-   - id: EFI_ADC_11
+  - id: EFI_ADC_11
     class: analog_inputs
     ts_name: BattV  (C1)
   
