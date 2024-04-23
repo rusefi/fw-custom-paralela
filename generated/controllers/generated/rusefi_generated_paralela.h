@@ -1111,8 +1111,8 @@
 #define operation_mode_e_FOUR_STROKE_TWELVE_TIMES_CRANK_SENSOR 6
 #define operation_mode_e_OM_NONE 0
 #define operation_mode_e_TWO_STROKE 3
-#define output_pin_e_enum 0="NONE",27="Boost (PB9)",47="Fan (PC13)",70="Fuel Pump (PE4)",39="Idle",10="Ignition 1",43="Ignition 2",12="Ignition 3",42="Ignition 4",66="Injector 1",72="Injector 2",59="Injector 3",69="Injector 4",32="StepDir",33="StepStep",26="Tach (PB8)"
-#define output_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 1","INVALID","Ignition 3","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Tach (PB8)","Boost (PB9)","INVALID","INVALID","INVALID","INVALID","StepDir","StepStep","INVALID","INVALID","INVALID","INVALID","INVALID","Idle","INVALID","INVALID","Ignition 4","Ignition 2","INVALID","INVALID","INVALID","Fan (PC13)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Injector 3","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Injector 1","INVALID","INVALID","Injector 4","Fuel Pump (PE4)","INVALID","Injector 2"
+#define output_pin_e_enum 0="NONE",27="Boost (PB9)",47="Fan (PC13)",70="Fuel Pump (PE4)",39="Idle",10="Ignition 1",43="Ignition 2",61="Ignition 3",42="Ignition 4",66="Injector 1",72="Injector 2",59="Injector 3",69="Injector 4",32="StepDir",33="StepStep",26="Tach (PB8)"
+#define output_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 1","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Tach (PB8)","Boost (PB9)","INVALID","INVALID","INVALID","INVALID","StepDir","StepStep","INVALID","INVALID","INVALID","INVALID","INVALID","Idle","INVALID","INVALID","Ignition 4","Ignition 2","INVALID","INVALID","INVALID","Fan (PC13)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Injector 3","INVALID","Ignition 3","INVALID","INVALID","INVALID","INVALID","Injector 1","INVALID","INVALID","Injector 4","Fuel Pump (PE4)","INVALID","Injector 2"
 #define PACK_ADD_TEMPERATURE 40
 #define PACK_MULT_AFR 1000
 #define PACK_MULT_AFR_CFG 10
@@ -1214,7 +1214,7 @@
 #define show_microRusEFI_presets false
 #define show_Proteus_presets false
 #define show_test_presets false
-#define SIGNATURE_HASH 4218864476
+#define SIGNATURE_HASH 2541354410
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1591,7 +1591,7 @@
 #define ts_show_vr_threshold_all false
 #define ts_show_vr_threshold_pins true
 #define ts_show_vvt_output true
-#define TS_SIGNATURE "rusEFI default.2024.04.23.paralela.4218864476"
+#define TS_SIGNATURE "rusEFI default.2024.04.23.paralela.2541354410"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_SINGLE_WRITE_COMMAND 'W'
