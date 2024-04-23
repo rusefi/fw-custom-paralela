@@ -3,3 +3,10 @@
 
 
 #define LUA_SCRIPT_SIZE 10100
+
+#define ts_show_spi false
+#define ts_show_can2 false
+#define ts_show_hardware_simulator false
+#define ts_show_tcu false
+#define ts_show_gdi false
+#define ts_show_fancy_hardware false
