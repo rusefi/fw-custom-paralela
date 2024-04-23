@@ -138,6 +138,26 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: CMP
 
-  - id: D11
-    class: outputs
-    ts_name: I/O D11
+  - id: [PD11, PD11]
+    class: [output, switch_inputs]
+    ts_name: I/O PD11
+
+  - id: [PD12, PD12]
+    class: [output, switch_inputs]
+    ts_name: I/O PD12
+
+  - id: [PD13, PD13]
+    class: [output, switch_inputs]
+    ts_name: I/O PD13
+
+  - id: [PD14, PD14]
+    class: [output, switch_inputs]
+    ts_name: I/O PD14
+
+  - id: [PE11, PE11]
+    class: [output, switch_inputs]
+    ts_name: I/O PE11
+
+  - id: [PE12, PE12]
+    class: [output, switch_inputs]
+    ts_name: I/O PE12
