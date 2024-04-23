@@ -18,12 +18,12 @@ void setBoardDefaultConfiguration() {
 }
 
 static Gpio OUTPUTS[] = {
-    Gpio::PD11, // 
-    Gpio::PD12, // 
-    Gpio::PD13, //
-    Gpio::PD14, //
-    Gpio::PE11, //
-    Gpio::PE12,
+    PD11, // 
+    PD12, // 
+    PD13, //
+    PD14, //
+    PE11, //
+    PE12,
 };
 
 int getBoardMetaOutputsCount() {
