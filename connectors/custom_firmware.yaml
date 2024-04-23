@@ -77,6 +77,10 @@ pins:
     class: outputs
     ts_name: Fuel Pump (PE4)
 
+  - id: E5
+    class: outputs
+    ts_name: NOS (PE5)
+    
   - id: B8
     class: outputs
     ts_name: Tach (PB8)
@@ -89,8 +93,8 @@ pins:
     class: outputs
     ts_name: StepDir
 
-  - id: B15
-    class: outputs
+  - id: [B15, B15]
+    class: [outputs, event_inputs]
     ts_name: StepStep
 
   - id: C5
@@ -109,6 +113,9 @@ pins:
   #  class: can
   #  ts_name: CAN Tx
 
+  - id: [E2, E2]
+    class: [switch_inputs, event_inputs]
+    ts_name: Clutch
 
   - id: [B1, B1]
     class: [switch_inputs, event_inputs]
@@ -142,6 +149,6 @@ pins:
     class: [outputs, switch_inputs]
     ts_name: I/O PE11
 
-  - id: [E12, E12]
-    class: [outputs, switch_inputs]
+  - id: [E12, E12, E12]
+    class: [outputs, switch_inputs, event_inputs]
     ts_name: I/O PE12
