@@ -138,7 +138,7 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: CMP
 
-  - id: [PD11, PD11]
-    class: [output, switch_inputs]
+  - id: PD11
+    class: switch_inputs
     ts_name: I/O PD11
   
