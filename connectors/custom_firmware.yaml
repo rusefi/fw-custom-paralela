@@ -122,22 +122,22 @@ pins:
     class: [outputs, switch_inputs]
     ts_name: I/O PD11
 
-  - id: [PD12, PD12]
+  - id: [D12, D12]
     class: [outputs, switch_inputs]
     ts_name: I/O PD12
 
-  - id: [PD13, PD13]
+  - id: [D13, D13]
     class: [outputs, switch_inputs]
     ts_name: I/O PD13
 
-  - id: [PD14, PD14]
+  - id: [D14, D14]
     class: [outputs, switch_inputs]
     ts_name: I/O PD14
 
-  - id: [PE11, PE11]
+  - id: [E11, E11]
     class: [outputs, switch_inputs]
     ts_name: I/O PE11
 
-  - id: [PE12, PE12]
+  - id: [E12, E12]
     class: [outputs, switch_inputs]
     ts_name: I/O PE12
