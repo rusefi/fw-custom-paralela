@@ -117,6 +117,10 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: Clutch
 
+  - id: [A7, A7]
+    class: [switch_inputs, event_inputs]
+    ts_name: FlexFuel
+
   - id: [B1, B1]
     class: [switch_inputs, event_inputs]
     ts_name: CKP
