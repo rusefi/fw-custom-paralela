@@ -16,6 +16,23 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->vbattDividerCoeff = 10.2f;
 	engineConfiguration->vbattAdcChannel = EFI_ADC_12;
 }
+
+static Gpio OUTPUTS[] = {
+    Gpio::PD11, // 
+    Gpio::PD12, // 
+    Gpio::PD13, //
+    Gpio::PD14, //
+    Gpio::PE11, //
+    Gpio::PE12,
+};
+
+int getBoardMetaOutputsCount() {
+    return efi::size(OUTPUTS);
+}
+
+Gpio* getBoardMetaOutputs() {
+    return OUTPUTS;
+}
 /*
 static void setInjectorPins() {
 	engineConfiguration->injectionPins[0] = Gpio::E0;
