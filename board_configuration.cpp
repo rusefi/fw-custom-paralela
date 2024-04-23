@@ -33,6 +33,15 @@ int getBoardMetaOutputsCount() {
 Gpio* getBoardMetaOutputs() {
     return OUTPUTS;
 }
+
+void setCustomVbatt() {
+	// set vbatt_divider 5.835
+	// 33k / 6.8k
+	engineConfiguration->vbattDividerCoeff = 10.2; // 5.835
+
+	engineConfiguration->vbattAdcChannel = EFI_ADC_12;
+
+}
 /*
 static void setInjectorPins() {
 	engineConfiguration->injectionPins[0] = Gpio::E0;
