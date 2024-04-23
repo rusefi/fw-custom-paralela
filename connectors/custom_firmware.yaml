@@ -45,7 +45,7 @@ pins:
     class: outputs
     ts_name: Ignition 2
 
-  - id: D11
+  - id: A10
     class: outputs
     ts_name: Ignition 3
 
