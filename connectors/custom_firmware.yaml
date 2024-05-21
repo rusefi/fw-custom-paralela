@@ -150,7 +150,7 @@ pins:
     ts_name: I/O PD14
 
   - id: [E11, E11]
-    class: [outputs, switch_inputs]
+    class: [outputs, switch_inputs, event_inputs]
     ts_name: I/O PE11
 
   - id: [E12, E12, E12]
