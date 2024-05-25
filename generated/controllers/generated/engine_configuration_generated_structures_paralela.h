@@ -1,4 +1,4 @@
-// this section was generated automatically by rusEFI tool config_definition-all.jar based on (unknown script) integration/rusefi_config.txt Tue Apr 23 19:39:21 UTC 2024
+// this section was generated automatically by rusEFI tool config_definition-all.jar based on (unknown script) integration/rusefi_config.txt Sat May 25 00:51:08 UTC 2024
 // by class com.rusefi.output.CHeaderConsumer
 // begin
 #pragma once
@@ -216,12 +216,10 @@ struct gppwm_channel {
 	 */
 	gppwm_channel_e rpmAxis;
 	/**
-	 * units: load
 	 * offset 10
 	 */
 	scaled_channel<int16_t, 2, 1> loadBins[GPPWM_LOAD_COUNT];
 	/**
-	 * units: RPM
 	 * offset 26
 	 */
 	int16_t rpmBins[GPPWM_RPM_COUNT];
@@ -934,9 +932,8 @@ struct engine_configuration_s {
 	 */
 	int hip9011PrescalerAndSDO;
 	/**
-	 * We calculate knock band based of cylinderBore
-	 *  Use this to override - kHz knock band override
-	 * Requires power cycling to effect
+	 * Use any online calculator and input your bore.
+	 * Reminder that in some cases double frequency works better!
 	 * units: kHz
 	 * offset 428
 	 */
@@ -1635,7 +1632,7 @@ struct engine_configuration_s {
 	bool pauseEtbControl : 1 {};
 	/**
 	offset 752 bit 27 */
-	bool alignEngineSnifferAtTDC : 1 {};
+	bool unusedAlign : 1 {};
 	/**
 	offset 752 bit 28 */
 	bool verboseKLine : 1 {};
@@ -1648,7 +1645,7 @@ struct engine_configuration_s {
 	bool enableAemXSeries : 1 {};
 	/**
 	offset 752 bit 31 */
-	bool unusedBit_225_31 : 1 {};
+	bool unused32nd : 1 {};
 	/**
 	 * offset 756
 	 */
@@ -1698,14 +1695,13 @@ struct engine_configuration_s {
 	 */
 	uint8_t minimumBoostClosedLoopMap;
 	/**
-	 * Optional Radiator Fan used with A/C
 	 * offset 778
 	 */
-	output_pin_e acFanPin;
+	uint16_t smoothRetardStartRpm;
 	/**
 	 * offset 780
 	 */
-	pin_output_mode_e acFanPinMode;
+	gppwm_channel_e boostOpenLoopYAxis;
 	/**
 	 * offset 781
 	 */
@@ -1815,7 +1811,7 @@ struct engine_configuration_s {
 	/**
 	 * offset 828
 	 */
-	Gpio debugMapAveraging;
+	uint16_t smoothRetardEndRpm;
 	/**
 	 * offset 830
 	 */
@@ -2032,7 +2028,6 @@ struct engine_configuration_s {
 	offset 920 bit 13 */
 	bool verboseVVTDecoding : 1 {};
 	/**
-	 * get invertCamVVTSignal
 	offset 920 bit 14 */
 	bool invertCamVVTSignal : 1 {};
 	/**
@@ -2170,17 +2165,13 @@ struct engine_configuration_s {
 	 */
 	int launchRpmWindow;
 	/**
-	 * Spark Skip Transition Target
-	 * units: %
 	 * offset 988
 	 */
-	int launchSparkSkipPercent;
+	int unusedHere12;
 	/**
-	 * Duty Cycle for the Boost Solenoid
-	 * units: %
 	 * offset 992
 	 */
-	int launchBoostDuty;
+	int unusedHere13;
 	/**
 	 * offset 996
 	 */
@@ -2501,6 +2492,7 @@ struct engine_configuration_s {
 	offset 1316 bit 14 */
 	bool twoWireBatchIgnition : 1 {};
 	/**
+	 * Read MAP sensor on ECU start-up to use as baro value.
 	offset 1316 bit 15 */
 	bool useFixedBaroCorrFromMap : 1 {};
 	/**
@@ -2814,10 +2806,10 @@ struct engine_configuration_s {
 	bool useHardSkipInTraction : 1 {};
 	/**
 	offset 1496 bit 9 */
-	bool fancySmartS : 1 {};
+	bool unusedHere1212 : 1 {};
 	/**
 	offset 1496 bit 10 */
-	bool fancySmartL : 1 {};
+	bool unusedHere1213 : 1 {};
 	/**
 	 * Use Aux Speed 1 as one of speeds for wheel slip ratio?
 	offset 1496 bit 11 */
@@ -2847,7 +2839,7 @@ struct engine_configuration_s {
 	bool skipBoardCanDash : 1 {};
 	/**
 	offset 1496 bit 19 */
-	bool unusedBit_503_19 : 1 {};
+	bool brakePedalPinInverted : 1 {};
 	/**
 	offset 1496 bit 20 */
 	bool devBit0 : 1 {};
@@ -2877,13 +2869,13 @@ struct engine_configuration_s {
 	bool skipADC12bitAssert : 1 {};
 	/**
 	offset 1496 bit 29 */
-	bool unusedBit_513_29 : 1 {};
+	bool invertExhaustCamVVTSignal : 1 {};
 	/**
 	offset 1496 bit 30 */
-	bool unusedBit_513_30 : 1 {};
+	bool enableKnockSpectrogram : 1 {};
 	/**
 	offset 1496 bit 31 */
-	bool unusedBit_513_31 : 1 {};
+	bool unusedBit_515_31 : 1 {};
 	/**
 	 * This is the duration in cycles that the IAC will take to reach its normal idle position, it can be used to hold the idle higher for a few seconds after cranking to improve startup.\Should be 100 once tune is better
 	 * units: cycles
@@ -4186,10 +4178,9 @@ struct engine_configuration_s {
 	 */
 	float ALSSkipRatio;
 	/**
-	 * units: %
 	 * offset 3564
 	 */
-	uint8_t ALSMaxDriverThrottleIntent;
+	uint8_t unusedSorry11;
 	/**
 	 * offset 3565
 	 */
@@ -4559,7 +4550,7 @@ struct engine_configuration_s {
 	 * units: units
 	 * offset 4020
 	 */
-	uint8_t unusedOftenChangesDuringFirmwareUpdate[200];
+	uint8_t unusedOftenChangesDuringFirmwareUpdate[END_OF_CALIBRATION_PADDING];
 };
 static_assert(sizeof(engine_configuration_s) == 4220);
 
@@ -4808,7 +4799,7 @@ struct persistent_config_s {
 	/**
 	 * offset 5332
 	 */
-	uint8_t fancyOptions[FANCY_OPTIONS_COUNT];
+	uint8_t unusedGapHere[16];
 	/**
 	 * offset 5348
 	 */
@@ -4823,7 +4814,6 @@ struct persistent_config_s {
 	 */
 	scaled_channel<uint8_t, 1, 2> boostTableClosedLoop[BOOST_LOAD_COUNT][BOOST_RPM_COUNT];
 	/**
-	 * units: %
 	 * offset 5484
 	 */
 	uint8_t boostTpsBins[BOOST_LOAD_COUNT];
@@ -5051,7 +5041,7 @@ struct persistent_config_s {
 	 */
 	scaled_channel<uint16_t, 10, 1> veTable[FUEL_LOAD_COUNT][FUEL_RPM_COUNT];
 	/**
-	 * units: kPa
+	 * units: {bitStringValue(fuelUnits, fuelAlgorithm) }
 	 * offset 19156
 	 */
 	uint16_t veLoadBins[FUEL_LOAD_COUNT];
@@ -5289,17 +5279,17 @@ struct persistent_config_s {
 	 * units: deg
 	 * offset 21272
 	 */
-	scaled_channel<uint8_t, 4, 1> maxKnockRetardTable[6][6];
+	scaled_channel<uint8_t, 4, 1> maxKnockRetardTable[KNOCK_TABLE_SIZE][KNOCK_TABLE_SIZE];
 	/**
 	 * units: %
 	 * offset 21308
 	 */
-	uint8_t maxKnockRetardLoadBins[6];
+	uint8_t maxKnockRetardLoadBins[KNOCK_TABLE_SIZE];
 	/**
 	 * units: RPM
 	 * offset 21314
 	 */
-	scaled_channel<uint8_t, 1, 100> maxKnockRetardRpmBins[6];
+	scaled_channel<uint8_t, 1, 100> maxKnockRetardRpmBins[KNOCK_TABLE_SIZE];
 	/**
 	 * units: deg
 	 * offset 21320
@@ -5626,4 +5616,4 @@ struct persistent_config_s {
 static_assert(sizeof(persistent_config_s) == 24756);
 
 // end
-// this section was generated automatically by rusEFI tool config_definition-all.jar based on (unknown script) integration/rusefi_config.txt Tue Apr 23 19:39:21 UTC 2024
+// this section was generated automatically by rusEFI tool config_definition-all.jar based on (unknown script) integration/rusefi_config.txt Sat May 25 00:51:08 UTC 2024
