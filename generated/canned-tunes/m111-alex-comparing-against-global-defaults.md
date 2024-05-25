@@ -28,6 +28,14 @@
     // default 300.0
     engineConfiguration->fuelReferencePressure = 0;
     // default 0.0
+    engineConfiguration->cylinderBankSelect[0] = 1;
+    // default 0.0
+    engineConfiguration->cylinderBankSelect[1] = 1;
+    // default 0.0
+    engineConfiguration->cylinderBankSelect[2] = 1;
+    // default 0.0
+    engineConfiguration->cylinderBankSelect[3] = 1;
+    // default 0.0
     engineConfiguration->cylinderBankSelect[4] = 1;
     // default 0.0
     engineConfiguration->cylinderBankSelect[5] = 1;
@@ -145,6 +153,8 @@
     engineConfiguration->pidExtraForLowRpm = 45;
     // default "false"
     engineConfiguration->useIacPidMultTable = true;
+    // default 50.0
+    engineConfiguration->manIdlePosition = 32;
     // default 15.0
     engineConfiguration->acIdleExtraOffset = 2;
     // default 2.0
@@ -429,6 +439,7 @@
 	cannedtpsTpsAccelFromRpmBins();
 	cannedtpsTpsAccelToRpmBins();
 	cannedtpsTpsAccelTable();
+	cannedtractionControlSlipBins();
 	cannedboostRpmBins();
 	cannedboostTpsBins();
 	cannedboostTableOpenLoop();

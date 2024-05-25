@@ -20,6 +20,14 @@
     // default 300.0
     engineConfiguration->fuelReferencePressure = 0;
     // default 0.0
+    engineConfiguration->cylinderBankSelect[0] = 1;
+    // default 0.0
+    engineConfiguration->cylinderBankSelect[1] = 1;
+    // default 0.0
+    engineConfiguration->cylinderBankSelect[2] = 1;
+    // default 0.0
+    engineConfiguration->cylinderBankSelect[3] = 1;
+    // default 0.0
     engineConfiguration->cylinderBankSelect[4] = 1;
     // default 0.0
     engineConfiguration->cylinderBankSelect[5] = 1;
@@ -63,6 +71,8 @@
     engineConfiguration->tps2SecondaryMin = 0;
     // default 0.0
     engineConfiguration->tps2SecondaryMax = 1000;
+    // default 5.0
+    engineConfiguration->etbSplit = 10;
     // default 0.0
     engineConfiguration->throttlePedalUpVoltage = 0.840429;
     // default 5.0
@@ -71,8 +81,6 @@
     engineConfiguration->throttlePedalSecondaryUpVoltage = 0.395229;
     // default 0.0
     engineConfiguration->throttlePedalSecondaryWOTVoltage = 2.120979;
-    // default 5.0
-    engineConfiguration->etbSplit = 10;
     // default 400.0
     engineConfiguration->mc33_t_max_boost = 470;
     // default 10.0
@@ -344,6 +352,7 @@
 	cannedtpsTpsAccelFromRpmBins();
 	cannedtpsTpsAccelToRpmBins();
 	cannedtpsTpsAccelTable();
+	cannedtractionControlSlipBins();
 	cannedboostRpmBins();
 	cannedboostTableOpenLoop();
 	cannedvvtTable1RpmBins();

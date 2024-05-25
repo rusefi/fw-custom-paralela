@@ -22,6 +22,14 @@
     // default 300.0
     engineConfiguration->fuelReferencePressure = 294;
     // default 0.0
+    engineConfiguration->cylinderBankSelect[0] = 1;
+    // default 0.0
+    engineConfiguration->cylinderBankSelect[1] = 1;
+    // default 0.0
+    engineConfiguration->cylinderBankSelect[2] = 1;
+    // default 0.0
+    engineConfiguration->cylinderBankSelect[3] = 1;
+    // default 0.0
     engineConfiguration->cylinderBankSelect[4] = 1;
     // default 0.0
     engineConfiguration->cylinderBankSelect[5] = 1;
@@ -65,6 +73,8 @@
     engineConfiguration->mapErrorDetectionTooHigh = 250;
     // default "false"
     engineConfiguration->enableAemXSeries = true;
+    // default 50.0
+    engineConfiguration->manIdlePosition = 29;
     // default 2.0
     engineConfiguration->fan1ExtraIdle = 10;
     // default 92.0
@@ -173,6 +183,7 @@
 	cannedtpsTpsAccelFromRpmBins();
 	cannedtpsTpsAccelToRpmBins();
 	cannedtpsTpsAccelTable();
+	cannedtractionControlSlipBins();
 	cannedboostTableOpenLoop();
 	cannedvvtTable1RpmBins();
 	cannedvvtTable1LoadBins();
