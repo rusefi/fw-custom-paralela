@@ -134,16 +134,6 @@ static void cannedcltRevLimitRpm() {
 	copyArray(config->cltRevLimitRpm, hardCodedcltRevLimitRpm);
 }
 
-static void cannedcrankingCycleBins() {
-	static const float hardCodedcrankingCycleBins[8] = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0};
-	copyArray(config->crankingCycleBins, hardCodedcrankingCycleBins);
-}
-
-static void cannedcrankingCycleCoef() {
-	static const float hardCodedcrankingCycleCoef[8] = {2.5, 1.8, 1.5, 1.0, 1.0, 1.0, 1.0, 1.0};
-	copyArray(config->crankingCycleCoef, hardCodedcrankingCycleCoef);
-}
-
 static void cannedcltIdleCorrBins() {
 	static const float hardCodedcltIdleCorrBins[16] = {-40.0, -30.0, -20.0, -10.0, 0.0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0, 100.0, 110.0};
 	copyArray(config->cltIdleCorrBins, hardCodedcltIdleCorrBins);
@@ -1113,6 +1103,16 @@ static void cannedignTrims12_table() {
 	copyTable(engineConfiguration->ignTrims12.ignTrims12_table, hardCodedignTrims12_table);
 }
 
+static void cannedmapEstimateRpmBins() {
+	static const float hardCodedmapEstimateRpmBins[16] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+	copyArray(config->mapEstimateRpmBins, hardCodedmapEstimateRpmBins);
+}
+
+static void cannedmapEstimateTpsBins() {
+	static const float hardCodedmapEstimateTpsBins[16] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+	copyArray(config->mapEstimateTpsBins, hardCodedmapEstimateTpsBins);
+}
+
 static void cannedinjPhaseRpmBins() {
 	static const float hardCodedinjPhaseRpmBins[16] = {650.0, 800.0, 1100.0, 1400.0, 1700.0, 2000.0, 2300.0, 2600.0, 2900.0, 3200.0, 3500.0, 3800.0, 4100.0, 4400.0, 4700.0, 7000.0};
 	copyArray(config->injPhaseRpmBins, hardCodedinjPhaseRpmBins);
@@ -1286,6 +1286,11 @@ static void cannedpostCrankingFactor() {
 {1.200,	1.000,	1.000,	1.000,	1.000,	1.000,	},
 };
 	copyTable(engineConfiguration->postCrankingFactor, hardCodedpostCrankingFactor);
+}
+
+static void cannedcrankingCycleBins() {
+	static const float hardCodedcrankingCycleBins[8] = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0};
+	copyArray(config->crankingCycleBins, hardCodedcrankingCycleBins);
 }
 
 ```

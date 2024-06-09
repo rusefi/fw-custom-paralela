@@ -383,8 +383,6 @@
 	cannedcltRevLimitRpm();
 	cannedetbBiasBins();
 	cannedetbBiasValues();
-	cannedcrankingCycleBins();
-	cannedcrankingCycleCoef();
 	cannedcltIdleCorrBins();
 	cannedcltIdleCorr();
 	cannedcltCrankingCorrBins();
@@ -519,6 +517,8 @@
 	cannedignTrims10_table();
 	cannedignTrims11_table();
 	cannedignTrims12_table();
+	cannedmapEstimateRpmBins();
+	cannedmapEstimateTpsBins();
 	cannedinjPhaseRpmBins();
 	cannedinjPhaseLoadBins();
 	cannedinjectionPhase();
@@ -549,4 +549,5 @@
 	cannedhpfpTargetLoadBins();
 	cannedhpfpCompensation();
 	cannedpostCrankingFactor();
+	cannedcrankingCycleBins();
 ```

@@ -144,16 +144,6 @@ static void nb2cannedcltRevLimitRpm() {
 	copyArray(config->cltRevLimitRpm, hardCodedcltRevLimitRpm);
 }
 
-static void nb2cannedcrankingCycleBins() {
-	static const float hardCodedcrankingCycleBins[8] = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0};
-	copyArray(config->crankingCycleBins, hardCodedcrankingCycleBins);
-}
-
-static void nb2cannedcrankingCycleCoef() {
-	static const float hardCodedcrankingCycleCoef[8] = {2.0, 1.300003, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
-	copyArray(config->crankingCycleCoef, hardCodedcrankingCycleCoef);
-}
-
 static void nb2cannedcltIdleCorrBins() {
 	static const float hardCodedcltIdleCorrBins[16] = {-40.0, -30.0, -20.0, -10.0, 0.0, 9.439941, 19.120117, 30.810059, 42.509766, 54.529785, 64.21973, 71.90039, 80.0, 90.0, 100.0, 110.0};
 	copyArray(config->cltIdleCorrBins, hardCodedcltIdleCorrBins);
@@ -836,6 +826,16 @@ static void nb2cannedignTrims12_table() {
 	copyTable(engineConfiguration->ignTrims12.ignTrims12_table, hardCodedignTrims12_table);
 }
 
+static void nb2cannedmapEstimateRpmBins() {
+	static const float hardCodedmapEstimateRpmBins[16] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+	copyArray(config->mapEstimateRpmBins, hardCodedmapEstimateRpmBins);
+}
+
+static void nb2cannedmapEstimateTpsBins() {
+	static const float hardCodedmapEstimateTpsBins[16] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+	copyArray(config->mapEstimateTpsBins, hardCodedmapEstimateTpsBins);
+}
+
 static void nb2cannedinjPhaseRpmBins() {
 	static const float hardCodedinjPhaseRpmBins[16] = {650.0, 800.0, 1100.0, 1400.0, 1700.0, 2000.0, 2300.0, 2600.0, 2900.0, 3200.0, 3500.0, 3800.0, 4100.0, 4400.0, 4700.0, 7000.0};
 	copyArray(config->injPhaseRpmBins, hardCodedinjPhaseRpmBins);
@@ -941,6 +941,11 @@ static void nb2cannedpostCrankingFactor() {
 {0.000,	0.000,	0.000,	0.000,	0.000,	0.000,	},
 };
 	copyTable(engineConfiguration->postCrankingFactor, hardCodedpostCrankingFactor);
+}
+
+static void nb2cannedcrankingCycleBins() {
+	static const float hardCodedcrankingCycleBins[8] = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0};
+	copyArray(config->crankingCycleBins, hardCodedcrankingCycleBins);
 }
 
 ```

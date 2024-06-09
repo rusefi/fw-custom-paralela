@@ -306,8 +306,6 @@
 	nb2cannedcrankingFuelCoefE100();
 	nb2cannedcltRevLimitRpmBins();
 	nb2cannedcltRevLimitRpm();
-	nb2cannedcrankingCycleBins();
-	nb2cannedcrankingCycleCoef();
 	nb2cannedcltIdleCorrBins();
 	nb2cannedcltIdleCorr();
 	nb2cannedcltCrankingCorr();
@@ -400,6 +398,8 @@
 	nb2cannedignTrims10_table();
 	nb2cannedignTrims11_table();
 	nb2cannedignTrims12_table();
+	nb2cannedmapEstimateRpmBins();
+	nb2cannedmapEstimateTpsBins();
 	nb2cannedinjPhaseRpmBins();
 	nb2cannedinjPhaseLoadBins();
 	nb2cannedinjectionPhase();
@@ -411,4 +411,5 @@
 	nb2cannedhpfpTargetLoadBins();
 	nb2cannedhpfpCompensation();
 	nb2cannedpostCrankingFactor();
+	nb2cannedcrankingCycleBins();
 ```
