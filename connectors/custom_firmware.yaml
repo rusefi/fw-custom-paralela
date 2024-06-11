@@ -124,11 +124,26 @@ pins:
   - id: [B1, B1]
     class: [switch_inputs, event_inputs]
     ts_name: CKP
-    
+
   - id: [A6, A6]
     class: [switch_inputs, event_inputs]
     ts_name: CMP
 
+  - id: [A5, A5, EFI_ADC_5]
+    class: [switch_inputs, event_inputs, analog_inputs]
+    ts_name: I/O PA5
+
+  - id: [C6, C6, C6]
+    class: [switch_inputs, event_inputs, outputs]
+    ts_name: I/O PC6 (ETB-PWM)
+
+  - id: [C10, C10, C10]
+    class: [switch_inputs, event_inputs, outputs]
+    ts_name: I/O PC10 (VVT)
+
+  - id: [C11, C11, C11]
+    class: [switch_inputs, event_inputs, outputs]
+    ts_name: I/O PC11 (VVT2)
   #- id: D11
   #  class: outputs
   #  ts_name: I/O PD11
