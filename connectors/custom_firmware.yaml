@@ -13,18 +13,6 @@ pins:
     class: analog_inputs
     ts_name: CLT (A2)
 
-  #- id: EFI_ADC_3
- #   class: analog_inputs
-   # ts_name: Knock (A3)
-
-   # - id: B1
-  # class: switch_inputs
-  #  ts_name: CKP (B1)
-    
- # - id: [A6, A6]
- #   class: [switch_inputs, event_inputs]
- #   ts_name: CMP (A6)
-
   - id: EFI_ADC_11
     class: analog_inputs
     ts_name: BattV  (C1)
@@ -105,14 +93,6 @@ pins:
     class: outputs
     ts_name: Fan (PC13)
     
-#  - id: Gpio::D0
-#    class: can
-#    ts_name: CAN Rx
-
-  #- id: Gpio::D1
-  #  class: can
-  #  ts_name: CAN Tx
-
   - id: [E2, E2]
     class: [switch_inputs, event_inputs]
     ts_name: Clutch
@@ -129,28 +109,10 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: CMP
 
-#  - id: [A5, A5, EFI_ADC_5]
-#    class: [switch_inputs, event_inputs, analog_inputs]
-#    ts_name: I/O PA5
-
   - id: [A5, A5]
     class: [switch_inputs, event_inputs]
     ts_name: I/O PA5
-
-  - id: [C6, C6, C6]
-    class: [switch_inputs, event_inputs, outputs]
-    ts_name: I/O PC6 (ETB-PWM)
-
-  - id: [C10, C10, C10]
-    class: [switch_inputs, event_inputs, outputs]
-    ts_name: I/O PC10 (VVT)
-
-  - id: [C11, C11, C11]
-    class: [switch_inputs, event_inputs, outputs]
-    ts_name: I/O PC11 (VVT2)
-  #- id: D11
-  #  class: outputs
-  #  ts_name: I/O PD11
+    
   - id: [D10, D10]
     class: [outputs, switch_inputs]
     ts_name: I/O PD10
