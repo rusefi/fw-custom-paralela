@@ -132,10 +132,7 @@ pins:
   #- id: D11
   #  class: outputs
   #  ts_name: I/O PD11
-  - id: [D10, D10]
-    class: [outputs, switch_inputs]
-    ts_name: I/O PD10
-    
+
   - id: [D11, D11]
     class: [outputs, switch_inputs]
     ts_name: I/O PD11
