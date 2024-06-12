@@ -92,7 +92,7 @@ pins:
   - id: C13
     class: outputs
     ts_name: Fan (PC13)
-    
+   
   - id: [E2, E2]
     class: [switch_inputs, event_inputs]
     ts_name: Clutch
@@ -104,11 +104,11 @@ pins:
   - id: [B1, B1]
     class: [switch_inputs, event_inputs]
     ts_name: CKP
-
+    
   - id: [A6, A6]
     class: [switch_inputs, event_inputs]
     ts_name: CMP
-    
+
   - id: [D10, D10]
     class: [outputs, switch_inputs]
     ts_name: I/O PD10
