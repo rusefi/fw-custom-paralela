@@ -123,6 +123,7 @@
 #define BOARD_OPTIONS_FROM_FILE 
 #define BOARD_PANELS_FROM_FILE 
 #define BOARD_TABLES_FROM_FILE 
+#define BOARD_VE_MENU_FROM_FILE 
 #define BOOST_BLEND_COUNT 2
 #define BOOST_LOAD_COUNT 8
 #define BOOST_RPM_COUNT 8
@@ -259,7 +260,7 @@
 #define dc_function_e_DC_Wastegate 4
 #define dc_io_size 8
 #define DC_PER_STEPPER 2
-#define debug_mode_e_auto_enum 0="DBG_0",10="DBG_10",11="DBG_11",12="DBG_12",13="DBG_13",16="DBG_16",19="DBG_19",2="DBG_2",20="DBG_20",21="DBG_21",22="DBG_22",24="DBG_24",25="DBG_25",26="DBG_26",29="DBG_29",32="DBG_32",34="DBG_34",35="DBG_35",36="DBG_36",37="DBG_37",38="DBG_38",43="DBG_43",46="DBG_46",5="DBG_5",6="DBG_6",7="DBG_7",8="DBG_8",9="DBG_9",40="DBG_COMPOSITE_LOG",33="DBG_DWELL_METRIC",44="DBG_DYNO_VIEW",17="DBG_ELECTRONIC_THROTTLE_PID",4="DBG_EL_ACCEL",39="DBG_ETB_AUTOTUNE",18="DBG_EXECUTOR",30="DBG_ION",15="DBG_KNOCK",45="DBG_LOGIC_ANALYZER",48="DBG_LUA",27="DBG_MAP",28="DBG_METRICS",14="DBG_SR5_PROTOCOL",3="DBG_STEPPER_IDLE_CONTROL",47="DBG_TCU",31="DBG_TLE8888",1="DBG_TPS_ACCEL",41="DBG_UNUSED41",42="DBG_UNUSED_42",23="UNUSED23"
+#define debug_mode_e_auto_enum 0="DBG_0",10="DBG_10",11="DBG_11",12="DBG_12",13="DBG_13",16="DBG_16",19="DBG_19",2="DBG_2",20="DBG_20",21="DBG_21",22="DBG_22",24="DBG_24",25="DBG_25",26="DBG_26",27="DBG_27",29="DBG_29",32="DBG_32",34="DBG_34",35="DBG_35",36="DBG_36",37="DBG_37",38="DBG_38",43="DBG_43",46="DBG_46",5="DBG_5",6="DBG_6",7="DBG_7",8="DBG_8",9="DBG_9",40="DBG_COMPOSITE_LOG",33="DBG_DWELL_METRIC",44="DBG_DYNO_VIEW",17="DBG_ELECTRONIC_THROTTLE_PID",4="DBG_EL_ACCEL",39="DBG_ETB_AUTOTUNE",18="DBG_EXECUTOR",30="DBG_ION",15="DBG_KNOCK",45="DBG_LOGIC_ANALYZER",48="DBG_LUA",28="DBG_METRICS",14="DBG_SR5_PROTOCOL",3="DBG_STEPPER_IDLE_CONTROL",47="DBG_TCU",31="DBG_TLE8888",1="DBG_TPS_ACCEL",41="DBG_UNUSED41",42="DBG_UNUSED_42",23="UNUSED23"
 #define debug_mode_e_DBG_0 0
 #define debug_mode_e_DBG_10 10
 #define debug_mode_e_DBG_11 11
@@ -274,6 +275,7 @@
 #define debug_mode_e_DBG_24 24
 #define debug_mode_e_DBG_25 25
 #define debug_mode_e_DBG_26 26
+#define debug_mode_e_DBG_27 27
 #define debug_mode_e_DBG_29 29
 #define debug_mode_e_DBG_32 32
 #define debug_mode_e_DBG_34 34
@@ -299,7 +301,6 @@
 #define debug_mode_e_DBG_KNOCK 15
 #define debug_mode_e_DBG_LOGIC_ANALYZER 45
 #define debug_mode_e_DBG_LUA 48
-#define debug_mode_e_DBG_MAP 27
 #define debug_mode_e_DBG_METRICS 28
 #define debug_mode_e_DBG_SR5_PROTOCOL 14
 #define debug_mode_e_DBG_STEPPER_IDLE_CONTROL 3
@@ -310,6 +311,7 @@
 #define debug_mode_e_DBG_UNUSED_42 42
 #define debug_mode_e_enum "INVALID", "TPS acceleration enrichment", "INVALID", "Stepper Idle Control", "Engine Load accl enrich", "Trigger Counters", "Soft Spark Cut", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "SD card", "sr5", "Knock", "INVALID", "Electronic Throttle", "Executor", "Bench Test / TS commands", "INVALID", "Analog inputs #1", "INSTANT_RPM", "INVALID", "Status", "INVALID", "INVALID", "MAP", "Metrics", "INVALID", "Ion Sense", "TLE8888", "Analog inputs #2", "Dwell Metric", "INVALID", "INVALID", "Boost Control", "INVALID", "INVALID", "ETB Autotune", "Composite Log", "INVALID", "INVALID", "INVALID", "Dyno_View", "Logic_Analyzer", "INVALID", "TCU", "Lua"
 #define debug_mode_e_UNUSED23 23
+#define DEFAULT_RPM_AXIS_HIGH_VALUE 7000
 #define DEFAULT_SELT_STIM_RPM 1200
 #define DEFAULT_SELT_STIM_VVT0 23
 #define DEFAULT_SOLENOID_FREQUENCY 300
@@ -1168,8 +1170,8 @@
 #define operation_mode_e_FOUR_STROKE_TWELVE_TIMES_CRANK_SENSOR 6
 #define operation_mode_e_OM_NONE 0
 #define operation_mode_e_TWO_STROKE 3
-#define output_pin_e_enum 0="NONE",27="Boost (PB9)",47="Fan (PC13)",70="Fuel Pump (PE4)",60="I/O PD10",61="I/O PD11",62="I/O PD12",63="I/O PD13",64="I/O PD14",77="I/O PE11",78="I/O PE12",39="Idle",10="Ignition 1",43="Ignition 2",12="Ignition 3",42="Ignition 4",66="Injector 1",72="Injector 2",59="Injector 3",69="Injector 4",71="NOS (PE5)",32="StepDir",33="StepStep",26="Tach (PB8)"
-#define output_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 1","INVALID","Ignition 3","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Tach (PB8)","Boost (PB9)","INVALID","INVALID","INVALID","INVALID","StepDir","StepStep","INVALID","INVALID","INVALID","INVALID","INVALID","Idle","INVALID","INVALID","Ignition 4","Ignition 2","INVALID","INVALID","INVALID","Fan (PC13)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Injector 3","I/O PD10","I/O PD11","I/O PD12","I/O PD13","I/O PD14","INVALID","Injector 1","INVALID","INVALID","Injector 4","Fuel Pump (PE4)","NOS (PE5)","Injector 2","INVALID","INVALID","INVALID","INVALID","I/O PE11","I/O PE12"
+#define output_pin_e_enum 0="NONE",27="Boost (PB9)",47="Fan (PC13)",70="Fuel Pump (PE4)",61="I/O PD11",62="I/O PD12",63="I/O PD13",64="I/O PD14",77="I/O PE11",78="I/O PE12",39="Idle",10="Ignition 1",43="Ignition 2",12="Ignition 3",42="Ignition 4",66="Injector 1",72="Injector 2",59="Injector 3",69="Injector 4",71="NOS (PE5)",32="StepDir",33="StepStep",26="Tach (PB8)"
+#define output_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 1","INVALID","Ignition 3","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Tach (PB8)","Boost (PB9)","INVALID","INVALID","INVALID","INVALID","StepDir","StepStep","INVALID","INVALID","INVALID","INVALID","INVALID","Idle","INVALID","INVALID","Ignition 4","Ignition 2","INVALID","INVALID","INVALID","Fan (PC13)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Injector 3","INVALID","I/O PD11","I/O PD12","I/O PD13","I/O PD14","INVALID","Injector 1","INVALID","INVALID","Injector 4","Fuel Pump (PE4)","NOS (PE5)","Injector 2","INVALID","INVALID","INVALID","INVALID","I/O PE11","I/O PE12"
 #define PACK_ADD_TEMPERATURE 40
 #define PACK_MULT_AFR 1000
 #define PACK_MULT_AFR_CFG 10
@@ -1272,7 +1274,7 @@
 #define show_microRusEFI_presets false
 #define show_Proteus_presets false
 #define show_test_presets false
-#define SIGNATURE_HASH 1267394723
+#define SIGNATURE_HASH 1631354739
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1298,8 +1300,8 @@
 #define stft_cell_cfg_s_size 4
 #define STFT_CELL_COUNT 4
 #define stft_s_size 24
-#define switch_input_pin_e_enum 0="NONE",19="CKP",8="CMP",68="Clutch",9="FlexFuel",60="I/O PD10",61="I/O PD11",62="I/O PD12",63="I/O PD13",64="I/O PD14",77="I/O PE11",78="I/O PE12"
-#define switch_input_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CMP","FlexFuel","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CKP","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","I/O PD10","I/O PD11","I/O PD12","I/O PD13","I/O PD14","INVALID","INVALID","INVALID","Clutch","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","I/O PE11","I/O PE12"
+#define switch_input_pin_e_enum 0="NONE",19="CKP",8="CMP",68="Clutch",9="FlexFuel",61="I/O PD11",62="I/O PD12",63="I/O PD13",64="I/O PD14",77="I/O PE11",78="I/O PE12"
+#define switch_input_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CMP","FlexFuel","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CKP","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","I/O PD11","I/O PD12","I/O PD13","I/O PD14","INVALID","INVALID","INVALID","Clutch","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","I/O PE11","I/O PE12"
 #define TABLE_2_LOAD_SIZE 8
 #define TABLE_2_RPM_SIZE 8
 #define TABLE_3_LOAD_SIZE 8
@@ -1606,11 +1608,13 @@
 #define ts_show_firing_order true
 #define ts_show_forced_induction true
 #define ts_show_ford_toyota_tps_pps true
+#define ts_show_fuel_level_sensor true
 #define ts_show_fuel_pump true
 #define ts_show_fuel_relay_pin true
 #define ts_show_fuel_strategy true
 #define ts_show_full_pinout true
 #define ts_show_gdi false
+#define ts_show_globalTriggerAngleOffset true
 #define ts_show_hardware_simulator false
 #define ts_show_hd true
 #define ts_show_hip9011 false
@@ -1662,7 +1666,7 @@
 #define ts_show_vr_threshold_all false
 #define ts_show_vr_threshold_pins true
 #define ts_show_vvt_output true
-#define TS_SIGNATURE "rusEFI master.2024.06.09.paralela.1267394723"
+#define TS_SIGNATURE "rusEFI master.2024.06.16.paralela.1631354739"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_SINGLE_WRITE_COMMAND 'W'
