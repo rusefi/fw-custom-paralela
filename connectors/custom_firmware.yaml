@@ -13,18 +13,6 @@ pins:
     class: analog_inputs
     ts_name: CLT (A2)
 
-  #- id: EFI_ADC_3
- #   class: analog_inputs
-   # ts_name: Knock (A3)
-
-   # - id: B1
-  # class: switch_inputs
-  #  ts_name: CKP (B1)
-    
- # - id: [A6, A6]
- #   class: [switch_inputs, event_inputs]
- #   ts_name: CMP (A6)
-
   - id: EFI_ADC_11
     class: analog_inputs
     ts_name: BattV  (C1)
@@ -40,6 +28,14 @@ pins:
   - id: EFI_ADC_13
     class: analog_inputs
     ts_name: O2-1 (C3)
+    
+  - id: EFI_ADC_14
+    class: analog_inputs
+    ts_name: TPS2 (C4)
+
+  - id: EFI_ADC_15
+    class: analog_inputs
+    ts_name: PPS (C5)
 
   - id: A8
     class: outputs
@@ -89,30 +85,34 @@ pins:
     class: outputs
     ts_name: Boost (PB9)
 
-  - id: B14
-    class: outputs
-    ts_name: StepDir
+  - id: [B14, B14]
+    class: [outputs, event_inputs]
+    ts_name: ETB_DIS/StepDir
 
   - id: [B15, B15]
     class: [outputs, event_inputs]
-    ts_name: StepStep
+    ts_name: ETB_DIR/StepStep
 
   - id: C5
     class: outputs
     ts_name: Idle
 
+  - id: C6
+    class: outputs
+    ts_name: ETB PWM
+
+  - id: C10
+    class: outputs
+    ts_name: VVT1 (C10)
+
+  - id: C11
+    class: outputs
+    ts_name: VVT2 (C11)
+
   - id: C13
     class: outputs
     ts_name: Fan (PC13)
     
-#  - id: Gpio::D0
-#    class: can
-#    ts_name: CAN Rx
-
-  #- id: Gpio::D1
-  #  class: can
-  #  ts_name: CAN Tx
-
   - id: [E2, E2]
     class: [switch_inputs, event_inputs]
     ts_name: Clutch
@@ -129,30 +129,54 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: CMP
 
-  #- id: D11
-  #  class: outputs
-  #  ts_name: I/O PD11
+  - id: [D4, D4]
+    class: [outputs, switch_inputs]
+    ts_name: I/O PD4
+
+  - id: [D3, D3]
+    class: [outputs, switch_inputs]
+    ts_name: I/O PD3
+
+  - id: [D2, D2]
+    class: [outputs, switch_inputs]
+    ts_name: I/O D2
+
+  - id: [D10, D10]
+    class: [outputs, switch_inputs]
+    ts_name: Injector 5 (PD10)
 
   - id: [D11, D11]
     class: [outputs, switch_inputs]
-    ts_name: I/O PD11
+    ts_name: Injector 6 (PD11)
 
   - id: [D12, D12]
     class: [outputs, switch_inputs]
-    ts_name: I/O PD12
+    ts_name: Injector 7 (PD12)
 
   - id: [D13, D13]
     class: [outputs, switch_inputs]
-    ts_name: I/O PD13
+    ts_name: Injector 8 (PD13)
 
   - id: [D14, D14]
     class: [outputs, switch_inputs]
-    ts_name: I/O PD14
+    ts_name: Threshold (PD14)
 
   - id: [E11, E11, E11]
     class: [outputs, switch_inputs, event_inputs]
-    ts_name: I/O PE11
+    ts_name: Ignition 5 (PE11)
 
   - id: [E12, E12, E12]
     class: [outputs, switch_inputs, event_inputs]
-    ts_name: I/O PE12
+    ts_name: Ignition 5 (PE12)
+
+  - id: [E13, E13, E13]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: Ignition 7 (PE13)
+
+  - id: [E14, E14, E14]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: Ignition 8 (PE14)
+
+  - id: [E15, E15, E15]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: I/O PE15
