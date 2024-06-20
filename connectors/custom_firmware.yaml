@@ -133,10 +133,6 @@ pins:
     class: [outputs, switch_inputs]
     ts_name: I/O PD4
 
-  - id: [D3, D3]
-    class: [outputs, switch_inputs]
-    ts_name: I/O PD3
-
   - id: [D2, D2]
     class: [outputs, switch_inputs]
     ts_name: Ignition 7 (PD2)
