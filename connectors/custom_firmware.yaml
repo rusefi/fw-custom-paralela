@@ -95,7 +95,7 @@ pins:
 
   - id: C5
     class: outputs
-    ts_name: Idle
+    ts_name: PPS2 (PC5)
 
   - id: C6
     class: outputs
@@ -139,8 +139,12 @@ pins:
 
   - id: [D2, D2]
     class: [outputs, switch_inputs]
-    ts_name: I/O D2
+    ts_name: Ignition 7 (PD2)
 
+  - id: [D3, D3]
+    class: [outputs, switch_inputs]
+    ts_name: Ignition 8 (PD3)
+    
   - id: [D10, D10]
     class: [outputs, switch_inputs]
     ts_name: Injector 5 (PD10)
@@ -169,14 +173,11 @@ pins:
     class: [outputs, switch_inputs, event_inputs]
     ts_name: Ignition 5 (PE12)
 
-  - id: [E13, E13, E13]
-    class: [outputs, switch_inputs, event_inputs]
-    ts_name: Ignition 7 (PE13)
 
   - id: [E14, E14, E14]
     class: [outputs, switch_inputs, event_inputs]
-    ts_name: Ignition 8 (PE14)
+    ts_name: Extra I/O PE14
 
   - id: [E15, E15, E15]
     class: [outputs, switch_inputs, event_inputs]
-    ts_name: I/O PE15
+    ts_name: Idle (PE15)
