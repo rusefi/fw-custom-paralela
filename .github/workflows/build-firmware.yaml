@@ -2,7 +2,7 @@ name: Create Board Firmware
 
 on:
   schedule:
-    - cron: '05 14 * * *' # build fresh every 02:05 PM UTC
+    - cron: '25 14 * * *' # build fresh every 02:25 PM UTC
   push:
 #  pull_request:
   workflow_dispatch:
