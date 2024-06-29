@@ -1,4 +1,3 @@
 [submodule "ext/rusefi"]
 	path = ext/rusefi
-	url = https://github.com/kifir23917/rusefi
-	branch = lts-paralela-test
+	url = https://github.com/rusefi/rusefi
