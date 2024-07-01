@@ -14,7 +14,7 @@ Gpio getWarningLedPin() {
 
 void setBoardDefaultConfiguration() {
 	engineConfiguration->vbattDividerCoeff = 10.2f;
-	engineConfiguration->vbattAdcChannel = EFI_ADC_12;
+	engineConfiguration->vbattAdcChannel = EFI_ADC_11;
 }
 
 static Gpio OUTPUTS[] = {
@@ -39,7 +39,7 @@ void setCustomVbatt() {
 	// 33k / 6.8k
 	engineConfiguration->vbattDividerCoeff = 10.2; // 5.835
 
-	engineConfiguration->vbattAdcChannel = EFI_ADC_12;
+	engineConfiguration->vbattAdcChannel = EFI_ADC_11;
 
 }
 /*
