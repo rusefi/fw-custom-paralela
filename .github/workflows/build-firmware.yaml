@@ -32,7 +32,7 @@ jobs:
 
     - uses: ./ext/rusefi/.github/workflows/custom-board-build
       with:
-        release_date: ${{steps.set-variables.outputs.release_date}}
+        new_tag: ${{steps.set-variables.outputs.release_date}}
         artifacts: bin srec hex list map elf bundle autoupdate
         uploads: ini ${{steps.set-variables.outputs.upload}}
         push: ${{steps.set-variables.outputs.push}}
