@@ -54,8 +54,8 @@
 #define adc_channel_e_EFI_ADC_ERROR 50
 #define adc_channel_e_EFI_ADC_NONE 0
 #define adc_channel_e_EFI_ADC_TOTAL_CHANNELS 49
-#define adc_channel_e_enum 0="NONE",12="BattV  (C1)",3="CLT (A2)",13="IAT  (C2)",2="MAP (A1)",14="O2-1 (C3)",9="O2-2 (B0)",16="PPS (C5)",1="TPS (A0)",15="TPS2 (C4)"
-#define adc_channel_e_fullenum "NONE","TPS (A0)","MAP (A1)","CLT (A2)","INVALID","INVALID","INVALID","INVALID","INVALID","O2-2 (B0)","INVALID","INVALID","BattV  (C1)","IAT  (C2)","O2-1 (C3)","TPS2 (C4)","PPS (C5)"
+#define adc_channel_e_enum 0="NONE",12="BattV  (C1)",3="CLT (A2)",13="IAT  (C2)",2="MAP (A1)",14="O2-1 (C3)",9="O2-2 (B0)",15="PPS1 (C4)",16="PPS2 (C5)",1="TPS (A0)",6="TPS (A5)"
+#define adc_channel_e_fullenum "NONE","TPS (A0)","MAP (A1)","CLT (A2)","INVALID","INVALID","TPS (A5)","INVALID","INVALID","O2-2 (B0)","INVALID","INVALID","BattV  (C1)","IAT  (C2)","O2-1 (C3)","PPS1 (C4)","PPS2 (C5)"
 #define ADC_CHANNEL_NONE 0
 #define afr_sensor_s_size 20
 #define air_pressure_sensor_config_s_size 12
@@ -1289,7 +1289,7 @@
 #define show_microRusEFI_presets false
 #define show_Proteus_presets false
 #define show_test_presets false
-#define SIGNATURE_HASH 823366630
+#define SIGNATURE_HASH 207193461
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1701,7 +1701,7 @@
 #define ts_show_vvt_output true
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
-#define TS_SIGNATURE "rusEFI master.2024.07.09.paralela.823366630"
+#define TS_SIGNATURE "rusEFI master.2024.07.09.paralela.207193461"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_SINGLE_WRITE_COMMAND 'W'
