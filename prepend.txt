@@ -4,7 +4,7 @@
 
 #define LUA_SCRIPT_SIZE 10100
 
-#define ts_show_spi false
+#define ts_show_spi true
 #define ts_show_can2 false
 #define ts_show_hardware_simulator false
 #define ts_show_tcu false
