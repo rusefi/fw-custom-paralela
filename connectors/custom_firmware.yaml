@@ -133,9 +133,9 @@ pins:
     class: [switch_inputs, event_inputs]
     ts_name: CMP
 
-  - id: [D4, D4]
-    class: [outputs, switch_inputs]
-    ts_name: I/O PD4
+  - id: [D4, D4, D4]
+    class: [outputs, switch_inputs, event_inputs]
+    ts_name: CAM2 (PD4)
 
   - id: [D2, D2]
     class: [outputs, switch_inputs]
