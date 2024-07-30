@@ -24,6 +24,8 @@ Gpio GENERATED_OUTPUTS = {
 	Gpio::C11, // VVT2 (C11)
 	Gpio::C13, // Fan (PC13)
 	Gpio::D4, // CAM2 (PD4)
+	Gpio::D5, // USART-TX (PD5)
+	Gpio::D6, // USART-RX (PD6)
 	Gpio::D2, // Ignition 7 (PD2)
 	Gpio::D3, // Ignition 8 (PD3)
 	Gpio::D10, // Injector 5 (PD10)
@@ -55,6 +57,8 @@ Gpio GENERATED_OUTPUTS = {
 // "VVT2 (C11)",
 // "Fan (PC13)",
 // "CAM2 (PD4)",
+// "USART-TX (PD5)",
+// "USART-RX (PD6)",
 // "Ignition 7 (PD2)",
 // "Ignition 8 (PD3)",
 // "Injector 5 (PD10)",

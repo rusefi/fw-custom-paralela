@@ -30,6 +30,8 @@ const char * getBoardSpecificPinName(brain_pin_e brainPin) {
 		case Gpio::D2: return "Ignition 7 (PD2)";
 		case Gpio::D3: return "Ignition 8 (PD3)";
 		case Gpio::D4: return "CAM2 (PD4)";
+		case Gpio::D5: return "USART-TX (PD5)";
+		case Gpio::D6: return "USART-RX (PD6)";
 		case Gpio::D9: return "Injector 3";
 		case Gpio::E0: return "Injector 1";
 		case Gpio::E11: return "Ignition 5 (PE11)";
