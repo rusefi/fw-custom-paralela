@@ -165,8 +165,8 @@ pins:
     class: [outputs, switch_inputs]
     ts_name: Injector 7 (PD12)
 
-  - id: [D13, D13]
-    class: [outputs, switch_inputs]
+  - id: [D13, D13, D13]
+    class: [outputs, switch_inputs, event_inputs]
     ts_name: Injector 8 (PD13)
 
   - id: [D14, D14]
