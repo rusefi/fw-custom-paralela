@@ -145,8 +145,8 @@ pins:
     class: [outputs, switch_inputs, event_inputs]
     ts_name: USART-RX (PD6)
 
-  - id: [D2, D2]
-    class: [outputs, switch_inputs]
+  - id: [D2, D2, D2]
+    class: [outputs, switch_inputs, event_inputs]
     ts_name: Ignition 7 (PD2)
 
   - id: [D3, D3]
