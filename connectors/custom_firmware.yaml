@@ -7,7 +7,7 @@ pins:
 
   - id: EFI_ADC_5
     class: analog_inputs
-    ts_name: TPS (A5)
+    ts_name: TPS2 (A5)
     
   - id: EFI_ADC_1
     class: analog_inputs
@@ -179,7 +179,7 @@ pins:
 
   - id: [E12, E12, E12]
     class: [outputs, switch_inputs, event_inputs]
-    ts_name: Ignition 5 (PE12)
+    ts_name: Ignition 6 (PE12)
 
 
   - id: [E14, E14, E14]
