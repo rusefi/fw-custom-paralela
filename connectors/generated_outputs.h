@@ -34,7 +34,7 @@ Gpio GENERATED_OUTPUTS = {
 	Gpio::D13, // Injector 8 (PD13)
 	Gpio::D14, // Threshold (PD14)
 	Gpio::E11, // Ignition 5 (PE11)
-	Gpio::E12, // Ignition 5 (PE12)
+	Gpio::E12, // Ignition 6 (PE12)
 	Gpio::E14, // Extra I/O PE14
 	Gpio::E15, // Idle (PE15)
 // "Ignition 1",
@@ -67,7 +67,7 @@ Gpio GENERATED_OUTPUTS = {
 // "Injector 8 (PD13)",
 // "Threshold (PD14)",
 // "Ignition 5 (PE11)",
-// "Ignition 5 (PE12)",
+// "Ignition 6 (PE12)",
 // "Extra I/O PE14",
 // "Idle (PE15)",
 }
