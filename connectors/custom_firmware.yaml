@@ -187,9 +187,6 @@ pins:
     class: [outputs, switch_inputs, event_inputs]
     ts_name: Extra I/O PE14
 
-  - id: A3
-    class: switch_inputs
-    ts_name: Knock (A3)
 
   - id: [E15, E15, E15]
     class: [outputs, switch_inputs, event_inputs]
