@@ -17,6 +17,7 @@ pins:
     class: analog_inputs
     ts_name: CLT (A2)
 
+    
   - id: EFI_ADC_11
     class: analog_inputs
     ts_name: BattV  (C1)
@@ -185,6 +186,10 @@ pins:
   - id: [E14, E14, E14]
     class: [outputs, switch_inputs, event_inputs]
     ts_name: Extra I/O PE14
+
+  - id: A3
+    class: switch_inputs
+    ts_name: Knock (A3)
 
   - id: [E15, E15, E15]
     class: [outputs, switch_inputs, event_inputs]
