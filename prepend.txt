@@ -2,7 +2,7 @@
 #define ts_show_software_knock true
 
 
-#define LUA_SCRIPT_SIZE 10100
+#define LUA_SCRIPT_SIZE 12000
 
 #define ts_show_spi true
 #define ts_show_can2 false
@@ -10,3 +10,14 @@
 #define ts_show_tcu false
 #define ts_show_gdi false
 #define ts_show_fancy_hardware false
+
+#define IAT_CURVE_SIZE 6
+#define HPFP_TARGET_SIZE 4
+#define HPFP_COMPENSATION_SIZE 4
+#define HPFP_DEADTIME_SIZE 4
+#define HPFP_LOBE_PROFILE_SIZE 4
+#define DWELL_CURVE_SIZE 4
+#define CLT_CURVE_SIZE 8
+#define CLT_TIMING_CURVE_SIZE 4
+#define TCU_SOLENOID_COUNT 4
+#define TCU_TABLE_WIDTH 4
