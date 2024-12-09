@@ -10,8 +10,3 @@
 #define ts_show_tcu false
 #define ts_show_gdi false
 #define ts_show_fancy_hardware false
-
-#define IAT_CURVE_SIZE 6
-#define DWELL_CURVE_SIZE 4
-#define CLT_CURVE_SIZE 8
-#define CLT_TIMING_CURVE_SIZE 4
