@@ -53,6 +53,7 @@ static const LogField fields[] = {
 	{engine->outputChannels.oilPressure, "Oil Pressure", "kPa", 0},
 	{engine->outputChannels.vvtPositionB1I, "VVT: bank 1 intake", "deg", 1},
 	{engine->outputChannels.actualLastInjection, "Fuel: Last inj pulse width", "ms", 3},
+	{engine->outputChannels.stopEngineCode, "stopEngineCode", "", 0},
 	{engine->outputChannels.injectorDutyCycle, "Fuel: injector duty cycle", "%", 0},
 	{engine->outputChannels.tempLogging1, "tempLogging1", "", 0},
 	{engine->outputChannels.injectionOffset, "Fuel: Injection timing SOI", "deg", 0},
@@ -584,6 +585,9 @@ static const LogField fields[] = {
 #if EFI_LAUNCH_CONTROL
 	{engine->shiftTorqueReductionController, 0, 5, "isFlatShiftConditionSatisfied", ""},
 #endif
+#if EFI_LAUNCH_CONTROL
+	{engine->shiftTorqueReductionController, 0, 6, "isBelowTemperatureThreshold", ""},
+#endif
 #if EFI_BOOST_CONTROL
 	{*engine->module<BoostController>(), 0, 0, "isTpsInvalid", ""},
 #endif
@@ -638,66 +642,26 @@ static const LogField fields[] = {
 #if EFI_BOOST_CONTROL
 	{engine->module<BoostController>()->boostControlTarget, "Boost: Target", "kPa", 1, "Boost Control"},
 #endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl1>(), 0, 0, "fan1cranking", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl1>(), 0, 1, "fan1notRunning", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl1>(), 0, 2, "fan1Engine stopped", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl1>(), 0, 3, "fan1Broken CLT", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl1>(), 0, 4, "fan1Enable for AC", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl1>(), 0, 5, "fan1Above hot threshold", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl1>(), 0, 6, "fan1Below cold threshold", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl1>(), 0, 7, "fan1disabledBySpeed", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl1>(), 0, 8, "fan1On", ""},
-#endif
-#if FULL_SD_LOGS
 	{engine->module<FanControl1>()->radiatorFanStatus, "fan1radiatorFanStatus", "", 0},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl2>(), 0, 0, "fan2cranking", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl2>(), 0, 1, "fan2notRunning", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl2>(), 0, 2, "fan2Engine stopped", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl2>(), 0, 3, "fan2Broken CLT", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl2>(), 0, 4, "fan2Enable for AC", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl2>(), 0, 5, "fan2Above hot threshold", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl2>(), 0, 6, "fan2Below cold threshold", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl2>(), 0, 7, "fan2disabledBySpeed", ""},
-#endif
-#if FULL_SD_LOGS
 	{*engine->module<FanControl2>(), 0, 8, "fan2On", ""},
-#endif
-#if FULL_SD_LOGS
 	{engine->module<FanControl2>()->radiatorFanStatus, "fan2radiatorFanStatus", "", 0},
-#endif
 	{engine->engineState.lua.fuelAdd, "Lua: Fuel add", "g", 3},
 	{engine->engineState.lua.fuelMult, "Lua: Fuel mult", "", 0},
 	{engine->engineState, 8, 0, "lua.clutchUpState", ""},
@@ -733,6 +697,7 @@ static const LogField fields[] = {
 	{engine->engineState, 48, 7, "luaDigitalState3", ""},
 	{engine->engineState, 48, 8, "Clutch: down", ""},
 	{engine->engineState.startStopStateToggleCounter, "startStopStateToggleCounter", "", 0},
+	{engine->engineState.currentVe, "currentVe", "", 0},
 	{engine->engineState.luaSoftSparkSkip, "luaSoftSparkSkip", "", 0},
 	{engine->engineState.luaHardSparkSkip, "luaHardSparkSkip", "", 0},
 	{engine->engineState.tractionControlSparkSkip, "tractionControlSparkSkip", "", 0},
