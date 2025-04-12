@@ -1,8 +1,6 @@
-BOARDINC += $(BOARD_DIR)/generated/controllers/generated
 
-BOARDCPPSRC =  $(BOARD_DIR)/board_configuration.cpp \
-    $(BOARD_DIR)/default_tune.cpp \
-
+# List of all the board related files.
+BOARDCPPSRC = $(BOARD_DIR)/board_configuration.cpp
 
 
 # defines SHORT_BOARD_NAME
