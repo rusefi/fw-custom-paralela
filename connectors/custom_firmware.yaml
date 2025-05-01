@@ -90,12 +90,12 @@ pins:
     class: outputs
     ts_name: Boost (PB9)
 
-  - id: [B14, B14]
-    class: [outputs, event_inputs]
+  - id: [B14, B14, B14]
+    class: [outputs, event_inputs, switch_inputs]
     ts_name: ETB_DIS/StepDir
 
-  - id: [B15, B15]
-    class: [outputs, event_inputs]
+  - id: [B15, B15, B15]
+    class: [outputs, event_inputs, switch_inputs]
     ts_name: ETB_DIR/StepStep
 
   - id: C5
