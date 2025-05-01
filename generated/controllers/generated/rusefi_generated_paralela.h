@@ -1422,7 +1422,7 @@
 #define SentInput_NONE 0
 #define show_tcu_gauges false
 #define show_vvt_output_pin true
-#define SIGNATURE_HASH 3567131994
+#define SIGNATURE_HASH 3482270482
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1447,8 +1447,8 @@
 #define stft_cell_cfg_s_size 4
 #define STFT_CELL_COUNT 4
 #define stft_s_size 28
-#define switch_input_pin_e_enum 0="NONE",54="CAM2 (PD4)",19="CKP",8="CMP",68="Clutch",80="Extra I/O PE14",9="FlexFuel",81="Idle (PE15)",77="Ignition 5 (PE11)",78="Ignition 6 (PE12)",52="Ignition 7 (PD2)",53="Ignition 8 (PD3)",60="Injector 5 (PD10)",61="Injector 6 (PD11)",62="Injector 7 (PD12)",63="Injector 8 (PD13)",64="Threshold (PD14)",56="USART-RX (PD6)",55="USART-TX (PD5)"
-#define switch_input_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CMP","FlexFuel","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CKP","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 7 (PD2)","Ignition 8 (PD3)","CAM2 (PD4)","USART-TX (PD5)","USART-RX (PD6)","INVALID","INVALID","INVALID","Injector 5 (PD10)","Injector 6 (PD11)","Injector 7 (PD12)","Injector 8 (PD13)","Threshold (PD14)","INVALID","INVALID","INVALID","Clutch","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 5 (PE11)","Ignition 6 (PE12)","INVALID","Extra I/O PE14","Idle (PE15)"
+#define switch_input_pin_e_enum 0="NONE",54="CAM2 (PD4)",19="CKP",8="CMP",68="Clutch",33="ETB_DIR/StepStep",32="ETB_DIS/StepDir",80="Extra I/O PE14",9="FlexFuel",81="Idle (PE15)",77="Ignition 5 (PE11)",78="Ignition 6 (PE12)",52="Ignition 7 (PD2)",53="Ignition 8 (PD3)",60="Injector 5 (PD10)",61="Injector 6 (PD11)",62="Injector 7 (PD12)",63="Injector 8 (PD13)",64="Threshold (PD14)",56="USART-RX (PD6)",55="USART-TX (PD5)"
+#define switch_input_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CMP","FlexFuel","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CKP","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","ETB_DIS/StepDir","ETB_DIR/StepStep","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 7 (PD2)","Ignition 8 (PD3)","CAM2 (PD4)","USART-TX (PD5)","USART-RX (PD6)","INVALID","INVALID","INVALID","Injector 5 (PD10)","Injector 6 (PD11)","Injector 7 (PD12)","Injector 8 (PD13)","Threshold (PD14)","INVALID","INVALID","INVALID","Clutch","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 5 (PE11)","Ignition 6 (PE12)","INVALID","Extra I/O PE14","Idle (PE15)"
 #define TABLE_2_LOAD_SIZE 8
 #define TABLE_2_RPM_SIZE 8
 #define TABLE_3_LOAD_SIZE 8
@@ -1927,7 +1927,7 @@
 #define ts_show_wastegate_sensor true
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
-#define TS_SIGNATURE "rusEFI master.2025.04.30.paralela.3567131994"
+#define TS_SIGNATURE "rusEFI master.2025.05.01.paralela.3482270482"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_SINGLE_WRITE_COMMAND 'W'
