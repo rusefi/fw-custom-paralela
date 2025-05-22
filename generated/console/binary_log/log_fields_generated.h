@@ -668,17 +668,29 @@ static const LogField fields[] = {
 	{*engine->module<FanControl2>(), 0, 7, "fan2disabledBySpeed", ""},
 	{*engine->module<FanControl2>(), 0, 8, "fan2On", ""},
 	{engine->module<FanControl2>()->radiatorFanStatus, "fan2radiatorFanStatus", "", 0},
+	{engine->engineState.injectionMass[0], "injectionMass 1", "", 0},
+	{engine->engineState.injectionMass[1], "injectionMass 2", "", 0},
+	{engine->engineState.injectionMass[2], "injectionMass 3", "", 0},
+	{engine->engineState.injectionMass[3], "injectionMass 4", "", 0},
+	{engine->engineState.injectionMass[4], "injectionMass 5", "", 0},
+	{engine->engineState.injectionMass[5], "injectionMass 6", "", 0},
+	{engine->engineState.injectionMass[6], "injectionMass 7", "", 0},
+	{engine->engineState.injectionMass[7], "injectionMass 8", "", 0},
+	{engine->engineState.injectionMass[8], "injectionMass 9", "", 0},
+	{engine->engineState.injectionMass[9], "injectionMass 10", "", 0},
+	{engine->engineState.injectionMass[10], "injectionMass 11", "", 0},
+	{engine->engineState.injectionMass[11], "injectionMass 12", "", 0},
 	{engine->engineState.lua.fuelAdd, "Lua: Fuel add", "g", 3},
 	{engine->engineState.lua.fuelMult, "Lua: Fuel mult", "", 0},
-	{engine->engineState, 8, 0, "lua.clutchUpState", ""},
-	{engine->engineState, 8, 1, "lua.brakePedalState", ""},
-	{engine->engineState, 8, 2, "lua.acRequestState", ""},
-	{engine->engineState, 8, 3, "lua.luaDisableEtb", ""},
-	{engine->engineState, 8, 4, "lua.luaIgnCut", ""},
-	{engine->engineState, 8, 5, "lua.luaFuelCut", ""},
-	{engine->engineState, 8, 6, "lua.clutchDownState", ""},
-	{engine->engineState, 8, 7, "lua.disableDecelerationFuelCutOff", ""},
-	{engine->engineState, 8, 8, "lua.torqueReductionState", ""},
+	{engine->engineState, 56, 0, "lua.clutchUpState", ""},
+	{engine->engineState, 56, 1, "lua.brakePedalState", ""},
+	{engine->engineState, 56, 2, "lua.acRequestState", ""},
+	{engine->engineState, 56, 3, "lua.luaDisableEtb", ""},
+	{engine->engineState, 56, 4, "lua.luaIgnCut", ""},
+	{engine->engineState, 56, 5, "lua.luaFuelCut", ""},
+	{engine->engineState, 56, 6, "lua.clutchDownState", ""},
+	{engine->engineState, 56, 7, "lua.disableDecelerationFuelCutOff", ""},
+	{engine->engineState, 56, 8, "lua.torqueReductionState", ""},
 	{engine->engineState.sd.tCharge, "Air: Charge temperature estimate", "deg C", 1},
 	{engine->engineState.sd.tChargeK, "Air: Charge temperature estimate K", "", 0},
 	{engine->engineState.crankingFuel.coolantTemperatureCoefficient, "Fuel: cranking CLT mult", "", 0},
@@ -693,15 +705,15 @@ static const LogField fields[] = {
 	{engine->engineState.smartChipState, "smartChipState", "", 0},
 	{engine->engineState.smartChipRestartCounter, "smartChipRestartCounter", "", 0},
 	{engine->engineState.smartChipAliveCounter, "smartChipAliveCounter", "", 0},
-	{engine->engineState, 44, 0, "startStopPhysicalState", ""},
-	{engine->engineState, 44, 1, "Harley ACR Active", ""},
-	{engine->engineState, 44, 2, "acrEngineMovedRecently", ""},
-	{engine->engineState, 44, 3, "heaterControlEnabled", ""},
-	{engine->engineState, 44, 4, "luaDigitalState0", ""},
-	{engine->engineState, 44, 5, "luaDigitalState1", ""},
-	{engine->engineState, 44, 6, "luaDigitalState2", ""},
-	{engine->engineState, 44, 7, "luaDigitalState3", ""},
-	{engine->engineState, 44, 8, "Clutch: down", ""},
+	{engine->engineState, 92, 0, "startStopPhysicalState", ""},
+	{engine->engineState, 92, 1, "Harley ACR Active", ""},
+	{engine->engineState, 92, 2, "acrEngineMovedRecently", ""},
+	{engine->engineState, 92, 3, "heaterControlEnabled", ""},
+	{engine->engineState, 92, 4, "luaDigitalState0", ""},
+	{engine->engineState, 92, 5, "luaDigitalState1", ""},
+	{engine->engineState, 92, 6, "luaDigitalState2", ""},
+	{engine->engineState, 92, 7, "luaDigitalState3", ""},
+	{engine->engineState, 92, 8, "Clutch: down", ""},
 	{engine->engineState.startStopStateToggleCounter, "startStopStateToggleCounter", "", 0},
 	{engine->engineState.currentVe, "currentVe", "", 0},
 	{engine->engineState.luaSoftSparkSkip, "luaSoftSparkSkip", "", 0},
@@ -743,6 +755,15 @@ static const LogField fields[] = {
 	{engine->triggerCentral.mapVvt_sync_counter, "Instant MAP sync counter", "counter", 0},
 #endif
 #if EFI_SHAFT_POSITION_INPUT
+	{engine->triggerCentral.mapVvt_min_point_counter, "mapVvt_min_point_counter", "", 0},
+#endif
+#if EFI_SHAFT_POSITION_INPUT
+	{engine->triggerCentral.temp_mapVvt_index, "temp_mapVvt_index", "", 0},
+#endif
+#if EFI_SHAFT_POSITION_INPUT
+	{engine->triggerCentral.mapVvt_CycleDelta, "mapVvt_CycleDelta", "", 0},
+#endif
+#if EFI_SHAFT_POSITION_INPUT
 	{engine->triggerCentral.currentEngineDecodedPhase, "Sync: Engine Phase", "deg", 0, "Sync"},
 #endif
 #if EFI_SHAFT_POSITION_INPUT
@@ -755,7 +776,7 @@ static const LogField fields[] = {
 	{engine->triggerCentral.mapCamPrevToothAngle, "Sync: MAP: prev angle", "deg", 2},
 #endif
 #if EFI_SHAFT_POSITION_INPUT
-	{engine->triggerCentral, 40, 0, "isDecodingMapCam", ""},
+	{engine->triggerCentral, 48, 0, "isDecodingMapCam", ""},
 #endif
 #if EFI_SHAFT_POSITION_INPUT
 	{engine->triggerCentral.triggerElapsedUs, "triggerElapsedUs", "", 0},
@@ -788,6 +809,9 @@ static const LogField fields[] = {
 	{engine->triggerCentral.triggerState.triggerStateIndex, "trgtriggerStateIndex", "", 0},
 #endif
 #if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
+	{engine->triggerCentral.triggerState.triggerCountersError, "trgtriggerCountersError", "", 0},
+#endif
+#if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
 	{engine->triggerCentral.vvtState[0][0].synchronizationCounter, "vvt1isync: wheel sync counter", "", 0},
 #endif
 #if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
@@ -813,6 +837,9 @@ static const LogField fields[] = {
 #endif
 #if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
 	{engine->triggerCentral.vvtState[0][0].triggerStateIndex, "vvt1itriggerStateIndex", "", 0},
+#endif
+#if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
+	{engine->triggerCentral.vvtState[0][0].triggerCountersError, "vvt1itriggerCountersError", "", 0},
 #endif
 #if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
 	{engine->triggerCentral.vvtState[0][1].synchronizationCounter, "vvt1esync: wheel sync counter", "", 0},
@@ -842,6 +869,9 @@ static const LogField fields[] = {
 	{engine->triggerCentral.vvtState[0][1].triggerStateIndex, "vvt1etriggerStateIndex", "", 0},
 #endif
 #if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
+	{engine->triggerCentral.vvtState[0][1].triggerCountersError, "vvt1etriggerCountersError", "", 0},
+#endif
+#if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
 	{engine->triggerCentral.vvtState[1][0].synchronizationCounter, "vvt2isync: wheel sync counter", "", 0},
 #endif
 #if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
@@ -869,6 +899,9 @@ static const LogField fields[] = {
 	{engine->triggerCentral.vvtState[1][0].triggerStateIndex, "vvt2itriggerStateIndex", "", 0},
 #endif
 #if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
+	{engine->triggerCentral.vvtState[1][0].triggerCountersError, "vvt2itriggerCountersError", "", 0},
+#endif
+#if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
 	{engine->triggerCentral.vvtState[1][1].synchronizationCounter, "vvt2esync: wheel sync counter", "", 0},
 #endif
 #if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
@@ -894,6 +927,9 @@ static const LogField fields[] = {
 #endif
 #if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
 	{engine->triggerCentral.vvtState[1][1].triggerStateIndex, "vvt2etriggerStateIndex", "", 0},
+#endif
+#if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
+	{engine->triggerCentral.vvtState[1][1].triggerCountersError, "vvt2etriggerCountersError", "", 0},
 #endif
 #if EFI_PROD_CODE && EFI_IDLE_CONTROL
 	{engine->module<IdleController>().unmock().baseIdlePosition, "idle: base value", "", 0},

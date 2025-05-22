@@ -794,7 +794,7 @@ struct engine_configuration_s {
 	bool launchControlEnabled : 1 {};
 	/**
 	offset 168 bit 17 */
-	bool tempPumpLimitCheck : 1 {};
+	bool unusedBit42423 : 1 {};
 	/**
 	offset 168 bit 18 */
 	bool antiLagEnabled : 1 {};
@@ -2015,7 +2015,7 @@ struct engine_configuration_s {
 	bool enableCanVss : 1 {};
 	/**
 	offset 892 bit 8 */
-	bool suppressWboWorkaround7048 : 1 {};
+	bool unusedSuppressWboWorkaround7048 : 1 {};
 	/**
 	 * If enabled, adjust at a constant rate instead of a rate proportional to the current lambda error. This mode may be easier to tune, and more tolerant of sensor noise.
 	offset 892 bit 9 */
@@ -2474,9 +2474,8 @@ struct engine_configuration_s {
 	offset 1292 bit 10 */
 	bool verboseTriggerSynchDetails : 1 {};
 	/**
-	 * Measure actual dt for PID instead of pre-defined
 	offset 1292 bit 11 */
-	bool etbUsePreciseTiming : 1 {};
+	bool unusedBitsd23413421 : 1 {};
 	/**
 	offset 1292 bit 12 */
 	bool hondaK : 1 {};
@@ -4943,8 +4942,16 @@ struct engine_configuration_s {
 	 */
 	float wastegatePositionClosedVoltage;
 	/**
-	 * units: units
 	 * offset 3928
+	 */
+	can_wbo_type_e wboType1;
+	/**
+	 * offset 3930
+	 */
+	can_wbo_type_e wboType2;
+	/**
+	 * units: units
+	 * offset 3932
 	 */
 	uint8_t unusedOftenChangesDuringFirmwareUpdate[END_OF_CALIBRATION_PADDING] = {};
 };
