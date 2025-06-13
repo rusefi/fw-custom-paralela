@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <msq xmlns="http://www.msefi.com/:msq">
     <page/>
-    <page number="0" size="28572">
+    <page number="0" size="28532">
         <constant name="accelerometerCsPin">"NONE"</constant>
         <constant name="accelerometerCsPinMode">"default"</constant>
         <constant name="accelerometerSpiDevice">"Off"</constant>
@@ -559,7 +559,7 @@
         <constant name="brakePedalPin">"NONE"</constant>
         <constant name="brakePedalPinMode">"PULLUP"</constant>
         <constant digits="0" name="byFirmwareVersion" units="index">0.0</constant>
-        <constant digits="0" name="calibrationBirthday" units="">2.0250612E7</constant>
+        <constant digits="0" name="calibrationBirthday" units="">2.0250613E7</constant>
         <constant digits="0" name="camDecoder2jzPosition" units="angle">95.0</constant>
         <constant digits="0" name="camDecoder2jzPrecision" units="">40.0</constant>
         <constant name="camInputs1">"NONE"</constant>
@@ -669,19 +669,19 @@
          0.0
          0.0
 </constant>
-        <constant cols="1" digits="2" name="cltIdleCorrBins" rows="8">
+        <constant cols="1" digits="2" name="cltIdleCorrBins" rows="6">
          -40.0
-         -10.0
-         10.0
-         40.0
-         60.0
-         90.0
-         110.0
+         0.0
+         30.0
+         70.0
+         100.0
          140.0
 </constant>
-        <constant cols="8" digits="2" name="cltIdleCorrTable" rows="2">
-         75.0 70.0 70.0 65.0 60.0 55.0 55.0 50.0
-         75.0 70.0 70.0 65.0 60.0 55.0 55.0 50.0
+        <constant cols="6" digits="2" name="cltIdleCorrTable" rows="4">
+         75.0 70.0 65.0 60.0 55.0 50.0
+         75.0 70.0 65.0 60.0 55.0 50.0
+         75.0 70.0 65.0 60.0 55.0 50.0
+         75.0 70.0 65.0 60.0 55.0 50.0
 </constant>
         <constant cols="1" digits="0" name="cltIdleRpm" rows="8">
          0.0
@@ -1318,7 +1318,31 @@
         <constant digits="2" name="highPressureFuel_v2" units="volts">0.0</constant>
         <constant digits="2" name="highPressureFuel_value1" units="">0.0</constant>
         <constant digits="2" name="highPressureFuel_value2" units="">0.0</constant>
-        <constant cols="1" digits="0" name="highSpeedOffsets" rows="32">
+        <constant cols="1" digits="0" name="highSpeedOffsets" rows="128">
+         54.0
+         1000.0
+         3000.0
+         7000.0
+         2500.0
+         25630.0
+         25675.0
+         0.0
+         0.0
+         16656.0
+         0.0
+         5000.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         3840.0
+         542.0
+         2000.0
+         0.0
+         17312.0
          0.0
          0.0
          0.0
@@ -1342,6 +1366,7 @@
          0.0
          0.0
          0.0
+         17224.0
          0.0
          0.0
          0.0
@@ -1351,6 +1376,77 @@
          0.0
          0.0
          0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         0.0
+         8385.0
+         0.0
+         98.0
+         926.0
+         65526.0
+         110.0
+         550.0
+         0.0
+         0.0
+         16576.0
+         0.0
+         250.0
+         32768.0
+         17442.0
+         0.0
+         17480.0
+         24576.0
+         17770.0
+         49152.0
+         17882.0
+         0.0
+         17096.0
+         0.0
+         17116.0
+         0.0
+         17136.0
+         0.0
+         17154.0
+         32768.0
+         17442.0
+         0.0
+         17480.0
+         32768.0
+         17620.0
+         32768.0
+         17698.0
+         49152.0
+         17754.0
+         32768.0
+         17801.0
+         40960.0
+         17829.0
+         49152.0
+         17882.0
+         0.0
+         16968.0
+         0.0
+         16968.0
+         0.0
+         16968.0
+         0.0
+         16968.0
+         0.0
+         16968.0
+         0.0
+         16968.0
+         0.0
+         16968.0
 </constant>
         <constant name="hondaK">"false"</constant>
         <constant digits="0" name="hpfpActivationAngle" units="deg">30.0</constant>
@@ -2792,8 +2888,10 @@ end</constant>
         <constant name="rethrowHardFault">"false"</constant>
         <constant digits="0" name="rpmHardLimit" units="rpm">7000.0</constant>
         <constant digits="0" name="rpmHardLimitHyst" units="RPM">50.0</constant>
-        <constant cols="1" digits="0" name="rpmIdleCorrBins" rows="2">
+        <constant cols="1" digits="0" name="rpmIdleCorrBins" rows="4">
          700.0
+         800.0
+         3800.0
          7000.0
 </constant>
         <constant digits="1" name="rpmSoftLimitFuelAdded" units="%">0.0</constant>
@@ -4557,7 +4655,7 @@ end</constant>
 </constant>
         <constant name="yesUnderstandLocking">"no"</constant>
     </page>
-    <versionInfo firmwareInfo="20250610" nPages="1" signature="rusEFI master.2025.06.12.paralela.2430026896" version="5.0"/>
+    <versionInfo firmwareInfo="20250610" nPages="1" signature="rusEFI master.2025.06.13.paralela.265327521" version="5.0"/>
     <bibliography author="rusEFI 20250610" writeDate="date"/>
     <settings/>
     <userComments/>
