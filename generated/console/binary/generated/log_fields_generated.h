@@ -191,6 +191,7 @@ static const LogField fields[] = {
 	{engine->outputChannels.auxLinear3, "Aux linear #3", "", 2},
 	{engine->outputChannels.auxLinear4, "Aux linear #4", "", 2},
 	{engine->outputChannels.fallbackMap, "fallbackMap", "kPa", 1},
+	{engine->outputChannels.effectiveMap, "Effective MAP", "kPa", 1},
 	{engine->outputChannels.instantMAPValue, "Instant MAP", "kPa", 2},
 	{engine->outputChannels.maxLockedDuration, "maxLockedDuration", "us", 0},
 	{engine->outputChannels.canWriteOk, "CAN: Tx OK", "", 0},
@@ -655,25 +656,25 @@ static const LogField fields[] = {
 	{*engine->module<BoostController>(), 0, 10, "isBoostControlled", ""},
 #endif
 #if EFI_BOOST_CONTROL
-	{engine->module<BoostController>()->luaTargetAdd, "Boost: Lua target add", "v", 1, "Boost Control"},
+	{engine->module<BoostController>()->luaTargetAdd, "Boost: Lua target add", "percent", 1, "Boost Control"},
 #endif
 #if EFI_BOOST_CONTROL
-	{engine->module<BoostController>()->boostOutput, "Boost: Output", "percent", 2, "Boost Control"},
+	{engine->module<BoostController>()->luaTargetMult, "Boost: Lua target mult", "", 1, "Boost Control"},
 #endif
 #if EFI_BOOST_CONTROL
-	{engine->module<BoostController>()->luaTargetMult, "Boost: Lua target mult", "v", 1, "Boost Control"},
+	{engine->module<BoostController>()->boostControlTarget, "Boost: Target", "kPa", 1, "Boost Control"},
 #endif
 #if EFI_BOOST_CONTROL
-	{engine->module<BoostController>()->openLoopPart, "Boost: Open loop", "v", 1, "Boost Control"},
+	{engine->module<BoostController>()->openLoopPart, "Boost: Open loop", "percent", 1, "Boost Control"},
 #endif
 #if EFI_BOOST_CONTROL
-	{engine->module<BoostController>()->luaOpenLoopAdd, "Boost: Lua open loop add", "v", 1, "Boost Control"},
+	{engine->module<BoostController>()->luaOpenLoopAdd, "Boost: Lua open loop add", "percent", 1, "Boost Control"},
 #endif
 #if EFI_BOOST_CONTROL
 	{engine->module<BoostController>()->boostControllerClosedLoopPart, "Boost: Closed loop", "%", 1, "Boost Control"},
 #endif
 #if EFI_BOOST_CONTROL
-	{engine->module<BoostController>()->boostControlTarget, "Boost: Target", "kPa", 1, "Boost Control"},
+	{engine->module<BoostController>()->boostOutput, "Boost: Output", "percent", 2, "Boost Control"},
 #endif
 	{*engine->module<FanControl1>(), 0, 0, "fan1cranking", ""},
 	{*engine->module<FanControl1>(), 0, 1, "fan1notRunning", ""},
