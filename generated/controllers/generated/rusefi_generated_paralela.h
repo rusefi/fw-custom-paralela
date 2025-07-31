@@ -1440,6 +1440,7 @@
 #define pin_output_mode_e_OM_INVERTED 1
 #define pin_output_mode_e_OM_OPENDRAIN 2
 #define pin_output_mode_e_OM_OPENDRAIN_INVERTED 3
+#define poke false
 #define PRIME_CURVE_COUNT 8
 #define PROTOCOL_COIL_SHORT_PREFIX "c"
 #define PROTOCOL_CRANK1 "t1"
@@ -1502,7 +1503,7 @@
 #define SentInput_NONE 0
 #define show_tcu_gauges false
 #define show_vvt_output_pin true
-#define SIGNATURE_HASH 4207167897
+#define SIGNATURE_HASH 2093446914
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1526,6 +1527,16 @@
 #define stft_cell_cfg_s_size 4
 #define STFT_CELL_COUNT 4
 #define stft_s_size 28
+#define stft_state_e_stftDisabledAfrOurOfRange 6
+#define stft_state_e_stftDisabledClt 5
+#define stft_state_e_stftDisabledCrankingDelay 4
+#define stft_state_e_stftDisabledDFCO 7
+#define stft_state_e_stftDisabledFuelCut 9
+#define stft_state_e_stftDisabledRPM 3
+#define stft_state_e_stftDisabledSettings 1
+#define stft_state_e_stftDisabledTpsAccel 8
+#define stft_state_e_stftDisabledTuning 2
+#define stft_state_e_stftEnabled 0
 #define switch_input_pin_e_enum 0="NONE",54="CAM2 (PD4)",19="CKP",8="CMP",68="Clutch",33="ETB_DIR/StepStep",32="ETB_DIS/StepDir",80="Extra I/O PE14",9="FlexFuel",81="Idle (PE15)",77="Ignition 5 (PE11)",78="Ignition 6 (PE12)",52="Ignition 7 (PD2)",53="Ignition 8 (PD3)",60="Injector 5 (PD10)",61="Injector 6 (PD11)",62="Injector 7 (PD12)",63="Injector 8 (PD13)",64="Threshold (PD14)",56="USART-RX (PD6)",55="USART-TX (PD5)"
 #define switch_input_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CMP","FlexFuel","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CKP","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","ETB_DIS/StepDir","ETB_DIR/StepStep","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 7 (PD2)","Ignition 8 (PD3)","CAM2 (PD4)","USART-TX (PD5)","USART-RX (PD6)","INVALID","INVALID","INVALID","Injector 5 (PD10)","Injector 6 (PD11)","Injector 7 (PD12)","Injector 8 (PD13)","Threshold (PD14)","INVALID","INVALID","INVALID","Clutch","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 5 (PE11)","Ignition 6 (PE12)","INVALID","Extra I/O PE14","Idle (PE15)"
 #define TABLE_2_LOAD_SIZE 8
@@ -2044,12 +2055,12 @@
 #define ts_show_wastegate_sensor true
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
-#define TS_SIGNATURE "rusEFI master.2025.07.24.paralela.4207167897"
+#define TS_SIGNATURE "rusEFI master.2025.07.31.paralela.2093446914"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_TEST_COMMAND 't'
 #define TS_TEST_COMMAND_char t
-#define TS_TOTAL_OUTPUT_SIZE 2004
+#define TS_TOTAL_OUTPUT_SIZE 2008
 #define TS_TRIGGER_SCOPE_CHANNEL_1_NAME "Channel 1"
 #define TS_TRIGGER_SCOPE_CHANNEL_2_NAME "Channel 2"
 #define TS_TRIGGER_SCOPE_DISABLE 5
