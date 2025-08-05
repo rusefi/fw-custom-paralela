@@ -64,7 +64,7 @@ struct stft_s {
 	scaled_channel<uint8_t, 10, 1> deadband;
 	/**
 	 * Below this temperature, correction is disabled.
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 7
 	 */
 	int8_t minClt;
@@ -2049,92 +2049,92 @@ struct engine_configuration_s {
 	bool rethrowHardFault : 1 {};
 	/**
 	offset 708 bit 6 */
-	bool requireFootOnBrakeToCrank : 1 {};
-	/**
-	offset 708 bit 7 */
 	bool verboseQuad : 1 {};
 	/**
 	 * This setting should only be used if you have a stepper motor idle valve and a stepper motor driver installed.
-	offset 708 bit 8 */
+	offset 708 bit 7 */
 	bool useStepperIdle : 1 {};
 	/**
-	offset 708 bit 9 */
+	offset 708 bit 8 */
 	bool enabledStep1Limiter : 1 {};
 	/**
-	offset 708 bit 10 */
+	offset 708 bit 9 */
 	bool lambdaProtectionEnable : 1 {};
 	/**
-	offset 708 bit 11 */
+	offset 708 bit 10 */
 	bool verboseTLE8888 : 1 {};
 	/**
 	 * CAN broadcast using custom rusEFI protocol
-	offset 708 bit 12 */
+	offset 708 bit 11 */
 	bool enableVerboseCanTx : 1 {};
 	/**
-	offset 708 bit 13 */
+	offset 708 bit 12 */
 	bool externalRusEfiGdiModule : 1 {};
 	/**
-	offset 708 bit 14 */
+	offset 708 bit 13 */
 	bool unusedFlipWboChannels : 1 {};
 	/**
 	 * Useful for individual intakes
-	offset 708 bit 15 */
+	offset 708 bit 14 */
 	bool measureMapOnlyInOneCylinder : 1 {};
 	/**
-	offset 708 bit 16 */
+	offset 708 bit 15 */
 	bool stepperForceParkingEveryRestart : 1 {};
 	/**
 	 * If enabled, try to fire the engine before a full engine cycle has been completed using RPM estimated from the last 90 degrees of engine rotation. As soon as the trigger syncs plus 90 degrees rotation, fuel and ignition events will occur. If disabled, worst case may require up to 4 full crank rotations before any events are scheduled.
-	offset 708 bit 17 */
+	offset 708 bit 16 */
 	bool isFasterEngineSpinUpEnabled : 1 {};
 	/**
 	 * This setting disables fuel injection while the engine is in overrun, this is useful as a fuel saving measure and to prevent back firing.
-	offset 708 bit 18 */
+	offset 708 bit 17 */
 	bool coastingFuelCutEnabled : 1 {};
 	/**
 	 * Override the IAC position during overrun conditions to help reduce engine breaking, this can be helpful for large engines in light weight cars or engines that have trouble returning to idle.
-	offset 708 bit 19 */
+	offset 708 bit 18 */
 	bool useIacTableForCoasting : 1 {};
 	/**
-	offset 708 bit 20 */
+	offset 708 bit 19 */
 	bool useNoiselessTriggerDecoder : 1 {};
 	/**
-	offset 708 bit 21 */
+	offset 708 bit 20 */
 	bool useIdleTimingPidControl : 1 {};
 	/**
 	 * Allows disabling the ETB when the engine is stopped. You may not like the power draw or PWM noise from the motor, so this lets you turn it off until it's necessary.
-	offset 708 bit 22 */
+	offset 708 bit 21 */
 	bool disableEtbWhenEngineStopped : 1 {};
 	/**
-	offset 708 bit 23 */
+	offset 708 bit 22 */
 	bool is_enabled_spi_4 : 1 {};
 	/**
 	 * Disable the electronic throttle motor and DC idle motor for testing.
 	 * This mode is for testing ETB/DC idle position sensors, etc without actually driving the throttle.
-	offset 708 bit 24 */
+	offset 708 bit 23 */
 	bool pauseEtbControl : 1 {};
 	/**
-	offset 708 bit 25 */
+	offset 708 bit 24 */
 	bool verboseKLine : 1 {};
 	/**
-	offset 708 bit 26 */
+	offset 708 bit 25 */
 	bool idleIncrementalPidCic : 1 {};
 	/**
 	 * AEM X-Series or rusEFI Wideband
-	offset 708 bit 27 */
+	offset 708 bit 26 */
 	bool enableAemXSeries : 1 {};
 	/**
-	offset 708 bit 28 */
+	offset 708 bit 27 */
 	bool modeledFlowIdle : 1 {};
 	/**
+	offset 708 bit 28 */
+	bool unusedBit_309_28 : 1 {};
+	/**
 	offset 708 bit 29 */
-	bool unusedBit_310_29 : 1 {};
+	bool unusedBit_309_29 : 1 {};
 	/**
 	offset 708 bit 30 */
-	bool unusedBit_310_30 : 1 {};
+	bool unusedBit_309_30 : 1 {};
 	/**
 	offset 708 bit 31 */
-	bool unusedBit_310_31 : 1 {};
+	bool unusedBit_309_31 : 1 {};
 	/**
 	 * offset 712
 	 */
@@ -2448,15 +2448,11 @@ struct engine_configuration_s {
 	 */
 	uart_device_e consoleUartDevice;
 	/**
-	 * offset 869
-	 */
-	maf_sensor_type_e mafSensorType;
-	/**
 	 * need 4 byte alignment
 	 * units: units
-	 * offset 870
+	 * offset 869
 	 */
-	uint8_t alignmentFill_at_870[2] = {};
+	uint8_t alignmentFill_at_869[3] = {};
 	/**
 	 * Ramp the idle target down from the entry threshold over N seconds when returning to idle. Helps prevent overshooting (below) the idle target while returning to idle from coasting.
 	offset 872 bit 0 */
@@ -2558,10 +2554,10 @@ struct engine_configuration_s {
 	bool verboseCan2 : 1 {};
 	/**
 	offset 872 bit 30 */
-	bool unusedBit_409_30 : 1 {};
+	bool unusedBit_408_30 : 1 {};
 	/**
 	offset 872 bit 31 */
-	bool unusedBit_409_31 : 1 {};
+	bool unusedBit_408_31 : 1 {};
 	/**
 	 * offset 876
 	 */
@@ -2604,17 +2600,15 @@ struct engine_configuration_s {
 	 */
 	antiLagActivationMode_e antiLagActivationMode;
 	/**
-	 * How long to look back for TPS-based acceleration enrichment. Increasing this time will trigger enrichment for longer when a throttle position change occurs.
-	 * units: sec
 	 * offset 926
 	 */
-	scaled_channel<uint8_t, 20, 1> tpsAccelLookback;
+	cranking_condition_e crankingCondition;
 	/**
-	 * need 4 byte alignment
-	 * units: units
+	 * How long to look back for TPS-based acceleration enrichment. Increasing this time will trigger enrichment for longer when a throttle position change occurs.
+	 * units: sec
 	 * offset 927
 	 */
-	uint8_t alignmentFill_at_927[1] = {};
+	scaled_channel<uint8_t, 20, 1> tpsAccelLookback;
 	/**
 	 * For decel we simply multiply delta of TPS and tFor decel we do not use table?!
 	 * units: roc
@@ -2906,22 +2900,22 @@ struct engine_configuration_s {
 	bool skippedWheelOnCam : 1 {};
 	/**
 	offset 1236 bit 26 */
-	bool unusedBit_487_26 : 1 {};
+	bool unusedBit_486_26 : 1 {};
 	/**
 	offset 1236 bit 27 */
-	bool unusedBit_487_27 : 1 {};
+	bool unusedBit_486_27 : 1 {};
 	/**
 	offset 1236 bit 28 */
-	bool unusedBit_487_28 : 1 {};
+	bool unusedBit_486_28 : 1 {};
 	/**
 	offset 1236 bit 29 */
-	bool unusedBit_487_29 : 1 {};
+	bool unusedBit_486_29 : 1 {};
 	/**
 	offset 1236 bit 30 */
-	bool unusedBit_487_30 : 1 {};
+	bool unusedBit_486_30 : 1 {};
 	/**
 	offset 1236 bit 31 */
-	bool unusedBit_487_31 : 1 {};
+	bool unusedBit_486_31 : 1 {};
 	/**
 	 * A/C button input
 	 * offset 1240
@@ -3056,16 +3050,16 @@ struct engine_configuration_s {
 	bool watchOutForLinearTime : 1 {};
 	/**
 	offset 1248 bit 28 */
-	bool unusedBit_526_28 : 1 {};
+	bool unusedBit_525_28 : 1 {};
 	/**
 	offset 1248 bit 29 */
-	bool unusedBit_526_29 : 1 {};
+	bool unusedBit_525_29 : 1 {};
 	/**
 	offset 1248 bit 30 */
-	bool unusedBit_526_30 : 1 {};
+	bool unusedBit_525_30 : 1 {};
 	/**
 	offset 1248 bit 31 */
-	bool unusedBit_526_31 : 1 {};
+	bool unusedBit_525_31 : 1 {};
 	/**
 	 * units: count
 	 * offset 1252
@@ -3346,16 +3340,16 @@ struct engine_configuration_s {
 	bool enableKnockSpectrogramFilter : 1 {};
 	/**
 	offset 1404 bit 28 */
-	bool unusedBit_594_28 : 1 {};
+	bool unusedBit_593_28 : 1 {};
 	/**
 	offset 1404 bit 29 */
-	bool unusedBit_594_29 : 1 {};
+	bool unusedBit_593_29 : 1 {};
 	/**
 	offset 1404 bit 30 */
-	bool unusedBit_594_30 : 1 {};
+	bool unusedBit_593_30 : 1 {};
 	/**
 	offset 1404 bit 31 */
-	bool unusedBit_594_31 : 1 {};
+	bool unusedBit_593_31 : 1 {};
 	/**
 	 * This value is an added for base idle value. Idle Value added when coasting and transitioning into idle.
 	 * units: percent
@@ -3504,76 +3498,76 @@ struct engine_configuration_s {
 	bool can2ListenMode : 1 {};
 	/**
 	offset 1448 bit 8 */
-	bool unusedBit_628_8 : 1 {};
+	bool unusedBit_627_8 : 1 {};
 	/**
 	offset 1448 bit 9 */
-	bool unusedBit_628_9 : 1 {};
+	bool unusedBit_627_9 : 1 {};
 	/**
 	offset 1448 bit 10 */
-	bool unusedBit_628_10 : 1 {};
+	bool unusedBit_627_10 : 1 {};
 	/**
 	offset 1448 bit 11 */
-	bool unusedBit_628_11 : 1 {};
+	bool unusedBit_627_11 : 1 {};
 	/**
 	offset 1448 bit 12 */
-	bool unusedBit_628_12 : 1 {};
+	bool unusedBit_627_12 : 1 {};
 	/**
 	offset 1448 bit 13 */
-	bool unusedBit_628_13 : 1 {};
+	bool unusedBit_627_13 : 1 {};
 	/**
 	offset 1448 bit 14 */
-	bool unusedBit_628_14 : 1 {};
+	bool unusedBit_627_14 : 1 {};
 	/**
 	offset 1448 bit 15 */
-	bool unusedBit_628_15 : 1 {};
+	bool unusedBit_627_15 : 1 {};
 	/**
 	offset 1448 bit 16 */
-	bool unusedBit_628_16 : 1 {};
+	bool unusedBit_627_16 : 1 {};
 	/**
 	offset 1448 bit 17 */
-	bool unusedBit_628_17 : 1 {};
+	bool unusedBit_627_17 : 1 {};
 	/**
 	offset 1448 bit 18 */
-	bool unusedBit_628_18 : 1 {};
+	bool unusedBit_627_18 : 1 {};
 	/**
 	offset 1448 bit 19 */
-	bool unusedBit_628_19 : 1 {};
+	bool unusedBit_627_19 : 1 {};
 	/**
 	offset 1448 bit 20 */
-	bool unusedBit_628_20 : 1 {};
+	bool unusedBit_627_20 : 1 {};
 	/**
 	offset 1448 bit 21 */
-	bool unusedBit_628_21 : 1 {};
+	bool unusedBit_627_21 : 1 {};
 	/**
 	offset 1448 bit 22 */
-	bool unusedBit_628_22 : 1 {};
+	bool unusedBit_627_22 : 1 {};
 	/**
 	offset 1448 bit 23 */
-	bool unusedBit_628_23 : 1 {};
+	bool unusedBit_627_23 : 1 {};
 	/**
 	offset 1448 bit 24 */
-	bool unusedBit_628_24 : 1 {};
+	bool unusedBit_627_24 : 1 {};
 	/**
 	offset 1448 bit 25 */
-	bool unusedBit_628_25 : 1 {};
+	bool unusedBit_627_25 : 1 {};
 	/**
 	offset 1448 bit 26 */
-	bool unusedBit_628_26 : 1 {};
+	bool unusedBit_627_26 : 1 {};
 	/**
 	offset 1448 bit 27 */
-	bool unusedBit_628_27 : 1 {};
+	bool unusedBit_627_27 : 1 {};
 	/**
 	offset 1448 bit 28 */
-	bool unusedBit_628_28 : 1 {};
+	bool unusedBit_627_28 : 1 {};
 	/**
 	offset 1448 bit 29 */
-	bool unusedBit_628_29 : 1 {};
+	bool unusedBit_627_29 : 1 {};
 	/**
 	offset 1448 bit 30 */
-	bool unusedBit_628_30 : 1 {};
+	bool unusedBit_627_30 : 1 {};
 	/**
 	offset 1448 bit 31 */
-	bool unusedBit_628_31 : 1 {};
+	bool unusedBit_627_31 : 1 {};
 	/**
 	 * Angle of tooth detection within engine phase cycle
 	 * units: angle
@@ -3926,7 +3920,7 @@ struct engine_configuration_s {
 	 */
 	float injectorCorrectionPolynomial[8] = {};
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 1824
 	 */
 	scaled_channel<int8_t, 1, 5> primeBins[PRIME_CURVE_COUNT] = {};
@@ -4001,7 +3995,7 @@ struct engine_configuration_s {
 	int16_t coastingFuelCutTps;
 	/**
 	 * Fuel cutoff is disabled when the engine is cold.
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 1876
 	 */
 	int16_t coastingFuelCutClt;
@@ -4529,7 +4523,7 @@ struct engine_configuration_s {
 	 */
 	vin_number_t vinNumber;
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 3061
 	 */
 	int8_t torqueReductionActivationTemperature;
@@ -4563,12 +4557,12 @@ struct engine_configuration_s {
 	 */
 	int16_t ALSMaxDuration;
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 3086
 	 */
 	int8_t ALSMinCLT;
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 3087
 	 */
 	int8_t ALSMaxCLT;
@@ -5554,7 +5548,7 @@ struct persistent_config_s {
 	 */
 	uint16_t postCrankingDurationBins[CRANKING_ENRICH_COUNT] = {};
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 4008
 	 */
 	int16_t postCrankingCLTBins[CRANKING_ENRICH_CLT_COUNT] = {};
@@ -5611,7 +5605,7 @@ struct persistent_config_s {
 	scaled_channel<uint16_t, 100, 1> sparkDwellValues[DWELL_CURVE_SIZE] = {};
 	/**
 	 * CLT-based target RPM for automatic idle controller
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 4208
 	 */
 	scaled_channel<int8_t, 1, 2> cltIdleRpmBins[CLT_CURVE_SIZE] = {};
@@ -5628,7 +5622,7 @@ struct persistent_config_s {
 	scaled_channel<int16_t, 10, 1> ignitionCltCorrTable[CLT_TIMING_CURVE_SIZE][CLT_TIMING_CURVE_SIZE] = {};
 	/**
 	 * CLT-based timing correction
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 4274
 	 */
 	scaled_channel<int8_t, 1, 5> ignitionCltCorrTempBins[CLT_TIMING_CURVE_SIZE] = {};
@@ -5785,7 +5779,7 @@ struct persistent_config_s {
 	scaled_channel<uint8_t, 1, 100> pedalToTpsRpmBins[PEDAL_TO_TPS_RPM_SIZE] = {};
 	/**
 	 * CLT-based cranking position % for simple manual idle controller
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 5212
 	 */
 	float cltCrankingCorrBins[CLT_CRANKING_CURVE_SIZE] = {};
@@ -5796,7 +5790,7 @@ struct persistent_config_s {
 	 */
 	float cltCrankingCorr[CLT_CRANKING_CURVE_SIZE] = {};
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 5276
 	 */
 	float afterCrankingIACtaperDurationBins[CLT_CRANKING_TAPER_CURVE_SIZE] = {};
@@ -5839,7 +5833,7 @@ struct persistent_config_s {
 	 */
 	lua_script_t luaScript;
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 15376
 	 */
 	float cltFuelCorrBins[CLT_FUEL_CURVE_SIZE] = {};
@@ -5849,7 +5843,7 @@ struct persistent_config_s {
 	 */
 	float cltFuelCorr[CLT_FUEL_CURVE_SIZE] = {};
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 15440
 	 */
 	float iatFuelCorrBins[IAT_CURVE_SIZE] = {};
@@ -5864,7 +5858,7 @@ struct persistent_config_s {
 	 */
 	float crankingFuelCoef[CRANKING_CURVE_SIZE] = {};
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 15508
 	 */
 	float crankingFuelBins[CRANKING_CURVE_SIZE] = {};
@@ -5874,7 +5868,7 @@ struct persistent_config_s {
 	 */
 	float crankingCycleBins[CRANKING_CURVE_SIZE] = {};
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 15548
 	 */
 	int16_t crankingCycleFuelCltBins[CRANKING_CYCLE_CLT_SIZE] = {};
@@ -5888,7 +5882,7 @@ struct persistent_config_s {
 	float crankingCycleBaseFuel[CRANKING_CYCLE_CLT_SIZE][CRANKING_CURVE_SIZE] = {};
 	/**
 	 * CLT-based idle position for simple manual idle controller
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 15636
 	 */
 	float cltIdleCorrBins[CLT_IDLE_TABLE_CLT_SIZE] = {};
@@ -5928,7 +5922,7 @@ struct persistent_config_s {
 	 */
 	scaled_channel<int16_t, 10, 1> ignitionIatCorrTable[IAT_IGN_CORR_LOAD_COUNT][IAT_IGN_CORR_COUNT] = {};
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 16124
 	 */
 	int8_t ignitionIatCorrTempBins[IAT_IGN_CORR_COUNT] = {};
@@ -6564,7 +6558,7 @@ struct persistent_config_s {
 	 */
 	scaled_channel<uint8_t, 50, 1> tpsTspCorrValues[TPS_TPS_ACCEL_CLT_CORR_TABLE] = {};
 	/**
-	 * units: C
+	 * units: SPECIAL_CASE_TEMPERATURE
 	 * offset 22894
 	 */
 	scaled_channel<int8_t, 1, 5> cltRevLimitRpmBins[CLT_LIMITER_CURVE_SIZE] = {};
