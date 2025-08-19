@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "board_overrides.h"
 
 Gpio getCommsLedPin() {
 	return Gpio::D15;
@@ -12,7 +13,7 @@ Gpio getWarningLedPin() {
 	return Gpio::Unassigned;
 }
 
-void setBoardDefaultConfiguration() {
+static void customBoardDefaultConfiguration() {
 	engineConfiguration->vbattDividerCoeff = 6.5f;
 	engineConfiguration->vbattAdcChannel = EFI_ADC_11;
 }
@@ -70,3 +71,7 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->triggerInputPins[1] = Gpio::A6;
 }
 */
+
+void setup_custom_board_overrides() {
+	custom_board_DefaultConfiguration = customBoardDefaultConfiguration;
+}
