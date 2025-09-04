@@ -559,7 +559,7 @@ struct injector_s {
 	scaled_channel<int16_t, 100, 1> battLagCorrBattBins[VBAT_INJECTOR_CURVE_SIZE] = {};
 	/**
 	 * Injector correction pressure
-	 * units: kPa
+	 * units: SPECIAL_CASE_PRESSURE
 	 * offset 16
 	 */
 	scaled_channel<uint32_t, 10, 1> battLagCorrPressBins[VBAT_INJECTOR_CURVE_PRESSURE_SIZE] = {};
@@ -2831,7 +2831,8 @@ struct engine_configuration_s {
 	float triggerEventsTimeoutMs;
 	/**
 	 * A higher alpha (closer to 1) means the EMA reacts more quickly to changes in the data.
-	 * '1' means no filtering, 0.98 would be some filtering.
+	 * '100%' means no filtering, 98% would be some filtering.
+	 * units: percent
 	 * offset 960
 	 */
 	float ppsExpAverageAlpha;
@@ -4778,7 +4779,7 @@ struct engine_configuration_s {
 	float ALSSkipRatio;
 	/**
 	 * Hysterisis: if Pressure High Disable is 240kpa, and acPressureEnableHyst is 20, when the ECU sees 240kpa, A/C will be disabled, and stay disabled until 240-20=220kpa is reached
-	 * units: kPa (absolute)
+	 * units: SPECIAL_CASE_PRESSURE
 	 * offset 3124
 	 */
 	scaled_channel<uint8_t, 2, 1> acPressureEnableHyst;
@@ -5270,7 +5271,7 @@ struct engine_configuration_s {
 	/**
 	 * This is the pressure at which your injector flow is known.
 	 * For example if your injectors flow 400cc/min at 3.5 bar, enter 350kpa here.
-	 * units: kPa
+	 * units: SPECIAL_CASE_PRESSURE
 	 * offset 3672
 	 */
 	float secondaryInjectorFuelReferencePressure;
@@ -6143,7 +6144,7 @@ struct persistent_config_s {
 	 * This table represents MAP at a given TPS vs RPM, which we use if our MAP sensor has failed, or if we are using MAP Prediciton. 
 	 *  This table should be a direct representation of MAP, you can tune it manually by disconnecting MAP sensor, and filling out the table with values that match an external gauge that shows MAP.
 	 * Additionally, you can also use MLV to get the map values and/or generate the table for you
-	 * units: kPa
+	 * units: SPECIAL_CASE_PRESSURE
 	 * offset 16314
 	 */
 	scaled_channel<uint16_t, 100, 1> mapEstimateTable[MAP_EST_LOAD_COUNT][MAP_EST_RPM_COUNT] = {};
@@ -6781,32 +6782,32 @@ struct persistent_config_s {
 	 */
 	scaled_channel<uint8_t, 1, 1> tcu_shiftTpsBins[TCU_TABLE_WIDTH] = {};
 	/**
-	 * units: MPH
+	 * units: SPECIAL_CASE_SPEED
 	 * offset 23022
 	 */
 	uint8_t tcu_shiftSpeed12[TCU_TABLE_WIDTH] = {};
 	/**
-	 * units: MPH
+	 * units: SPECIAL_CASE_SPEED
 	 * offset 23024
 	 */
 	uint8_t tcu_shiftSpeed23[TCU_TABLE_WIDTH] = {};
 	/**
-	 * units: MPH
+	 * units: SPECIAL_CASE_SPEED
 	 * offset 23026
 	 */
 	uint8_t tcu_shiftSpeed34[TCU_TABLE_WIDTH] = {};
 	/**
-	 * units: MPH
+	 * units: SPECIAL_CASE_SPEED
 	 * offset 23028
 	 */
 	uint8_t tcu_shiftSpeed21[TCU_TABLE_WIDTH] = {};
 	/**
-	 * units: MPH
+	 * units: SPECIAL_CASE_SPEED
 	 * offset 23030
 	 */
 	uint8_t tcu_shiftSpeed32[TCU_TABLE_WIDTH] = {};
 	/**
-	 * units: MPH
+	 * units: SPECIAL_CASE_SPEED
 	 * offset 23032
 	 */
 	uint8_t tcu_shiftSpeed43[TCU_TABLE_WIDTH] = {};
@@ -6880,7 +6881,7 @@ struct persistent_config_s {
 	 */
 	scaled_channel<uint8_t, 1, 100> minimumOilPressureBins[8] = {};
 	/**
-	 * units: kPa
+	 * units: SPECIAL_CASE_PRESSURE
 	 * offset 23256
 	 */
 	scaled_channel<uint8_t, 1, 10> minimumOilPressureValues[8] = {};
@@ -6999,7 +7000,7 @@ struct persistent_config_s {
 	 */
 	scaled_channel<uint8_t, 1, 100> maximumOilPressureBins[4] = {};
 	/**
-	 * units: kPa
+	 * units: SPECIAL_CASE_PRESSURE
 	 * offset 23704
 	 */
 	scaled_channel<uint8_t, 1, 10> maximumOilPressureValues[4] = {};
