@@ -102,11 +102,12 @@ static_assert(sizeof(stft_s) == 28);
 // start of ltft_s
 struct ltft_s {
 	/**
-	 * Enables lambda sensor long term fuel corrections learning
+	 * Enables lambda sensor long term fuel corrections data gathering into LTFT trim tables
 	offset 0 bit 0 */
 	bool enabled : 1 {};
 	/**
-	 * Enables applying long term fuel corrections
+	 * Apply LTFT trims into fuel calculation on top of VE table.
+	 * We do not adjust VE table automatically, please click 'Apply to VE' if you want to adjust your VE tables and reset trims.
 	offset 0 bit 1 */
 	bool correctionEnabled : 1 {};
 	/**
@@ -1396,7 +1397,7 @@ struct engine_configuration_s {
 	 */
 	scaled_channel<uint8_t, 1, 2> idleMaximumAirmass;
 	/**
-	 * Zero value means do not detect tuning
+	 * Zero value means do not detect tuning, set at least 15 if you are using TunerStudio autotune
 	 * units: seconds
 	 * offset 369
 	 */
@@ -2195,7 +2196,6 @@ struct engine_configuration_s {
 	offset 712 bit 2 */
 	bool is_enabled_spi_3 : 1 {};
 	/**
-	 * enable sd/disable sd
 	offset 712 bit 3 */
 	bool isSdCardEnabled : 1 {};
 	/**

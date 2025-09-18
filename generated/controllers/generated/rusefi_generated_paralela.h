@@ -597,7 +597,7 @@
 #define engine_type_e_VAG_5_CYL 77
 #define engine_type_e_VW_ABA 32
 #define engine_type_e_WASTEGATE_PROTEUS_TEST 96
-#define ENGINE_TYPES_DIALOG_NAME "Popular vehicles"
+#define ENGINE_TYPES_DIALOG_NAME "Base Tunes"
 #define engineSyncCam_enum "Intake First Bank", "Exhaust First Bank", "Intake Second Bank", "Exhaust Second Bank"
 #define ETB2_TRIM_SIZE 6
 #define ETB_BIAS_CURVE_LENGTH 8
@@ -606,7 +606,7 @@
 #define FIELD_DISPLACEMENT displacement
 #define FIELD_INJECTOR_FLOW injector.flow
 #define firing_order_e_enum "One Cylinder", "1-3-4-2", "1-2-4-3", "1-3-2-4", "1-5-3-6-2-4", "1-8-4-3-6-5-7-2", "1-2-4-5-3", "1-4-2-5-3-6", "1-2", "1-2-3-4-5-6", "1-2-3", "1-8-7-2-6-5-4-3", "1-5-4-2-6-3-7-8 Mustang", "1-6-3-2-5-4", "1-10-9-4-3-6-5-8-7_2", "1-7-5-11-3-9-6-12-2-8-4-10", "1-7-4-10-2-8-6-12-3-9-5-11", "1-4-3-2", "1-12-5-8-3-10-6-7-2-11-4-9", "1-2-7-8-4-5-6-3", "1-3-7-2-6-5-4-8 HO", "1-2-3-4-5-6-7-8-9", "INVALID", "1-2-3-4-5-6-7-8-9-10-11-12", "1-3-2", "1-2-3-4-5-6-7-8", "1-5-4-8-6-3-7-2", "1-4-3-6-2-5", "1-8-7-3-6-5-4-2", "1-6-2-4-3-5", "1-6-5-4-3-2", "1-4-5-2-3-6", "1-5-4-8-3-7-2-6 Voodoo", "1-6-5-10-2-7-3-8-4-9", "1-8-6-2-7-3-4-5 F136", "fo35", "fo36", "fo37"
-#define FLASH_DATA_VERSION 250826
+#define FLASH_DATA_VERSION 250901
 #define FLOW_LINEARIZATION_MASS_SIZE 2
 #define FLOW_LINEARIZATION_PRESSURE_SIZE 2
 #define FRONTEND_TITLE_BAR_NAME "rusEFI"
@@ -714,6 +714,8 @@
 #define GAUGE_NAME_FUEL_INJ_DUTY_STAGE_2 "Fuel: injector duty cycle stage 2"
 #define GAUGE_NAME_FUEL_INJECTION_TIMING "Fuel: Injection timing SOI"
 #define GAUGE_NAME_FUEL_LAST_INJECTION "Fuel: Last inj pulse width"
+#define GAUGE_NAME_FUEL_LAST_INJECTION_RATIO "Fuel: Last inj pulse growth"
+#define GAUGE_NAME_FUEL_LAST_INJECTION_RATIO_STAGE_2 "Fuel: Last inj pulse growth stg 2"
 #define GAUGE_NAME_FUEL_LAST_INJECTION_STAGE_2 "Fuel: Last inj pulse width stg 2"
 #define GAUGE_NAME_FUEL_LEVEL "Fuel level"
 #define GAUGE_NAME_FUEL_LOAD "Fuel: Load"
@@ -1515,7 +1517,7 @@
 #define SentInput_NONE 0
 #define show_tcu_gauges false
 #define show_vvt_output_pin true
-#define SIGNATURE_HASH 3347189255
+#define SIGNATURE_HASH 1285718481
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1726,6 +1728,7 @@
 #define TRIGGERS_FILE_NAME "triggers.txt"
 #define TriggerWheel_T_PRIMARY 0
 #define TriggerWheel_T_SECONDARY 1
+#define TRUE_FALSE_COUNT_LIMIT 325
 #define ts_14_command_COMMAND_X14_UNUSED_0 0x00
 #define ts_14_command_COMMAND_X14_UNUSED_1 0x01
 #define ts_14_command_COMMAND_X14_UNUSED_15 0x15
@@ -1746,6 +1749,8 @@
 #define ts_14_command_TS_EXTERNAL_TRIGGER_STIMULATOR_ENABLE 0x13
 #define ts_14_command_TS_GRAB_PEDAL_UP 6
 #define ts_14_command_TS_GRAB_PEDAL_WOT 7
+#define ts_14_command_TS_GRAB_TPS_CLOSED 0x20
+#define ts_14_command_TS_GRAB_TPS_OPEN 0x21
 #define ts_14_command_TS_RESET_MC33810 0x16
 #define ts_14_command_TS_RESET_TLE8888 8
 #define ts_14_command_TS_SD_DELETE_REPORTS 0x1B
@@ -1800,6 +1805,7 @@
 #define ts_command_e_TS_WIDEBAND_FLASH_BY_ID 35
 #define ts_command_e_TS_WIDEBAND_PING_BY_ID 34
 #define ts_command_e_TS_WIDEBAND_SET_IDX_BY_ID 33
+#define ts_command_e_TS_WIDEBAND_SET_SENS_BY_ID 37
 #define ts_command_e_TS_X14 20
 #define TS_COMMAND_F 'F'
 #define TS_COMMAND_F_char F
@@ -1908,6 +1914,7 @@
 #define ts_show_dc_hardware true
 #define ts_show_debug_mode false
 #define ts_show_disable_etb false
+#define ts_show_ecu_stimulator true
 #define ts_show_ego2 true
 #define ts_show_egt true
 #define ts_show_engine_code true
@@ -1974,6 +1981,7 @@
 #define ts_show_iat true
 #define ts_show_idle_hardware true
 #define ts_show_ign_key_analog_input false
+#define ts_show_ign_key_menu true
 #define ts_show_ign_key_switch false
 #define ts_show_ignitionOutputs true
 #define ts_show_ignitionPinMode true
@@ -1989,6 +1997,7 @@
 #define ts_show_k_line false
 #define ts_show_knock_cylinder_mapping true
 #define ts_show_l9779 false
+#define ts_show_linear_thermistors true
 #define ts_show_live_data true
 #define ts_show_long_term_fuel_trim false
 #define ts_show_maf true
@@ -2070,12 +2079,12 @@
 #define ts_show_wastegate_sensor true
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
-#define TS_SIGNATURE "rusEFI master.2025.09.11.paralela.3347189255"
+#define TS_SIGNATURE "rusEFI master.2025.09.18.paralela.1285718481"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_TEST_COMMAND 't'
 #define TS_TEST_COMMAND_char t
-#define TS_TOTAL_OUTPUT_SIZE 2048
+#define TS_TOTAL_OUTPUT_SIZE 2060
 #define TS_TRIGGER_SCOPE_CHANNEL_1_NAME "Channel 1"
 #define TS_TRIGGER_SCOPE_CHANNEL_2_NAME "Channel 2"
 #define TS_TRIGGER_SCOPE_DISABLE 5
