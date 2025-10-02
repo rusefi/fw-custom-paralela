@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <msq xmlns="http://www.msefi.com/:msq">
     <page/>
-    <page number="0" size="23872">
+    <page number="0" size="23896">
         <constant name="accelEnrichmentMode">"MS Adder"</constant>
         <constant name="accelerometerCsPin">"NONE"</constant>
         <constant name="accelerometerCsPinMode">"default"</constant>
@@ -559,7 +559,7 @@
         <constant name="brakePedalPin">"NONE"</constant>
         <constant name="brakePedalPinMode">"PULLUP"</constant>
         <constant digits="0" name="byFirmwareVersion" units="index">0.0</constant>
-        <constant digits="0" name="calibrationBirthday" units="">2.0250928E7</constant>
+        <constant digits="0" name="calibrationBirthday" units="">2.0251002E7</constant>
         <constant digits="0" name="camDecoder2jzPosition" units="angle">95.0</constant>
         <constant digits="0" name="camDecoder2jzPrecision" units="">40.0</constant>
         <constant name="camInputs1">"NONE"</constant>
@@ -1327,16 +1327,24 @@
         <constant digits="0" name="hpfpActivationAngle" units="deg">30.0</constant>
         <constant name="hpfpCam">"NONE"</constant>
         <constant digits="0" name="hpfpCamLobes" units="lobes/cam">3.0</constant>
-        <constant cols="2" digits="0" name="hpfpCompensation" rows="2" units="%">
-         0.0 0.0
-         0.0 0.0
+        <constant cols="10" digits="0" name="hpfpCompensation" rows="2" units="%">
+         0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+         0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
 </constant>
         <constant cols="1" digits="3" name="hpfpCompensationLoadBins" rows="2" units="cc/lobe">
          0.005
          0.12
 </constant>
-        <constant cols="1" digits="0" name="hpfpCompensationRpmBins" rows="2" units="RPM">
+        <constant cols="1" digits="0" name="hpfpCompensationRpmBins" rows="10" units="RPM">
          650.0
+         800.0
+         1450.0
+         2100.0
+         2750.0
+         3400.0
+         4050.0
+         4700.0
+         5350.0
          7000.0
 </constant>
         <constant cols="1" digits="3" name="hpfpDeadtimeMS" rows="2" units="ms">
@@ -4562,7 +4570,7 @@ end</constant>
 </constant>
         <constant name="yesUnderstandLocking">"no"</constant>
     </page>
-    <versionInfo firmwareInfo="20250913" nPages="1" signature="rusEFI master.2025.09.28.paralela.4148187430" version="5.0"/>
+    <versionInfo firmwareInfo="20250913" nPages="1" signature="rusEFI master.2025.10.02.paralela.1566417025" version="5.0"/>
     <bibliography author="rusEFI 20250913" writeDate="date"/>
     <settings/>
     <userComments/>
