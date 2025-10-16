@@ -6235,12 +6235,12 @@ struct persistent_config_s {
 	 */
 	float tpsTpsAccelTable[TPS_TPS_ACCEL_TABLE][TPS_TPS_ACCEL_TABLE] = {};
 	/**
-	 * units: from
+	 * units: %
 	 * offset 18568
 	 */
 	float tpsTpsAccelFromRpmBins[TPS_TPS_ACCEL_TABLE] = {};
 	/**
-	 * units: to
+	 * units: %
 	 * offset 18600
 	 */
 	float tpsTpsAccelToRpmBins[TPS_TPS_ACCEL_TABLE] = {};
