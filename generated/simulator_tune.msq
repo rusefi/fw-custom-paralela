@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <msq xmlns="http://www.msefi.com/:msq">
     <page/>
-    <page number="0" size="23896">
+    <page number="0" size="23904">
         <constant name="accelEnrichmentMode">"MS Adder"</constant>
         <constant name="accelerometerCsPin">"NONE"</constant>
         <constant name="accelerometerCsPinMode">"default"</constant>
@@ -558,8 +558,8 @@
         <constant digits="0" name="brakeMeanEffectivePressureDifferential" units="">0.0</constant>
         <constant name="brakePedalPin">"NONE"</constant>
         <constant name="brakePedalPinMode">"PULLUP"</constant>
-        <constant digits="0" name="byFirmwareVersion" units="index">2.0251022E7</constant>
-        <constant digits="0" name="calibrationBirthday" units="">2.0251023E7</constant>
+        <constant digits="0" name="byFirmwareVersion" units="index">2.0251029E7</constant>
+        <constant digits="0" name="calibrationBirthday" units="">2.025103E7</constant>
         <constant digits="0" name="camDecoder2jzPosition" units="angle">95.0</constant>
         <constant digits="0" name="camDecoder2jzPrecision" units="">40.0</constant>
         <constant name="camInputs1">"NONE"</constant>
@@ -2169,6 +2169,7 @@
         <constant name="isPhaseSyncRequiredForIgnition">"false"</constant>
         <constant name="isSdCardEnabled">"disabled"</constant>
         <constant digits="0" name="issFilterReciprocal" units="">2.0</constant>
+        <constant name="isTuningDetectorEnabled">"yes"</constant>
         <constant name="isWaveAnalyzerEnabled">"true"</constant>
         <constant digits="0" name="justATempTest" units="">0.0</constant>
         <constant name="kickStartCranking">"false"</constant>
@@ -2332,7 +2333,10 @@
         <constant name="ltft_enabled">"yes"</constant>
         <constant digits="1" name="ltft_maxAdd" units="%">12.5</constant>
         <constant digits="1" name="ltft_maxRemove" units="%">12.5</constant>
-        <constant digits="0" name="ltft_timeConstant" units="sec">3000.0</constant>
+        <constant digits="0" name="ltft_timeConstant1" units="sec">3000.0</constant>
+        <constant digits="0" name="ltft_timeConstant2" units="sec">1500.0</constant>
+        <constant digits="0" name="ltft_timeConstant3" units="sec">30.0</constant>
+        <constant digits="0" name="ltft_timeConstant4" units="sec">300.0</constant>
         <constant digits="1" name="ltitClampMax" units="%">0.0</constant>
         <constant digits="1" name="ltitClampMin" units="%">0.0</constant>
         <constant digits="0" name="ltitCorrectionRate" units="%/s">0.0</constant>
@@ -4029,7 +4033,6 @@ end</constant>
         <constant digits="3" name="triggerVVTGapOverrideTo4" units="ratio">0.0</constant>
         <constant digits="0" name="tuneHidingKey" units="">0.0</constant>
         <constant digits="0" name="tunerStudioSerialSpeed" units="BPs">38400.0</constant>
-        <constant digits="0" name="tuningDetector" units="seconds">20.0</constant>
         <constant digits="0" name="turbochargerFilter" units="">0.01</constant>
         <constant name="turboSpeedSensorInputPin">"NONE"</constant>
         <constant digits="3" name="turboSpeedSensorMultiplier" units="mult">1.0</constant>
@@ -4569,7 +4572,7 @@ end</constant>
 </constant>
         <constant name="yesUnderstandLocking">"no"</constant>
     </page>
-    <versionInfo firmwareInfo="20251017" nPages="1" signature="rusEFI master.2025.10.23.paralela.1055766123" version="5.0"/>
+    <versionInfo firmwareInfo="20251017" nPages="1" signature="rusEFI master.2025.10.30.paralela.130140782" version="5.0"/>
     <bibliography author="rusEFI 20251017" writeDate="date"/>
     <settings/>
     <userComments/>
