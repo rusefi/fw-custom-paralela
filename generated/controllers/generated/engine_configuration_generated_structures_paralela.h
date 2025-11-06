@@ -2281,13 +2281,13 @@ struct engine_configuration_s {
 	bool isTuningDetectorEnabled : 1 {};
 	/**
 	offset 712 bit 29 */
-	bool unusedBit_311_29 : 1 {};
+	bool useAbsolutePressureForLagTime : 1 {};
 	/**
 	offset 712 bit 30 */
-	bool unusedBit_311_30 : 1 {};
+	bool unusedBit_312_30 : 1 {};
 	/**
 	offset 712 bit 31 */
-	bool unusedBit_311_31 : 1 {};
+	bool unusedBit_312_31 : 1 {};
 	/**
 	 * offset 716
 	 */
@@ -2652,7 +2652,7 @@ struct engine_configuration_s {
 	offset 876 bit 12 */
 	bool invertCamVVTSignal : 1 {};
 	/**
-	 * When set to true, it enables intake air temperature-based corrections for Alpha-N tuning strategies.
+	 * When set to yes, it enables intake air temperature-based corrections for Alpha-N tuning strategies.
 	offset 876 bit 13 */
 	bool alphaNUseIat : 1 {};
 	/**
