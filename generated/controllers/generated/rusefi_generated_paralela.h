@@ -1545,7 +1545,7 @@
 #define SentInput_NONE 0
 #define show_tcu_gauges false
 #define show_vvt_output_pin true
-#define SIGNATURE_HASH 2225115893
+#define SIGNATURE_HASH 1624109315
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1917,8 +1917,10 @@
 #define ts_show_can2 false
 #define ts_show_can_bitrate true
 #define ts_show_can_pins true
+#define ts_show_can_verbose true
 #define ts_show_can_wbo true
 #define ts_show_can_wbo_type true
+#define ts_show_can_weird true
 #define ts_show_charge_estimation true
 #define ts_show_check_engine true
 #define ts_show_clt_iat_pullup true
@@ -2020,10 +2022,12 @@
 #define ts_show_ign_key_analog_input false
 #define ts_show_ign_key_menu true
 #define ts_show_ign_key_switch false
+#define ts_show_ignition true
 #define ts_show_ignitionMode true
 #define ts_show_ignitionOutputs true
 #define ts_show_ignitionPinMode true
 #define ts_show_inj_diag false
+#define ts_show_injection true
 #define ts_show_injection_hardware true
 #define ts_show_injection_mode true
 #define ts_show_injection_phase true
@@ -2044,8 +2048,10 @@
 #define ts_show_main_relay_microRusEFI_message false
 #define ts_show_map_averaging_enabled true
 #define ts_show_map_estimate true
+#define ts_show_mapMinBufferLength true
 #define ts_show_mc33810 false
 #define ts_show_mc33810_cs false
+#define ts_show_measureMapOnlyInOneCylinder true
 #define ts_show_multispark true
 #define ts_show_number_of_cylinders true
 #define ts_show_odd_fire true
@@ -2126,7 +2132,7 @@
 #define ts_show_wastegate_sensor true
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
-#define TS_SIGNATURE "rusEFI master.2025.11.13.paralela.2225115893"
+#define TS_SIGNATURE "rusEFI master.2025.11.20.paralela.1624109315"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_TEST_COMMAND 't'
