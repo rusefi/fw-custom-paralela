@@ -146,32 +146,33 @@
 #define BLEND_TABLE_COUNT 8
 #define blend_table_s_size 188
 #define BLOCKING_FACTOR 1024
-#define BOARD_CAM_SETTINGS_FILE 
-#define BOARD_CAN_BUS_FROM_FILE 
-#define BOARD_CONFIG_FROM_FILE 
-#define BOARD_CONSTANTS_EXTENSIONS_FROM_FILE 
-#define BOARD_CURVES_FROM_FILE 
-#define BOARD_DIAG_PANEL1_FROM_FILE 
-#define BOARD_DIAG_PANEL2_FROM_FILE 
-#define BOARD_ENGINE_CONFIGURATION_FROM_FILE 
-#define BOARD_ENGINE_METADATA_FILE 
-#define BOARD_FRONT_PAGE_FROM_FILE 
-#define BOARD_GAUGES_FROM_FILE 
-#define BOARD_IGNITION_ADVANCE_MENU_FROM_FILE 
-#define BOARD_IGNITION_SETTINGS_FROM_FILE 
-#define BOARD_INDICATORS_FROM_FILE 
-#define BOARD_INJECTION_SETTINGS_FROM_FILE 
-#define BOARD_INJECTOR_SETTINGS_FROM_FILE 
-#define BOARD_MENU_FROM_FILE 
-#define BOARD_OPTIONS_FROM_FILE 
-#define BOARD_PANELS_FROM_FILE 
-#define BOARD_PC_VARIABLES_FROM_FILE 
-#define BOARD_POPULAR_VEHICLES_FILE 
-#define BOARD_PRIMING_PULSE_PANEL_FROM_FILE 
-#define BOARD_TABLES_FROM_FILE 
-#define BOARD_VE_FROM_FILE 
-#define BOARD_VE_MENU_FROM_FILE 
-#define BOARD_VIN_FIELD_FROM_FILE 
+#define BOARD_ACTION_INJECTOR_PRESET 0x302
+#define BOARD_CAM_SETTINGS_FILE
+#define BOARD_CAN_BUS_FROM_FILE
+#define BOARD_CONFIG_FROM_FILE
+#define BOARD_CONSTANTS_EXTENSIONS_FROM_FILE
+#define BOARD_CURVES_FROM_FILE
+#define BOARD_DIAG_PANEL1_FROM_FILE
+#define BOARD_DIAG_PANEL2_FROM_FILE
+#define BOARD_ENGINE_CONFIGURATION_FROM_FILE
+#define BOARD_ENGINE_METADATA_FILE
+#define BOARD_FRONT_PAGE_FROM_FILE
+#define BOARD_GAUGES_FROM_FILE
+#define BOARD_IGNITION_ADVANCE_MENU_FROM_FILE
+#define BOARD_IGNITION_SETTINGS_FROM_FILE
+#define BOARD_INDICATORS_FROM_FILE
+#define BOARD_INJECTION_SETTINGS_FROM_FILE
+#define BOARD_INJECTOR_SETTINGS_FROM_FILE
+#define BOARD_MENU_FROM_FILE
+#define BOARD_OPTIONS_FROM_FILE
+#define BOARD_PANELS_FROM_FILE
+#define BOARD_PC_VARIABLES_FROM_FILE
+#define BOARD_POPULAR_VEHICLES_FILE
+#define BOARD_PRIMING_PULSE_PANEL_FROM_FILE
+#define BOARD_TABLES_FROM_FILE
+#define BOARD_VE_FROM_FILE
+#define BOARD_VE_MENU_FROM_FILE
+#define BOARD_VIN_FIELD_FROM_FILE
 #define BOOST_BLEND_COUNT 2
 #define BOOST_CURVE_SIZE 5
 #define BOOST_LOAD_COUNT 8
@@ -353,7 +354,7 @@
 #define CMD_WRITECONFIG "writeconfig"
 #define COIL_1_NAME "Spark #1"
 #define COIL_2_NAME "Spark #2"
-#define COMMANDS_FROM_FILE 
+#define COMMANDS_FROM_FILE
 #define COMPOSITE_PACKET_SIZE 5
 #define CONSOLE_DATA_PROTOCOL_TAG " @"
 #define CRANKING_ADVANCE_CURVE_SIZE 4
@@ -1357,6 +1358,7 @@
 #define KNOCK_RPM_TABLE_NAME "Engine Knock Threshold RPM Based"
 #define KNOCK_TABLE_RPM_SIZE 6
 #define KNOCK_TABLE_SIZE 6
+#define KnockGain_size 36
 #define LAM_RPM_SIZE 4
 #define LAM_SIZE 4
 #define launchActivationMode_e_ALWAYS_ACTIVE_LAUNCH 2
@@ -1469,13 +1471,13 @@
 #define PACK_PERCENT_BYTE_MULT 100.0
 #define PAGE_SIZE_1 256
 #define PAGE_SIZE_2 2048
-#define PAGE_SIZE_4 1208
+#define PAGE_SIZE_4 1236
 #define PEDAL_TO_TPS_RPM_SIZE 8
 #define PEDAL_TO_TPS_SIZE 8
 #define pedalSensor_NAME "Accelerator pedal"
 #define pedalToTpsTbl_NAME "ETB pedal target"
 #define PERCENT_TRIM_BYTE_PACKING_DIV 0.02
-#define persistent_config_s_size 25280
+#define persistent_config_s_size 24488
 #define pid_s_size 20
 #define pin_input_mode_e_auto_enum 0="PI_DEFAULT",4="PI_INVERTED_DEFAULT",6="PI_INVERTED_PULLDOWN",5="PI_INVERTED_PULLUP",2="PI_PULLDOWN",1="PI_PULLUP"
 #define pin_input_mode_e_PI_DEFAULT 0
@@ -1565,7 +1567,7 @@
 #define SentInput_NONE 0
 #define show_tcu_gauges false
 #define show_vvt_output_pin true
-#define SIGNATURE_HASH 2703214661
+#define SIGNATURE_HASH 2989380831
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1645,7 +1647,7 @@
 #define torqueReductionActivationMode_e_TORQUE_REDUCTION_BUTTON 0
 #define torqueReductionActivationMode_e_TORQUE_REDUCTION_CLUTCH_DOWN_SWITCH 2
 #define torqueReductionActivationMode_e_TORQUE_REDUCTION_CLUTCH_UP_SWITCH 3
-#define TOTAL_CONFIG_SIZE 25280
+#define TOTAL_CONFIG_SIZE 24488
 #define TPS_2_BYTE_PACKING_MULT 100
 #define TPS_PPS_TOO_HIGH_THRESHOLD 110
 #define TPS_PPS_TOO_LOW_THRESHOLD -10
@@ -1996,7 +1998,7 @@
 #define ts_show_engine_make true
 #define ts_show_etb true
 #define ts_show_etb_bias_curve true
-#define ts_show_etb_extra_monitoring 
+#define ts_show_etb_extra_monitoring
 #define ts_show_etb_frequency true
 #define ts_show_etb_min_max true
 #define ts_show_etb_pid true
@@ -2175,12 +2177,12 @@
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
 #define ts_show_wbo_canbus_set_type false
-#define TS_SIGNATURE "rusEFI master.2026.04.16.paralela.2703214661"
+#define TS_SIGNATURE "rusEFI master.2026.04.23.paralela.2989380831"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_TEST_COMMAND 't'
 #define TS_TEST_COMMAND_char t
-#define TS_TOTAL_OUTPUT_SIZE 2124
+#define TS_TOTAL_OUTPUT_SIZE 2128
 #define TS_TRIGGER_SCOPE_CHANNEL_1_NAME "Channel 1"
 #define TS_TRIGGER_SCOPE_CHANNEL_2_NAME "Channel 2"
 #define TS_TRIGGER_SCOPE_DISABLE 5
