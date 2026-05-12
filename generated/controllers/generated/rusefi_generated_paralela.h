@@ -1472,8 +1472,8 @@
 #define PACK_MULT_VOLTAGE 1000
 #define PACK_MULT_VSS 100
 #define PACK_PERCENT_BYTE_MULT 100.0
-#define PAGE_SIZE_1 256
-#define PAGE_SIZE_2 2048
+#define PAGE_SIZE_2 256
+#define PAGE_SIZE_3 2048
 #define PAGE_SIZE_4 1236
 #define PEDAL_TO_TPS_RPM_SIZE 8
 #define PEDAL_TO_TPS_SIZE 8
@@ -1496,6 +1496,7 @@
 #define pin_output_mode_e_OM_OPENDRAIN_INVERTED 3
 #define poke false
 #define ppsExpAverageAlpha_NAME "Accelerator Exp Average"
+#define PRIMARY_CAN_NAME "Primary CAN"
 #define PRIME_CURVE_COUNT 8
 #define PROTOCOL_COIL_SHORT_PREFIX "c"
 #define PROTOCOL_CRANK1 "t1"
@@ -1533,6 +1534,7 @@
 #define SD_CARD_LABEL "rusEFI logs"
 #define SECOND_IGNITION_TABLE "Second Ignition Table"
 #define SECOND_VE_TABLE "Second VE Table"
+#define SECONDARY_CAN_NAME "Secondary CAN"
 #define SECONDARY_PANELS_FILE "tunerstudio/secondary_panels.ini"
 #define SelectedGear_Drive 6
 #define SelectedGear_Invalid 0
@@ -1570,7 +1572,7 @@
 #define SentInput_NONE 0
 #define show_tcu_gauges false
 #define show_vvt_output_pin true
-#define SIGNATURE_HASH 1941163840
+#define SIGNATURE_HASH 2214687112
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1604,8 +1606,8 @@
 #define stft_state_e_stftDisabledTpsAccel 8
 #define stft_state_e_stftDisabledTuning 2
 #define stft_state_e_stftEnabled 0
-#define switch_input_pin_e_enum 0="NONE",54="CAM2 (PD4)",19="CKP",8="CMP",68="Clutch",33="ETB_DIR/StepStep",32="ETB_DIS/StepDir",80="Extra I/O PE14",9="FlexFuel",81="Idle (PE15)",77="Ignition 5 (PE11)",78="Ignition 6 (PE12)",52="Ignition 7 (PD2)",53="Ignition 8 (PD3)",60="Injector 5 (PD10)",61="Injector 6 (PD11)",62="Injector 7 (PD12)",63="Injector 8 (PD13)",64="Threshold (PD14)",56="USART-RX (PD6)",55="USART-TX (PD5)"
-#define switch_input_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CMP","FlexFuel","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CKP","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","ETB_DIS/StepDir","ETB_DIR/StepStep","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 7 (PD2)","Ignition 8 (PD3)","CAM2 (PD4)","USART-TX (PD5)","USART-RX (PD6)","INVALID","INVALID","INVALID","Injector 5 (PD10)","Injector 6 (PD11)","Injector 7 (PD12)","Injector 8 (PD13)","Threshold (PD14)","INVALID","INVALID","INVALID","Clutch","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 5 (PE11)","Ignition 6 (PE12)","INVALID","Extra I/O PE14","Idle (PE15)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID"
+#define switch_input_pin_e_enum 0="NONE",54="CAM2 (PD4)",19="CKP",8="CMP",68="Clutch",33="ETB_DIR/StepStep",32="ETB_DIS/StepDir",80="Extra I/O PE14",9="FlexFuel",81="Idle (PE15)",77="Ignition 5 (PE11)",78="Ignition 6 (PE12)",52="Ignition 7 (PD2)",53="Ignition 8 (PD3)",60="Injector 5 (PD10)",61="Injector 6 (PD11)",62="Injector 7 (PD12)",63="Injector 8 (PD13)",64="Threshold (PD14)",56="USART-RX (PD6)",55="USART-TX (PD5)",44="VVT1 (C10)",45="VVT2 (C11)"
+#define switch_input_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CMP","FlexFuel","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","CKP","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","ETB_DIS/StepDir","ETB_DIR/StepStep","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","VVT1 (C10)","VVT2 (C11)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 7 (PD2)","Ignition 8 (PD3)","CAM2 (PD4)","USART-TX (PD5)","USART-RX (PD6)","INVALID","INVALID","INVALID","Injector 5 (PD10)","Injector 6 (PD11)","Injector 7 (PD12)","Injector 8 (PD13)","Threshold (PD14)","INVALID","INVALID","INVALID","Clutch","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 5 (PE11)","Ignition 6 (PE12)","INVALID","Extra I/O PE14","Idle (PE15)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID"
 #define TABLE_2_LOAD_SIZE 8
 #define TABLE_2_RPM_SIZE 8
 #define TABLE_3_LOAD_SIZE 8
@@ -1881,6 +1883,8 @@
 #define TS_COMPOSITE_DISABLE 2
 #define TS_COMPOSITE_ENABLE 1
 #define TS_COMPOSITE_READ 3
+#define TS_CRC32_CHECK_COMMAND 'K'
+#define TS_CRC32_CHECK_COMMAND_char K
 #define TS_CRC_CHECK_COMMAND 'k'
 #define TS_CRC_CHECK_COMMAND_char k
 #define ts_ecu_locking true
@@ -1892,8 +1896,6 @@
 #define TS_GET_CONFIG_ERROR_char e
 #define TS_GET_FIRMWARE_VERSION 'V'
 #define TS_GET_FIRMWARE_VERSION_char V
-#define TS_GET_IMAGE_COMMAND '('
-#define TS_GET_IMAGE_COMMAND_char (
 #define TS_GET_OUTPUTS_SIZE '4'
 #define TS_GET_OUTPUTS_SIZE_char 4
 #define TS_GET_PROTOCOL_VERSION_COMMAND_F 'F'
@@ -1923,6 +1925,8 @@
 #define TS_QUERY_BOOTLOADER_OPENBLT 1
 #define TS_QUERY_COMMAND 'Q'
 #define TS_QUERY_COMMAND_char Q
+#define TS_READ32_COMMAND '('
+#define TS_READ32_COMMAND_char (
 #define TS_READ_COMMAND 'R'
 #define TS_READ_COMMAND_char R
 #define TS_RESPONSE_BURN_OK 4
@@ -2182,7 +2186,7 @@
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
 #define ts_show_wbo_canbus_set_type false
-#define TS_SIGNATURE "rusEFI master.2026.05.07.paralela.1941163840"
+#define TS_SIGNATURE "rusEFI master.2026.05.13.paralela.2214687112"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_TEST_COMMAND 't'
