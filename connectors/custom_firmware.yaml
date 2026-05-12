@@ -106,12 +106,12 @@ pins:
     class: outputs
     ts_name: ETB PWM
 
-  - id: C10
-    class: outputs
+  - id: [C10, C10]
+    class: [outputs, switch_inputs]
     ts_name: VVT1 (C10)
 
-  - id: C11
-    class: outputs
+  - id: [C11, C11]
+    class: [outputs, switch_inputs]
     ts_name: VVT2 (C11)
 
   - id: C13
