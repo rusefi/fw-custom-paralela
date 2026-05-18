@@ -58,8 +58,8 @@
 #define adc_channel_e_EFI_ADC_ERROR 50
 #define adc_channel_e_EFI_ADC_NONE 0
 #define adc_channel_e_EFI_ADC_TOTAL_CHANNELS 49
-#define adc_channel_e_enum 0="NONE",12="BattV  (C1)",3="CLT (A2)",13="IAT  (C2)",2="MAP (A1)",14="O2-1 (C3)",9="O2-2 (B0)",15="PPS1 (C4)",16="PPS2 (C5)",1="TPS (A0)",6="TPS2 (A5)"
-#define adc_channel_e_fullenum "NONE","TPS (A0)","MAP (A1)","CLT (A2)","INVALID","INVALID","TPS2 (A5)","INVALID","INVALID","O2-2 (B0)","INVALID","INVALID","BattV  (C1)","IAT  (C2)","O2-1 (C3)","PPS1 (C4)","PPS2 (C5)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID"
+#define adc_channel_e_enum 0="NONE",12="BattV  (C1)",3="CLT (A2)",13="IAT  (C2)",2="MAP (A1)",14="O2-1 (C3)",9="O2-2 (B0)",15="PPS1 (C4)",16="PPS2 (C5)",1="TPS (A0)https://github.com/ElDominio/rusefi",6="TPS2 (A5)"
+#define adc_channel_e_fullenum "NONE","TPS (A0)https://github.com/ElDominio/rusefi","MAP (A1)","CLT (A2)","INVALID","INVALID","TPS2 (A5)","INVALID","INVALID","O2-2 (B0)","INVALID","INVALID","BattV  (C1)","IAT  (C2)","O2-1 (C3)","PPS1 (C4)","PPS2 (C5)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID"
 #define ADC_CHANNEL_NONE 0
 #define afr_sensor_s_size 20
 #define air_pressure_sensor_config_s_size 12
@@ -1450,8 +1450,8 @@
 #define operation_mode_e_FOUR_STROKE_TWELVE_TIMES_CRANK_SENSOR 6
 #define operation_mode_e_OM_NONE 0
 #define operation_mode_e_TWO_STROKE 3
-#define output_pin_e_enum 0="NONE",27="Boost (PB9)",54="CAM2 (PD4)",40="ETB PWM",33="ETB_DIR/StepStep",32="ETB_DIS/StepDir",80="Extra I/O PE14",47="Fan (PC13)",70="Fuel Pump (PE4)",81="Idle (PE15)",10="Ignition 1",43="Ignition 2",12="Ignition 3",42="Ignition 4",77="Ignition 5 (PE11)",78="Ignition 6 (PE12)",52="Ignition 7 (PD2)",53="Ignition 8 (PD3)",66="Injector 1",72="Injector 2",59="Injector 3",69="Injector 4",60="Injector 5 (PD10)",61="Injector 6 (PD11)",62="Injector 7 (PD12)",63="Injector 8 (PD13)",71="NOS (PE5)",39="PPS2 (PC5)",26="Tach (PB8)",64="Threshold (PD14)",56="USART-RX (PD6)",55="USART-TX (PD5)",44="VVT1 (C10)",45="VVT2 (C11)"
-#define output_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 1","INVALID","Ignition 3","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Tach (PB8)","Boost (PB9)","INVALID","INVALID","INVALID","INVALID","ETB_DIS/StepDir","ETB_DIR/StepStep","INVALID","INVALID","INVALID","INVALID","INVALID","PPS2 (PC5)","ETB PWM","INVALID","Ignition 4","Ignition 2","VVT1 (C10)","VVT2 (C11)","INVALID","Fan (PC13)","INVALID","INVALID","INVALID","INVALID","Ignition 7 (PD2)","Ignition 8 (PD3)","CAM2 (PD4)","USART-TX (PD5)","USART-RX (PD6)","INVALID","INVALID","Injector 3","Injector 5 (PD10)","Injector 6 (PD11)","Injector 7 (PD12)","Injector 8 (PD13)","Threshold (PD14)","INVALID","Injector 1","INVALID","INVALID","Injector 4","Fuel Pump (PE4)","NOS (PE5)","Injector 2","INVALID","INVALID","INVALID","INVALID","Ignition 5 (PE11)","Ignition 6 (PE12)","INVALID","Extra I/O PE14","Idle (PE15)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID"
+#define output_pin_e_enum 0="NONE",27="Boost (PB9)",54="CAM2 (PD4)",40="ETB PWM",33="ETB_DIR/StepStep",32="ETB_DIS/StepDir",80="Extra I/O PE14",47="Fan (PC13)",70="Fuel Pump (PE4)",81="Idle (PE15)",10="Ignition 1",43="Ignition 2",12="Ignition 3",42="Ignition 4",77="Ignition 5 (PE11)",78="Ignition 6 (PE12)",52="Ignition 7 (PD2)",53="Ignition 8 (PD3)",66="Injector 1",72="Injector 2",59="Injector 3",69="Injector 4",60="Injector 5 (PD10)",61="Injector 6 (PD11)",62="Injector 7 (PD12)",63="Injector 8 (PD13)",71="NOS (PE5)",38="PPS1 (PC4)",39="PPS2 (PC5)",26="Tach (PB8)",64="Threshold (PD14)",56="USART-RX (PD6)",55="USART-TX (PD5)",44="VVT1 (C10)",45="VVT2 (C11)"
+#define output_pin_e_fullenum "NONE","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Ignition 1","INVALID","Ignition 3","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","Tach (PB8)","Boost (PB9)","INVALID","INVALID","INVALID","INVALID","ETB_DIS/StepDir","ETB_DIR/StepStep","INVALID","INVALID","INVALID","INVALID","PPS1 (PC4)","PPS2 (PC5)","ETB PWM","INVALID","Ignition 4","Ignition 2","VVT1 (C10)","VVT2 (C11)","INVALID","Fan (PC13)","INVALID","INVALID","INVALID","INVALID","Ignition 7 (PD2)","Ignition 8 (PD3)","CAM2 (PD4)","USART-TX (PD5)","USART-RX (PD6)","INVALID","INVALID","Injector 3","Injector 5 (PD10)","Injector 6 (PD11)","Injector 7 (PD12)","Injector 8 (PD13)","Threshold (PD14)","INVALID","Injector 1","INVALID","INVALID","Injector 4","Fuel Pump (PE4)","NOS (PE5)","Injector 2","INVALID","INVALID","INVALID","INVALID","Ignition 5 (PE11)","Ignition 6 (PE12)","INVALID","Extra I/O PE14","Idle (PE15)","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID","INVALID"
 #define PACK_ADD_TEMPERATURE 40
 #define PACK_MULT_AFR 1000
 #define PACK_MULT_AFR_CFG 10
@@ -1572,7 +1572,7 @@
 #define SentInput_NONE 0
 #define show_tcu_gauges false
 #define show_vvt_output_pin true
-#define SIGNATURE_HASH 3583935128
+#define SIGNATURE_HASH 2397735747
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -2187,7 +2187,7 @@
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
 #define ts_show_wbo_canbus_set_type false
-#define TS_SIGNATURE "rusEFI master.2026.05.15.paralela.3583935128"
+#define TS_SIGNATURE "rusEFI master.2026.05.18.paralela.2397735747"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_TEST_COMMAND 't'
