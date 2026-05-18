@@ -30,6 +30,8 @@ const char* getBoardSpecificPinName(brain_pin_e brainPin) {
 			return "VVT2 (C11)";
 		case Gpio::C13:
 			return "Fan (PC13)";
+		case Gpio::C4:
+			return "PPS1 (PC4)";
 		case Gpio::C5:
 			return "PPS2 (PC5)";
 		case Gpio::C6:

@@ -18,6 +18,7 @@ Gpio GENERATED_OUTPUTS[] = {
 	Gpio::B9, // Boost (PB9)
 	Gpio::B14, // ETB_DIS/StepDir
 	Gpio::B15, // ETB_DIR/StepStep
+	Gpio::C4, // PPS1 (PC4)
 	Gpio::C5, // PPS2 (PC5)
 	Gpio::C6, // ETB PWM
 	Gpio::C10, // VVT1 (C10)
@@ -51,6 +52,7 @@ Gpio GENERATED_OUTPUTS[] = {
 // "Boost (PB9)",
 // "ETB_DIS/StepDir",
 // "ETB_DIR/StepStep",
+// "PPS1 (PC4)",
 // "PPS2 (PC5)",
 // "ETB PWM",
 // "VVT1 (C10)",
