@@ -2776,11 +2776,17 @@ struct engine_configuration_s {
 	 */
 	pin_output_mode_e mainRelayPinMode;
 	/**
-	 * need 4 byte alignment
-	 * units: units
+	 * Time after ignition turn-off before the main relay is disabled.
+	 * units: s
 	 * offset 805
 	 */
-	uint8_t alignmentFill_at_805[3] = {};
+	uint8_t mainRelayDisableTime;
+	/**
+	 * need 4 byte alignment
+	 * units: units
+	 * offset 806
+	 */
+	uint8_t alignmentFill_at_806[2] = {};
 	/**
 	 * offset 808
 	 */
@@ -3186,10 +3192,10 @@ struct engine_configuration_s {
 	bool verboseCan2 : 1 {};
 	/**
 	offset 956 bit 30 */
-	bool unusedBit_429_30 : 1 {};
+	bool unusedBit_430_30 : 1 {};
 	/**
 	offset 956 bit 31 */
-	bool unusedBit_429_31 : 1 {};
+	bool unusedBit_430_31 : 1 {};
 	/**
 	 * offset 960
 	 */
@@ -3531,22 +3537,22 @@ struct engine_configuration_s {
 	bool skippedWheelOnCam : 1 {};
 	/**
 	offset 1320 bit 26 */
-	bool unusedBit_506_26 : 1 {};
+	bool unusedBit_507_26 : 1 {};
 	/**
 	offset 1320 bit 27 */
-	bool unusedBit_506_27 : 1 {};
+	bool unusedBit_507_27 : 1 {};
 	/**
 	offset 1320 bit 28 */
-	bool unusedBit_506_28 : 1 {};
+	bool unusedBit_507_28 : 1 {};
 	/**
 	offset 1320 bit 29 */
-	bool unusedBit_506_29 : 1 {};
+	bool unusedBit_507_29 : 1 {};
 	/**
 	offset 1320 bit 30 */
-	bool unusedBit_506_30 : 1 {};
+	bool unusedBit_507_30 : 1 {};
 	/**
 	offset 1320 bit 31 */
-	bool unusedBit_506_31 : 1 {};
+	bool unusedBit_507_31 : 1 {};
 	/**
 	 * A/C button input
 	 * offset 1324
@@ -3684,13 +3690,13 @@ struct engine_configuration_s {
 	bool sdTriggerLogCsv : 1 {};
 	/**
 	offset 1332 bit 29 */
-	bool unusedBit_546_29 : 1 {};
+	bool unusedBit_547_29 : 1 {};
 	/**
 	offset 1332 bit 30 */
-	bool unusedBit_546_30 : 1 {};
+	bool unusedBit_547_30 : 1 {};
 	/**
 	offset 1332 bit 31 */
-	bool unusedBit_546_31 : 1 {};
+	bool unusedBit_547_31 : 1 {};
 	/**
 	 * units: count
 	 * offset 1336
@@ -3994,16 +4000,16 @@ struct engine_configuration_s {
 	bool enableKnockSpectrogramFilter : 1 {};
 	/**
 	offset 1504 bit 28 */
-	bool unusedBit_618_28 : 1 {};
+	bool unusedBit_619_28 : 1 {};
 	/**
 	offset 1504 bit 29 */
-	bool unusedBit_618_29 : 1 {};
+	bool unusedBit_619_29 : 1 {};
 	/**
 	offset 1504 bit 30 */
-	bool unusedBit_618_30 : 1 {};
+	bool unusedBit_619_30 : 1 {};
 	/**
 	offset 1504 bit 31 */
-	bool unusedBit_618_31 : 1 {};
+	bool unusedBit_619_31 : 1 {};
 	/**
 	 * This value is an added for base idle value. Idle Value added when coasting and transitioning into idle.
 	 * units: percent
@@ -4152,76 +4158,76 @@ struct engine_configuration_s {
 	bool can2ListenMode : 1 {};
 	/**
 	offset 1548 bit 8 */
-	bool unusedBit_652_8 : 1 {};
+	bool unusedBit_653_8 : 1 {};
 	/**
 	offset 1548 bit 9 */
-	bool unusedBit_652_9 : 1 {};
+	bool unusedBit_653_9 : 1 {};
 	/**
 	offset 1548 bit 10 */
-	bool unusedBit_652_10 : 1 {};
+	bool unusedBit_653_10 : 1 {};
 	/**
 	offset 1548 bit 11 */
-	bool unusedBit_652_11 : 1 {};
+	bool unusedBit_653_11 : 1 {};
 	/**
 	offset 1548 bit 12 */
-	bool unusedBit_652_12 : 1 {};
+	bool unusedBit_653_12 : 1 {};
 	/**
 	offset 1548 bit 13 */
-	bool unusedBit_652_13 : 1 {};
+	bool unusedBit_653_13 : 1 {};
 	/**
 	offset 1548 bit 14 */
-	bool unusedBit_652_14 : 1 {};
+	bool unusedBit_653_14 : 1 {};
 	/**
 	offset 1548 bit 15 */
-	bool unusedBit_652_15 : 1 {};
+	bool unusedBit_653_15 : 1 {};
 	/**
 	offset 1548 bit 16 */
-	bool unusedBit_652_16 : 1 {};
+	bool unusedBit_653_16 : 1 {};
 	/**
 	offset 1548 bit 17 */
-	bool unusedBit_652_17 : 1 {};
+	bool unusedBit_653_17 : 1 {};
 	/**
 	offset 1548 bit 18 */
-	bool unusedBit_652_18 : 1 {};
+	bool unusedBit_653_18 : 1 {};
 	/**
 	offset 1548 bit 19 */
-	bool unusedBit_652_19 : 1 {};
+	bool unusedBit_653_19 : 1 {};
 	/**
 	offset 1548 bit 20 */
-	bool unusedBit_652_20 : 1 {};
+	bool unusedBit_653_20 : 1 {};
 	/**
 	offset 1548 bit 21 */
-	bool unusedBit_652_21 : 1 {};
+	bool unusedBit_653_21 : 1 {};
 	/**
 	offset 1548 bit 22 */
-	bool unusedBit_652_22 : 1 {};
+	bool unusedBit_653_22 : 1 {};
 	/**
 	offset 1548 bit 23 */
-	bool unusedBit_652_23 : 1 {};
+	bool unusedBit_653_23 : 1 {};
 	/**
 	offset 1548 bit 24 */
-	bool unusedBit_652_24 : 1 {};
+	bool unusedBit_653_24 : 1 {};
 	/**
 	offset 1548 bit 25 */
-	bool unusedBit_652_25 : 1 {};
+	bool unusedBit_653_25 : 1 {};
 	/**
 	offset 1548 bit 26 */
-	bool unusedBit_652_26 : 1 {};
+	bool unusedBit_653_26 : 1 {};
 	/**
 	offset 1548 bit 27 */
-	bool unusedBit_652_27 : 1 {};
+	bool unusedBit_653_27 : 1 {};
 	/**
 	offset 1548 bit 28 */
-	bool unusedBit_652_28 : 1 {};
+	bool unusedBit_653_28 : 1 {};
 	/**
 	offset 1548 bit 29 */
-	bool unusedBit_652_29 : 1 {};
+	bool unusedBit_653_29 : 1 {};
 	/**
 	offset 1548 bit 30 */
-	bool unusedBit_652_30 : 1 {};
+	bool unusedBit_653_30 : 1 {};
 	/**
 	offset 1548 bit 31 */
-	bool unusedBit_652_31 : 1 {};
+	bool unusedBit_653_31 : 1 {};
 	/**
 	 * Angle of tooth detection within engine phase cycle
 	 * units: angle
@@ -6142,7 +6148,7 @@ struct blend_table_s {
 	/**
 	 * offset 0
 	 */
-	scaled_channel<int16_t, 10, 1> table[BLEND_TABLE_COUNT][BLEND_TABLE_COUNT] = {};
+	scaled_channel<int16_t, 1, 1> table[BLEND_TABLE_COUNT][BLEND_TABLE_COUNT] = {};
 	/**
 	 * units: Load
 	 * offset 128
@@ -6178,6 +6184,90 @@ struct blend_table_s {
 	uint8_t alignmentFill_at_186[2] = {};
 };
 static_assert(sizeof(blend_table_s) == 188);
+
+// start of blend_table_s_BLEND_PRECISION
+struct blend_table_s_BLEND_PRECISION {
+	/**
+	 * offset 0
+	 */
+	scaled_channel<int16_t, 1, 1> table[BLEND_TABLE_COUNT][BLEND_TABLE_COUNT] = {};
+	/**
+	 * units: Load
+	 * offset 128
+	 */
+	uint16_t loadBins[BLEND_TABLE_COUNT] = {};
+	/**
+	 * units: RPM
+	 * offset 144
+	 */
+	uint16_t rpmBins[BLEND_TABLE_COUNT] = {};
+	/**
+	 * offset 160
+	 */
+	gppwm_channel_e blendParameter;
+	/**
+	 * offset 161
+	 */
+	gppwm_channel_e yAxisOverride;
+	/**
+	 * offset 162
+	 */
+	scaled_channel<int16_t, 10, 1> blendBins[BLEND_FACTOR_SIZE] = {};
+	/**
+	 * units: %
+	 * offset 178
+	 */
+	scaled_channel<uint8_t, 2, 1> blendValues[BLEND_FACTOR_SIZE] = {};
+	/**
+	 * need 4 byte alignment
+	 * units: units
+	 * offset 186
+	 */
+	uint8_t alignmentFill_at_186[2] = {};
+};
+static_assert(sizeof(blend_table_s_BLEND_PRECISION) == 188);
+
+// start of blend_table_s_TARGET_AFR_BLEND_PRECISION
+struct blend_table_s_TARGET_AFR_BLEND_PRECISION {
+	/**
+	 * offset 0
+	 */
+	scaled_channel<int16_t, 1, 1> table[BLEND_TABLE_COUNT][BLEND_TABLE_COUNT] = {};
+	/**
+	 * units: Load
+	 * offset 128
+	 */
+	uint16_t loadBins[BLEND_TABLE_COUNT] = {};
+	/**
+	 * units: RPM
+	 * offset 144
+	 */
+	uint16_t rpmBins[BLEND_TABLE_COUNT] = {};
+	/**
+	 * offset 160
+	 */
+	gppwm_channel_e blendParameter;
+	/**
+	 * offset 161
+	 */
+	gppwm_channel_e yAxisOverride;
+	/**
+	 * offset 162
+	 */
+	scaled_channel<int16_t, 10, 1> blendBins[BLEND_FACTOR_SIZE] = {};
+	/**
+	 * units: %
+	 * offset 178
+	 */
+	scaled_channel<uint8_t, 2, 1> blendValues[BLEND_FACTOR_SIZE] = {};
+	/**
+	 * need 4 byte alignment
+	 * units: units
+	 * offset 186
+	 */
+	uint8_t alignmentFill_at_186[2] = {};
+};
+static_assert(sizeof(blend_table_s_TARGET_AFR_BLEND_PRECISION) == 188);
 
 // start of KnockGain
 struct KnockGain {
@@ -6995,11 +7085,11 @@ struct persistent_config_s {
 	/**
 	 * offset 20296
 	 */
-	blend_table_s ignBlends[IGN_BLEND_COUNT] = {};
+	blend_table_s_BLEND_PRECISION ignBlends[IGN_BLEND_COUNT] = {};
 	/**
 	 * offset 21048
 	 */
-	blend_table_s veBlends[VE_BLEND_COUNT] = {};
+	blend_table_s_BLEND_PRECISION veBlends[VE_BLEND_COUNT] = {};
 	/**
 	 * units: %
 	 * offset 21800
@@ -7014,11 +7104,11 @@ struct persistent_config_s {
 	/**
 	 * offset 21848
 	 */
-	blend_table_s boostOpenLoopBlends[BOOST_BLEND_COUNT] = {};
+	blend_table_s_BLEND_PRECISION boostOpenLoopBlends[BOOST_BLEND_COUNT] = {};
 	/**
 	 * offset 22224
 	 */
-	blend_table_s boostClosedLoopBlends[BOOST_BLEND_COUNT] = {};
+	blend_table_s_BLEND_PRECISION boostClosedLoopBlends[BOOST_BLEND_COUNT] = {};
 	/**
 	 * units: level
 	 * offset 22600
@@ -7429,7 +7519,7 @@ struct persistent_config_s {
 	/**
 	 * offset 23444
 	 */
-	blend_table_s targetAfrBlends[TARGET_AFR_BLEND_COUNT] = {};
+	blend_table_s_TARGET_AFR_BLEND_PRECISION targetAfrBlends[TARGET_AFR_BLEND_COUNT] = {};
 	/**
 	 * @@DYNO_RPM_STEP_TOOLTIP@@
 	 * units: Rpm
