@@ -949,6 +949,9 @@ This enables the various ignition corrections during cranking (IAT, CLT and PID 
 ### flexCranking
 Enable a second cranking table to use for E100 flex fuel, interpolating between the two based on flex fuel sensor.
 
+### flexFuelTransientComp
+Enable flex-fuel transient fueling compensation (acceleration enrichment and wall wetting tau/beta) based on ethanol content and coolant temperature.
+
 ### useIacPidMultTable
 This flag allows to use a special 'PID Multiplier' table (0.0-1.0) to compensate for nonlinear nature of IAC-RPM controller
 
@@ -987,6 +990,27 @@ If increased VVT duty cycle increases the indicated VVT angle, set this to 'adva
 
 ### sdTriggerLogCsv
 
+
+### sdCardConditionalLogging
+Only write the SD log while trigger conditions are met (start/stop). Off = always log, the current behavior.
+
+### sdLogStartRpm
+Start logging at/above this RPM
+
+### sdLogStopRpm
+Stop logging below this RPM. Set below 'start' for hysteresis
+
+### sdLogStopDelay
+Keep logging this many seconds after RPM drops below the stop threshold
+
+### sdLogMinTps
+Also require TPS at/above this to start logging (0 = ignore)
+
+### sdLogMinMap
+Also require MAP at/above this to start logging (0 = ignore)
+
+### sdLogMinVss
+Also require vehicle speed at/above this to start logging (0 = ignore)
 
 ### engineChartSize
 
