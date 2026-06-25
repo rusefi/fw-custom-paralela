@@ -212,6 +212,11 @@
 #define can_baudrate_e_B83KBPS 2
 #define can_baudrate_e_enum "33.33kbps", "50kbps", "83.33kbps", "100kbps", "125kbps", "250kbps", "500kbps", "666kbps", "1Mbps"
 #define CAN_BENCH_HEADER2 0x66
+#define can_broadcast_channel_e_auto_enum 0="CAN_BUS_FIRST",1="CAN_BUS_SECOND",2="CAN_BUS_THIRD"
+#define can_broadcast_channel_e_CAN_BUS_FIRST 0
+#define can_broadcast_channel_e_CAN_BUS_SECOND 1
+#define can_broadcast_channel_e_CAN_BUS_THIRD 2
+#define can_broadcast_channel_e_enum "first", "second", "3rd"
 #define CAN_DEFAULT_BASE 0x200
 #define CAN_ECU_SERIAL_RX_ID 0x710
 #define CAN_ECU_SERIAL_TX_ID 0x720
@@ -364,11 +369,12 @@
 #define CONSOLE_DATA_PROTOCOL_TAG " @"
 #define CRANKING_ADVANCE_CURVE_SIZE 4
 #define CRANKING_CLT_IDLE_CURVE_SIZE 8
-#define cranking_condition_e_auto_enum 0="CCNONE",1="CC_BRAKE",2="CC_CLUTCH"
+#define cranking_condition_e_auto_enum 0="CCNONE",1="CC_BRAKE",2="CC_CLUTCH",3="CC_CLUTCH_DOWN"
 #define cranking_condition_e_CC_BRAKE 1
 #define cranking_condition_e_CC_CLUTCH 2
+#define cranking_condition_e_CC_CLUTCH_DOWN 3
 #define cranking_condition_e_CCNONE 0
-#define cranking_condition_e_enum "None", "Brake", "Clutch"
+#define cranking_condition_e_enum "None", "Brake", "Clutch Up", "Clutch Down"
 #define CRANKING_CURVE_SIZE 5
 #define CRANKING_CYCLE_CLT_SIZE 4
 #define CRANKING_ENRICH_CLT_COUNT 6
@@ -494,7 +500,7 @@
 #define ego_sensor_e_ES_PLX 4
 #define egoSettings_NAME "CAN O2 sensors"
 #define EGT_CHANNEL_COUNT 8
-#define engine_configuration_s_size 3996
+#define engine_configuration_s_size 4040
 #define engine_load_mode_e_auto_enum 0="LM_SPEED_DENSITY",2="LM_ALPHA_N",3="LM_LUA",1="LM_REAL_MAF",4="UNSUPPORTED_ENUM_VALUE"
 #define engine_load_mode_e_LM_ALPHA_N 2
 #define engine_load_mode_e_LM_LUA 3
@@ -634,7 +640,7 @@
 #define FIELD_DISPLACEMENT displacement
 #define FIELD_INJECTOR_FLOW injector.flow
 #define firing_order_e_enum "One Cylinder", "1-3-4-2", "1-2-4-3", "1-3-2-4", "1-5-3-6-2-4", "1-8-4-3-6-5-7-2", "1-2-4-5-3", "1-4-2-5-3-6", "1-2", "1-2-3-4-5-6", "1-2-3", "1-8-7-2-6-5-4-3", "1-5-4-2-6-3-7-8 Mustang", "1-6-3-2-5-4", "1-10-9-4-3-6-5-8-7_2", "1-7-5-11-3-9-6-12-2-8-4-10", "1-7-4-10-2-8-6-12-3-9-5-11", "1-4-3-2", "1-12-5-8-3-10-6-7-2-11-4-9", "1-2-7-8-4-5-6-3", "1-3-7-2-6-5-4-8 HO", "1-2-3-4-5-6-7-8-9", "INVALID", "1-2-3-4-5-6-7-8-9-10-11-12", "1-3-2", "1-2-3-4-5-6-7-8", "1-5-4-8-6-3-7-2", "1-4-3-6-2-5", "1-8-7-3-6-5-4-2", "1-6-2-4-3-5", "1-6-5-4-3-2", "1-4-5-2-3-6", "1-5-4-8-3-7-2-6 Voodoo", "1-6-5-10-2-7-3-8-4-9", "1-8-6-2-7-3-4-5 F136", "1-2-3-4"
-#define FLASH_DATA_VERSION 260528
+#define FLASH_DATA_VERSION 260529
 #define FLEX_TRANSIENT_CLT_SIZE 8
 #define FLEX_TRANSIENT_ETH_SIZE 8
 #define FLOW_LINEARIZATION_MASS_SIZE 2
@@ -1323,7 +1329,7 @@
 #define ignition_mode_e_IM_ONE_COIL 0
 #define ignition_mode_e_IM_TWO_COILS 3
 #define ignition_mode_e_IM_WASTED_SPARK 2
-#define IGNITION_OUTPUT "Ignition Output"
+#define IGNITION_OUTPUT "Ignition Cylinder"
 #define imu_type_e_auto_enum 0="IMU_NONE",2="IMU_MM5_10",3="IMU_TYPE_3",4="IMU_TYPE_4",5="IMU_TYPE_MB_A0065422618",1="IMU_VAG"
 #define imu_type_e_IMU_MM5_10 2
 #define imu_type_e_IMU_NONE 0
@@ -1489,7 +1495,7 @@
 #define pedalSensor_NAME "Accelerator pedal"
 #define pedalToTpsTbl_NAME "ETB pedal target"
 #define PERCENT_TRIM_BYTE_PACKING_DIV 0.02
-#define persistent_config_s_size 24728
+#define persistent_config_s_size 24772
 #define pid_s_size 20
 #define pin_input_mode_e_auto_enum 0="PI_DEFAULT",4="PI_INVERTED_DEFAULT",6="PI_INVERTED_PULLDOWN",5="PI_INVERTED_PULLUP",2="PI_PULLDOWN",1="PI_PULLUP"
 #define pin_input_mode_e_PI_DEFAULT 0
@@ -1592,7 +1598,7 @@
 #define SentInput_NONE 0
 #define show_tcu_gauges false
 #define show_vvt_output_pin true
-#define SIGNATURE_HASH 1803598930
+#define SIGNATURE_HASH 158713309
 #define SIMULATOR_TUNE_BIN_FILE_NAME "generated/simulator_tune_image.bin"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_PREFIX "generated/simulator_tune_image"
 #define SIMULATOR_TUNE_BIN_FILE_NAME_SUFFIX ".bin"
@@ -1674,7 +1680,7 @@
 #define torqueReductionActivationMode_e_TORQUE_REDUCTION_BUTTON 0
 #define torqueReductionActivationMode_e_TORQUE_REDUCTION_CLUTCH_DOWN_SWITCH 2
 #define torqueReductionActivationMode_e_TORQUE_REDUCTION_CLUTCH_UP_SWITCH 3
-#define TOTAL_CONFIG_SIZE 24728
+#define TOTAL_CONFIG_SIZE 24772
 #define TPS_2_BYTE_PACKING_MULT 100
 #define TPS_PPS_TOO_HIGH_THRESHOLD 110
 #define TPS_PPS_TOO_LOW_THRESHOLD -10
@@ -2115,6 +2121,7 @@
 #define ts_show_linear_thermistors true
 #define ts_show_live_data true
 #define ts_show_long_term_fuel_trim false
+#define ts_show_ltft_sd_card_message true
 #define ts_show_maf true
 #define ts_show_main_relay true
 #define ts_show_main_relay_microRusEFI_message false
@@ -2210,12 +2217,12 @@
 #define ts_show_wbo_canbus_index true
 #define ts_show_wbo_canbus_set_index true
 #define ts_show_wbo_canbus_set_type false
-#define TS_SIGNATURE "rusEFI master.2026.06.18.paralela.1803598930"
+#define TS_SIGNATURE "rusEFI master.2026.06.25.paralela.158713309"
 #define TS_SIMULATE_CAN '>'
 #define TS_SIMULATE_CAN_char >
 #define TS_TEST_COMMAND 't'
 #define TS_TEST_COMMAND_char t
-#define TS_TOTAL_OUTPUT_SIZE 2148
+#define TS_TOTAL_OUTPUT_SIZE 2176
 #define TS_TRIGGER_SCOPE_CHANNEL_1_NAME "Channel 1"
 #define TS_TRIGGER_SCOPE_CHANNEL_2_NAME "Channel 2"
 #define TS_TRIGGER_SCOPE_DISABLE 5
