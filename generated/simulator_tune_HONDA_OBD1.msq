@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <msq xmlns="http://www.msefi.com/:msq">
     <page/>
-    <page number="0" size="14832">
+    <page number="0" size="14836">
         <constant name="accelEnrichmentMode">"MS Adder"</constant>
         <constant name="accelerometerCsPin">"NONE"</constant>
         <constant name="accelerometerCsPinMode">"default"</constant>
@@ -559,7 +559,7 @@
         <constant name="brakePedalPin">"NONE"</constant>
         <constant name="brakePedalPinMode">"PULLUP"</constant>
         <constant digits="0" name="byFirmwareVersion" units="index">0</constant>
-        <constant digits="0" name="calibrationBirthday" units="">20260702</constant>
+        <constant digits="0" name="calibrationBirthday" units="">20260709</constant>
         <constant digits="0" name="camDecoder2jzPosition" units="angle">95</constant>
         <constant digits="0" name="camDecoder2jzPrecision" units="">40</constant>
         <constant name="camInputs1">"NONE"</constant>
@@ -2542,6 +2542,7 @@
         <constant digits="0" name="launchFuelAdderPercent" units="%">0</constant>
         <constant name="launchFuelCutEnable">"no"</constant>
         <constant digits="0" name="launchRpm" units="rpm">3000</constant>
+        <constant digits="0" name="launchRpmThreshold" units="rpm">0</constant>
         <constant digits="0" name="launchRpmWindow" units="RPM">500</constant>
         <constant name="launchSmoothRetard">"disabled"</constant>
         <constant name="launchSparkCutEnable">"no"</constant>
@@ -4286,6 +4287,7 @@
         <constant name="useBiQuadOnAuxSpeedSensors">"no"</constant>
         <constant name="useCicPidForIdle">"Industrial"</constant>
         <constant name="useCltBasedRpmLimit">"no"</constant>
+        <constant name="useCompensatedMap">"disabled"</constant>
         <constant name="useEeprom">"no"</constant>
         <constant name="useFixedBaroCorrFromMap">"no"</constant>
         <constant name="useFordRedundantPps">"no"</constant>
@@ -4792,8 +4794,8 @@
 </constant>
         <constant name="yesUnderstandLocking">"no"</constant>
     </page>
-    <versionInfo firmwareInfo="20260628" nPages="1" signature="rusEFI master.2026.07.02.paralela.3869421587" version="5.0"/>
-    <bibliography author="rusEFI 20260628" writeDate="date"/>
+    <versionInfo firmwareInfo="20260708" nPages="1" signature="rusEFI master.2026.07.09.paralela.3422247547" version="5.0"/>
+    <bibliography author="rusEFI 20260708" writeDate="date"/>
     <settings/>
     <userComments/>
 </msq>
