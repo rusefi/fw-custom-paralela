@@ -668,6 +668,11 @@ static LOG_FIELD_CONSTNESS_SPECIFIER_STORAGE MLG::Entries::Field fields[] = {
 	{engine->module<BoostController>()->boostControllerClosedLoopPart, "Boost: Closed loop", "%", 1, "Boost Control"},
 	{engine->module<BoostController>()->boostOutput, "Boost: Output", "percent", 2, "Boost Control"},
 #endif
+#if EFI_ENGINE_CONTROL && EFI_SHAFT_POSITION_INPUT
+	{engine->lambdaMonitor, 0, 0, "lambdaCurrentlyGood", ""},
+	{engine->lambdaMonitor, 0, 1, "lambdaMonitorCut", ""},
+	{engine->lambdaMonitor.lambdaTimeSinceGood, "lambdaTimeSinceGood", "sec", 2},
+#endif
 #if EFI_LAUNCH_CONTROL
 	{engine->launchController.retardThresholdRpm, "Launch: Retard threshold RPM", "", 0},
 	{engine->launchController, 4, 0, "launchActivatePinState", ""},
@@ -694,6 +699,12 @@ static LOG_FIELD_CONSTNESS_SPECIFIER_STORAGE MLG::Entries::Field fields[] = {
 	{engine->shiftTorqueReductionController.trqRedCutXaxisValue, "trqRedCutXaxisValue", "", 0},
 	{engine->shiftTorqueReductionController.trqRedTimeXaxisValue, "trqRedTimeXaxisValue", "", 0},
 	{engine->shiftTorqueReductionController.trqRedIgnRetXaxisValue, "trqRedIgnRetXaxisValue", "", 0},
+#endif
+#if EFI_PROD_CODE && (BOARD_MC33810_COUNT > 0)
+	{mc33810getLiveData(0)->sparkDuration[0], "Spark duration 1", "ms", 3, "Timing"},
+	{mc33810getLiveData(0)->sparkDuration[1], "Spark duration 2", "ms", 3, "Timing"},
+	{mc33810getLiveData(0)->sparkDuration[2], "Spark duration 3", "ms", 3, "Timing"},
+	{mc33810getLiveData(0)->sparkDuration[3], "Spark duration 4", "ms", 3, "Timing"},
 #endif
 #if EFI_PROD_CODE && EFI_ELECTRONIC_THROTTLE_BODY && FULL_SD_LOGS
 	{getLiveDataConstexpr<electronic_throttle_s, 0>()->etbCurrentTarget, "etb1ETB: target for current pedal", "%", 2, "ETB more"},
@@ -805,9 +816,6 @@ static LOG_FIELD_CONSTNESS_SPECIFIER_STORAGE MLG::Entries::Field fields[] = {
 	{static_cast<trigger_state_primary_s&>(engine->triggerCentral.triggerState).m_phaseAdjustment, "sync: phase adjustment", "deg", 0, "Sync"},
 	{static_cast<trigger_state_primary_s&>(engine->triggerCentral.triggerState), 4, 0, "sync: We Know Engine Phase", ""},
 	{static_cast<trigger_state_primary_s&>(engine->triggerCentral.triggerState), 4, 1, "sync: We have sync", ""},
-	{engine->lambdaMonitor, 0, 0, "lambdaCurrentlyGood", ""},
-	{engine->lambdaMonitor, 0, 1, "lambdaMonitorCut", ""},
-	{engine->lambdaMonitor.lambdaTimeSinceGood, "lambdaTimeSinceGood", "sec", 2},
 #endif
 #if EFI_SHAFT_POSITION_INPUT && FULL_SD_LOGS
 	{engine->triggerCentral.triggerState.synchronizationCounter, "trgsync: wheel sync counter", "", 0},
