@@ -5399,6 +5399,9 @@ struct engine_configuration_s {
 	 */
 	int8_t torqueReductionActivationTemperature;
 	/**
+	 * Absolute: Sensor reads ~100 kPa (14.7 psi) with engine off and no fuel pressure.
+	 * Gauge: Sensor reads 0 with engine off and no fuel pressure (most common standard 0-10 bar / 0-150 psi sensors).
+	 * Differential: Sensor is connected to intake manifold vacuum and measures pressure difference directly.
 	 * offset 3226
 	 */
 	fuel_pressure_sensor_mode_e fuelPressureSensorMode;
@@ -8178,76 +8181,76 @@ struct persistent_config_s {
 	bool wizardCltSensor : 1 {};
 	/**
 	offset 14432 bit 8 */
-	bool unusedBit_294_8 : 1 {};
+	bool wizardTps : 1 {};
 	/**
 	offset 14432 bit 9 */
-	bool unusedBit_294_9 : 1 {};
+	bool wizardIgnitionOutputs : 1 {};
 	/**
 	offset 14432 bit 10 */
-	bool unusedBit_294_10 : 1 {};
+	bool wizardInjectorOutputs : 1 {};
 	/**
 	offset 14432 bit 11 */
-	bool unusedBit_294_11 : 1 {};
+	bool unusedBit_297_11 : 1 {};
 	/**
 	offset 14432 bit 12 */
-	bool unusedBit_294_12 : 1 {};
+	bool unusedBit_297_12 : 1 {};
 	/**
 	offset 14432 bit 13 */
-	bool unusedBit_294_13 : 1 {};
+	bool unusedBit_297_13 : 1 {};
 	/**
 	offset 14432 bit 14 */
-	bool unusedBit_294_14 : 1 {};
+	bool unusedBit_297_14 : 1 {};
 	/**
 	offset 14432 bit 15 */
-	bool unusedBit_294_15 : 1 {};
+	bool unusedBit_297_15 : 1 {};
 	/**
 	offset 14432 bit 16 */
-	bool unusedBit_294_16 : 1 {};
+	bool unusedBit_297_16 : 1 {};
 	/**
 	offset 14432 bit 17 */
-	bool unusedBit_294_17 : 1 {};
+	bool unusedBit_297_17 : 1 {};
 	/**
 	offset 14432 bit 18 */
-	bool unusedBit_294_18 : 1 {};
+	bool unusedBit_297_18 : 1 {};
 	/**
 	offset 14432 bit 19 */
-	bool unusedBit_294_19 : 1 {};
+	bool unusedBit_297_19 : 1 {};
 	/**
 	offset 14432 bit 20 */
-	bool unusedBit_294_20 : 1 {};
+	bool unusedBit_297_20 : 1 {};
 	/**
 	offset 14432 bit 21 */
-	bool unusedBit_294_21 : 1 {};
+	bool unusedBit_297_21 : 1 {};
 	/**
 	offset 14432 bit 22 */
-	bool unusedBit_294_22 : 1 {};
+	bool unusedBit_297_22 : 1 {};
 	/**
 	offset 14432 bit 23 */
-	bool unusedBit_294_23 : 1 {};
+	bool unusedBit_297_23 : 1 {};
 	/**
 	offset 14432 bit 24 */
-	bool unusedBit_294_24 : 1 {};
+	bool unusedBit_297_24 : 1 {};
 	/**
 	offset 14432 bit 25 */
-	bool unusedBit_294_25 : 1 {};
+	bool unusedBit_297_25 : 1 {};
 	/**
 	offset 14432 bit 26 */
-	bool unusedBit_294_26 : 1 {};
+	bool unusedBit_297_26 : 1 {};
 	/**
 	offset 14432 bit 27 */
-	bool unusedBit_294_27 : 1 {};
+	bool unusedBit_297_27 : 1 {};
 	/**
 	offset 14432 bit 28 */
-	bool unusedBit_294_28 : 1 {};
+	bool unusedBit_297_28 : 1 {};
 	/**
 	offset 14432 bit 29 */
-	bool unusedBit_294_29 : 1 {};
+	bool unusedBit_297_29 : 1 {};
 	/**
 	offset 14432 bit 30 */
-	bool unusedBit_294_30 : 1 {};
+	bool unusedBit_297_30 : 1 {};
 	/**
 	offset 14432 bit 31 */
-	bool unusedBit_294_31 : 1 {};
+	bool unusedBit_297_31 : 1 {};
 	/**
 	 * offset 14436
 	 */

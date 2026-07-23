@@ -2209,6 +2209,15 @@ float getConfigValueByHash(const int hash) {
 // wizardCltSensor
 		case -796431917:
 			return config->wizardCltSensor;
+// wizardTps
+		case -1732086003:
+			return config->wizardTps;
+// wizardIgnitionOutputs
+		case 85418299:
+			return config->wizardIgnitionOutputs;
+// wizardInjectorOutputs
+		case -1528635464:
+			return config->wizardInjectorOutputs;
 	}
 	return EFI_ERROR_CODE;
 }
@@ -5892,6 +5901,21 @@ bool setConfigValueByName(const char *name, float value) {
 		case -796431917:
 	{
 		config->wizardCltSensor = (int)value;
+		return 1;
+	}
+		case -1732086003:
+	{
+		config->wizardTps = (int)value;
+		return 1;
+	}
+		case 85418299:
+	{
+		config->wizardIgnitionOutputs = (int)value;
+		return 1;
+	}
+		case -1528635464:
+	{
+		config->wizardInjectorOutputs = (int)value;
 		return 1;
 	}
 	}
